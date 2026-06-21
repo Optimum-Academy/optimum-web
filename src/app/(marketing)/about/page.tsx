@@ -5,7 +5,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Learn about Optimum Academy mission to provide quality vocational training in Australia.',
+  description: 'Learn about Optimum Academy\'s mission to provide quality vocational training in Australia.',
 };
 
 export default function AboutPage() {

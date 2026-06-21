@@ -16,6 +16,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://optimumacademy.edu.au'),
   title: {
     default: 'Optimum Academy | Pathway to Care & Support Careers',
     template: '%s | Optimum Academy',
@@ -33,10 +34,35 @@ export const metadata: Metadata = {
   authors: [{ name: 'Optimum Academy' }],
   creator: 'Optimum Academy',
   publisher: 'Optimum Academy',
+  openGraph: {
+    type: 'website',
+    locale: 'en_AU',
+    url: 'https://optimumacademy.edu.au',
+    siteName: 'Optimum Academy',
+    title: 'Optimum Academy | Pathway to Care & Support Careers',
+    description: 'Leading provider of vocational education and training in Australia, specializing in care, disability support, and community services.',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Optimum Academy',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Optimum Academy | Pathway to Care & Support Careers',
+    description: 'Leading provider of vocational education and training in Australia, specializing in care, disability support, and community services.',
+    images: ['/og-image.jpg'],
+  },
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
+  },
+  alternates: {
+    canonical: '/',
   },
 };
 

@@ -1,6 +1,6 @@
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
-import { getPostBySlug } from '@/lib/api/cms';
+import { getPostBySlug, getPosts } from '@/lib/api/cms';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { Metadata } from 'next';
@@ -10,6 +10,13 @@ import { Button } from '@/components/ui/button';
 
 interface Props {
   params: Promise<{ slug: string }>;
+}
+
+export async function generateStaticParams() {
+  const posts = await getPosts();
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

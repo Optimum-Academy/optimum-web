@@ -1,6 +1,6 @@
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
-import { getCourseBySlug } from '@/lib/api/cms';
+import { getCourseBySlug, getCourses } from '@/lib/api/cms';
 import { notFound } from 'next/navigation';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -24,6 +24,13 @@ import { Separator } from '@/components/ui/separator';
 
 interface Props {
   params: Promise<{ slug: string }>;
+}
+
+export async function generateStaticParams() {
+  const courses = await getCourses();
+  return courses.map((course) => ({
+    slug: course.slug,
+  }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
