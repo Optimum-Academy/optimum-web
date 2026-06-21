@@ -228,11 +228,101 @@ export const mockCourses: Course[] = [
       entryRequirements: ['Certificate III in Individual Support'],
       externalEnrolmentLink: '#',
       level: 'Certificate IV',
+      price: '$5,500.00',
     },
     featuredImage: {
       node: {
         sourceUrl: 'https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?q=80&w=1932',
         altText: 'Healthcare professionals in discussion',
+      },
+    },
+  },
+  {
+    id: '4',
+    title: 'Certificate III in Individual Support',
+    slug: 'chc33021-certificate-iii-individual-support',
+    courseFields: {
+      qualificationCode: 'CHC33021',
+      audience: 'Domestic',
+      duration: '26 Weeks',
+      deliveryMode: 'Blended',
+      level: 'Certificate III',
+      price: '$3,500.00',
+      externalEnrolmentLink: '#',
+      careerOutcomes: [
+        'Personal Care Assistant',
+        'Community Care Worker',
+        'In-home Respite Care Worker',
+      ],
+      entryRequirements: [
+        'Must be 18 years of age or older',
+        'Successful completion of Year 10 or equivalent',
+      ],
+    },
+    featuredImage: {
+      node: {
+        sourceUrl: 'https://images.unsplash.com/photo-1581578731522-745505146317?q=80&w=2070',
+        altText: 'Caregiver assisting an elderly person',
+      },
+    },
+  },
+  {
+    id: '5',
+    title: 'Certificate IV in Ageing Support',
+    slug: 'chc43015-certificate-iv-ageing-support',
+    courseFields: {
+      qualificationCode: 'CHC43015',
+      audience: 'Domestic',
+      duration: '38 Weeks',
+      deliveryMode: 'Online + Placement',
+      level: 'Certificate IV',
+      price: '$4,800.00',
+      externalEnrolmentLink: '#',
+      careerOutcomes: [
+        'Aged Care Activity Officer',
+        'Care Supervisor',
+        'Support Coordinator',
+      ],
+      entryRequirements: [
+        'Must be 18 years of age or older',
+        'HLTINF001 - Comply with infection prevention and control policies and procedures',
+      ],
+    },
+    featuredImage: {
+      node: {
+        sourceUrl: 'https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?q=80&w=2070',
+        altText: 'Elderly person smiling with a nurse',
+      },
+    },
+  },
+  {
+    id: '6',
+    title: 'Certificate III in Individual Support (International)',
+    slug: 'chc33021-certificate-iii-individual-support-international',
+    courseFields: {
+      qualificationCode: 'CHC33021',
+      cricosCode: '107474K',
+      audience: 'International',
+      duration: '52 Weeks',
+      deliveryMode: 'On-campus + Placement',
+      level: 'Certificate III',
+      price: '$11,000.00',
+      externalEnrolmentLink: '#',
+      careerOutcomes: [
+        'Nursing Assistant',
+        'Community Support Worker',
+        'Residential Care Worker',
+      ],
+      entryRequirements: [
+        'Must be 18 years of age or older',
+        'IELTS 5.5 or equivalent',
+        'Completion of Year 12 or equivalent',
+      ],
+    },
+    featuredImage: {
+      node: {
+        sourceUrl: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=2070',
+        altText: 'Healthcare students in a lab',
       },
     },
   },
@@ -253,6 +343,38 @@ export const mockPosts: Post[] = [
     },
     categories: {
       nodes: [{ name: 'Career Advice', slug: 'career-advice' }],
+    },
+  },
+  {
+    id: 'p2',
+    title: 'Understanding the New NDIS Guidelines for 2024',
+    slug: 'understanding-ndis-guidelines-2024',
+    excerpt: 'Key changes in the National Disability Insurance Scheme and how they affect support workers and participants.',
+    date: '2024-04-15',
+    featuredImage: {
+      node: {
+        sourceUrl: 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=2043',
+        altText: 'NDIS discussion',
+      },
+    },
+    categories: {
+      nodes: [{ name: 'Industry News', slug: 'industry-news' }],
+    },
+  },
+  {
+    id: 'p3',
+    title: '5 Essential Skills for Every Community Service Worker',
+    slug: 'essential-skills-community-service-worker',
+    excerpt: 'Beyond qualifications, these core competencies will help you excel in providing support to those in need.',
+    date: '2024-05-10',
+    featuredImage: {
+      node: {
+        sourceUrl: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=2070',
+        altText: 'Community worker helping people',
+      },
+    },
+    categories: {
+      nodes: [{ name: 'Skills & Development', slug: 'skills-development' }],
     },
   },
 ];
