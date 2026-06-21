@@ -27,19 +27,42 @@ export interface Post {
   };
 }
 
+export interface CourseUnit {
+  code: string;
+  title: string;
+  type: 'CORE' | 'ELECTIVE';
+}
+
+export interface CourseFAQ {
+  question: string;
+  answer: string;
+}
+
 export interface Course {
   id: string;
   title: string;
   slug: string;
   content?: string;
   courseFields: {
+    qualificationCode: string;
     duration: string;
     deliveryMode: string;
     careerOutcomes: string[];
-    entryRequirements: string;
+    entryRequirements: string[];
     externalEnrolmentLink: string;
     price?: string;
     level?: string;
+    totalHours?: string;
+    vocationalPlacement?: string;
+    whyStudy?: string[];
+    whatYouWillLearn?: string[];
+    units?: CourseUnit[];
+    faqs?: CourseFAQ[];
+    structure?: string;
+    resources?: {
+      provided: string[];
+      required: string[];
+    };
   };
   featuredImage?: {
     node: {
