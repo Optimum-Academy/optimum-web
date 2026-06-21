@@ -1,5 +1,5 @@
-
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -23,12 +23,15 @@ export function Navbar() {
       <div className="container mx-auto flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center space-x-2">
-            <div className="h-10 w-10 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-white font-bold text-xl">O</span>
+            <div className="relative h-12 w-40">
+              <Image
+                src="/logo.png"
+                alt="Optimum Academy Logo"
+                fill
+                className="object-contain object-left"
+                priority
+              />
             </div>
-            <span className="font-heading text-xl font-bold tracking-tight hidden sm:inline-block">
-              Optimum Academy
-            </span>
           </Link>
         </div>
 

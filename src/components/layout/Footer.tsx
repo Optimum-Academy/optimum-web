@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Mail, MapPin, Phone, Globe } from 'lucide-react';
 
 const footerNavigation = {
@@ -29,12 +30,14 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-4">
           <div className="space-y-6">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="h-10 w-10 rounded-lg bg-primary flex items-center justify-center">
-                <span className="text-white font-bold text-xl">O</span>
+              <div className="relative h-12 w-40">
+                <Image
+                  src="/logo.png"
+                  alt="Optimum Academy Logo"
+                  fill
+                  className="object-contain object-left brightness-0 invert"
+                />
               </div>
-              <span className="font-heading text-xl font-bold tracking-tight text-white">
-                Optimum Academy
-              </span>
             </Link>
             <p className="text-sm leading-relaxed text-slate-400">
               Empowering the next generation of care and support professionals in Australia with industry-focused vocational training.
