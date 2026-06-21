@@ -26,10 +26,19 @@ export function CourseCard({ course }: CourseCardProps) {
         )}
       </div>
       <div className="flex flex-1 flex-col p-6">
-        <div className="flex items-center gap-2 mb-3">
+        <div className="flex items-center justify-between mb-3">
           <Badge variant="secondary" className="bg-brand-blue-50 text-brand-blue-700 hover:bg-brand-blue-100 border-none">
             {course.courseFields.level}
           </Badge>
+          {course.courseFields.audience === 'International' ? (
+            <Badge className="bg-brand-purple-500 text-white border-none text-[10px] uppercase">
+              International
+            </Badge>
+          ) : (
+            <Badge variant="outline" className="text-slate-400 border-slate-200 text-[10px] uppercase">
+              Domestic
+            </Badge>
+          )}
         </div>
         <h3 className="font-heading text-xl font-bold leading-tight text-slate-900 group-hover:text-primary transition-colors">
           <Link href={`/courses/${course.slug}`}>
