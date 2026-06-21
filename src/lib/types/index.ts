@@ -45,6 +45,8 @@ export interface Course {
   content?: string;
   courseFields: {
     qualificationCode: string;
+    cricosCode?: string;
+    audience: 'Domestic' | 'International';
     duration: string;
     deliveryMode: string;
     careerOutcomes: string[];

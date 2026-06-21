@@ -31,9 +31,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const course = await getCourseBySlug(slug);
   if (!course) return { title: 'Course Not Found' };
 
+  const audienceSuffix = course.courseFields.audience === 'International' ? ' (International Students)' : '';
+
   return {
-    title: `${course.courseFields.qualificationCode} ${course.title} | Optimum Training Academy`,
-    description: `Enrol in the ${course.courseFields.qualificationCode} ${course.title}. ${course.courseFields.duration} course with ${course.courseFields.deliveryMode}. Learn to ${course.courseFields.whatYouWillLearn?.[0]?.toLowerCase()}`,
+    title: `${course.courseFields.qualificationCode} ${course.title}${audienceSuffix} | Optimum Training Academy`,
+    description: `Enrol in the ${course.courseFields.qualificationCode} ${course.title} for ${course.courseFields.audience?.toLowerCase() || 'domestic'} students. ${course.courseFields.duration} course with ${course.courseFields.deliveryMode}.`,
   };
 }
 
@@ -51,14 +53,15 @@ export default async function CoursePage({ params }: Props) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Course",
-    "name": course.title,
-    "description": `Nationally recognised ${courseFields.qualificationCode} ${course.title} course.`,
+    "name": `${course.title} (${courseFields.audience})`,
+    "description": `Nationally recognised ${courseFields.qualificationCode} ${course.title} course for ${courseFields.audience} students.`,
     "provider": {
       "@type": "EducationalOrganization",
       "name": "Optimum Training Academy",
       "sameAs": "https://optimumacademy.edu.au"
     },
     "courseCode": courseFields.qualificationCode,
+    "identifier": courseFields.cricosCode,
     "educationalLevel": courseFields.level,
     "offers": {
       "@type": "Offer",
@@ -81,11 +84,25 @@ export default async function CoursePage({ params }: Props) {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
-                <div className="flex items-center gap-3 mb-6">
+                <div className="flex flex-wrap items-center gap-3 mb-6">
                   <Badge className="bg-brand-purple-500 text-white border-none px-4 py-1">
                     Nationally Recognised Training
                   </Badge>
-                  <span className="text-slate-400 font-mono text-sm">{courseFields.qualificationCode}</span>
+                  {courseFields.audience === 'International' ? (
+                    <Badge variant="outline" className="text-brand-purple-300 border-brand-purple-400 px-4 py-1">
+                      International / CRICOS
+                    </Badge>
+                  ) : (
+                    <Badge variant="outline" className="text-slate-400 border-slate-700 px-4 py-1">
+                      Domestic Students
+                    </Badge>
+                  )}
+                  <div className="flex flex-col ml-auto sm:ml-0">
+                    <span className="text-slate-400 font-mono text-sm leading-none">{courseFields.qualificationCode}</span>
+                    {courseFields.cricosCode && (
+                      <span className="text-brand-purple-400 font-mono text-[10px] uppercase mt-1">CRICOS {courseFields.cricosCode}</span>
+                    )}
+                  </div>
                 </div>
                 <h1 className="font-heading text-4xl sm:text-6xl font-bold tracking-tight leading-tight mb-8">
                   {course.title}
@@ -360,6 +377,15 @@ export default async function CoursePage({ params }: Props) {
                                <span className="text-slate-400">Course Code</span>
                                <span className="font-bold">{courseFields.qualificationCode}</span>
                             </div>
+                            {courseFields.cricosCode && (
+                              <>
+                                <Separator className="bg-white/10" />
+                                <div className="flex justify-between items-center text-sm">
+                                  <span className="text-slate-400">CRICOS Code</span>
+                                  <span className="font-bold text-brand-purple-400">{courseFields.cricosCode}</span>
+                                </div>
+                              </>
+                            )}
                             <Separator className="bg-white/10" />
                             <div className="flex justify-between items-center text-sm">
                                <span className="text-slate-400">Total Investment</span>

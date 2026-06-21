@@ -11,6 +11,7 @@ export const mockCourses: Course[] = [
     slug: 'chc52025-diploma-community-services',
     courseFields: {
       qualificationCode: 'CHC52025',
+      audience: 'Domestic',
       duration: 'Up to 52 Weeks',
       deliveryMode: 'Online + Vocational Placement',
       level: 'Diploma',
@@ -111,11 +112,112 @@ export const mockCourses: Course[] = [
     },
   },
   {
+    id: '3',
+    title: 'Diploma of Community Services (International)',
+    slug: 'chc52025-diploma-community-services-international',
+    courseFields: {
+      qualificationCode: 'CHC52025',
+      cricosCode: '04432K',
+      audience: 'International',
+      duration: 'Up to 104 Weeks (including holidays)',
+      deliveryMode: 'Blended + Vocational Placement',
+      level: 'Diploma',
+      totalHours: 'Approx. 2110 hours',
+      price: '$15,000.00',
+      externalEnrolmentLink: '#',
+      careerOutcomes: [
+        'Community Care Manager',
+        'Support Facilitator',
+        'Community Development Worker',
+        'Case Coordinator',
+      ],
+      entryRequirements: [
+        'Must be 18 years of age or older',
+        'Must hold a current Student Visa',
+        'Sound language, literacy, and numeracy skills (at least Year 10 English, or equivalent)',
+        'Basic computer skills',
+        'English Proficiency: IELTS 5.5 (no band < 5.0) or equivalent (PTE 43, TOEFL 46)',
+      ],
+      whyStudy: [
+        'Nationally recognised qualification for international students.',
+        'Comprehensive 104-week program designed for deep industry immersion.',
+        'Includes mandatory vocational placement to build practical skills in Australian settings.',
+        'Tailored support for international learners adapting to the Australian care sector.',
+      ],
+      whatYouWillLearn: [
+        'Develop and implement service programs',
+        'Facilitate workplace debriefing and support processes',
+        'Recognise and respond to crisis situations',
+        'Analyse impacts of sociological factors on people in community work and services',
+        'Provide advocacy and representation services',
+      ],
+      vocationalPlacement: 'A minimum of 400 hours of vocational placement within a registered community service centre. This includes specific requirements for CHCCSM013 and CHCDEV005 (100 hours each).',
+      structure: 'Assessment includes observations, questioning (verbal/written), projects, case studies, and third-party reports.',
+      resources: {
+        provided: [
+          'Learner Guides and Assessment Workbooks',
+          'Templates for projects and activities',
+          'Simulated resources for assessment pathways',
+          'Vocational Placement Pack',
+        ],
+        required: [
+          'Computer/laptop with internet access (Google Chrome preferred)',
+          'MS Word and PowerPoint',
+          'Adobe Acrobat Reader',
+          'Vocational Placement access',
+        ],
+      },
+      units: [
+        { code: 'CHCCCS004', title: 'Assess co-existing needs', type: 'CORE' },
+        { code: 'CHCCCS007', title: 'Develop and implement service programs', type: 'CORE' },
+        { code: 'CHCCCS019', title: 'Recognise and respond to crisis situations', type: 'CORE' },
+        { code: 'CHCCSM013', title: 'Facilitate and review case management', type: 'CORE' },
+        { code: 'CHCDEV005', title: 'Analyse impacts of sociological factors on people in community work and services', type: 'CORE' },
+        { code: 'CHCDFV001', title: 'Recognise and respond appropriately to domestic and family violence', type: 'CORE' },
+        { code: 'CHCDIV001', title: 'Work with diverse people', type: 'CORE' },
+        { code: 'CHCDIV002', title: 'Promote Aboriginal and/or Torres Strait Islander cultural safety', type: 'CORE' },
+        { code: 'CHCLEG003', title: 'Manage legal and ethical compliance', type: 'CORE' },
+        { code: 'CHCMGT005', title: 'Facilitate workplace debriefing and support processes', type: 'CORE' },
+        { code: 'CHCPRP003', title: 'Reflect on and improve own professional practice', type: 'CORE' },
+        { code: 'HLTWHS003', title: 'Maintain work health and safety', type: 'CORE' },
+        { code: 'CHCCSM012', title: 'Coordinate complex case requirements', type: 'ELECTIVE' },
+        { code: 'CHCADV002', title: 'Provide advocacy and representation services', type: 'ELECTIVE' },
+        { code: 'CHCADV005', title: 'Provide systems advocacy services', type: 'ELECTIVE' },
+        { code: 'CHCCCS009', title: 'Facilitate responsible behaviour', type: 'ELECTIVE' },
+        { code: 'CHCCOM003', title: 'Develop workplace communication strategies', type: 'ELECTIVE' },
+        { code: 'CHCMGT003', title: 'Lead the work team', type: 'ELECTIVE' },
+        { code: 'CHCPRP001', title: 'Develop and maintain networks and collaborative partnerships', type: 'ELECTIVE' },
+        { code: 'CHCCDE027', title: 'Implement community development strategies', type: 'ELECTIVE' },
+      ],
+      faqs: [
+        {
+          question: 'What are the payment terms for international students?',
+          answer: 'The total fee is $15,000.00. This requires an initial deposit of $7,500 followed by 11 scheduled monthly payments of $681.82.'
+        },
+        {
+          question: 'Are there English language requirements?',
+          answer: 'Yes, you need an IELTS total band score of at least 5.5 (no band less than 5.0) or equivalent from providers like PTE, TOEFL, or CAE.'
+        },
+        {
+          question: 'Is vocational placement mandatory?',
+          answer: 'Yes, 400 hours of vocational placement is mandatory. Optimum Training Academy can assist you in finding placement through our partner network.'
+        }
+      ]
+    },
+    featuredImage: {
+      node: {
+        sourceUrl: 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=2043',
+        altText: 'International students studying together',
+      },
+    },
+  },
+  {
     id: '2',
     title: 'Certificate IV in Disability Support',
     slug: 'cert-iv-disability-support',
     courseFields: {
       qualificationCode: 'CHC43121',
+      audience: 'Domestic',
       duration: '9 Months',
       deliveryMode: 'On-campus',
       careerOutcomes: [
