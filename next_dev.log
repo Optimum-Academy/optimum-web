@@ -24,3 +24,6 @@
  GET /contact 200 in 519ms
  GET / 200 in 480ms
  GET / 200 in 360ms
+[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. Please report the content of /tmp/next-panic-1ea5bad66a28a8a6486cc6fee3acd225.log, along with a description of what you were doing when the error occurred, to https://github.com/vercel/next.js/issues/new
+thread caused non-unwinding panic. aborting.
+thread caused non-unwinding panic. aborting.
