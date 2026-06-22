@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { TrackedLink } from '@/components/ui/tracked-link';
 import { CheckCircle2 } from 'lucide-react';
 
 export function Hero() {
@@ -24,10 +24,10 @@ export function Hero() {
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="h-14 px-8 text-lg font-semibold shadow-lg shadow-primary/20" asChild>
-                <Link href="/courses">Explore Courses</Link>
+                <TrackedLink href="/courses">Explore Courses</TrackedLink>
               </Button>
-              <Button size="lg" variant="outline" className="h-14 px-8 text-lg font-semibold" asChild>
-                <Link href="/contact">Enquire Now</Link>
+              <Button size="lg" variant="outline" className="h-14 px-8 text-lg font-semibold bg-transparent" asChild>
+                <TrackedLink href="/contact">Enquire Now</TrackedLink>
               </Button>
             </div>
 

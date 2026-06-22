@@ -6,8 +6,8 @@ import { Testimonials } from '@/components/sections/Testimonials';
 import { CTASection } from '@/components/sections/CTASection';
 import { FAQSection } from '@/components/sections/FAQSection';
 import { getCourses } from '@/lib/api/cms';
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { TrackedLink } from '@/components/ui/tracked-link';
 import { ArrowRight, BookOpen, GraduationCap, Briefcase } from 'lucide-react';
 
 export default async function Home() {
@@ -61,9 +61,9 @@ export default async function Home() {
                 </p>
               </div>
               <Button variant="ghost" className="text-primary font-bold group" asChild>
-                <Link href="/courses">
+                <TrackedLink href="/courses">
                   View All Courses <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
+                </TrackedLink>
               </Button>
             </div>
 

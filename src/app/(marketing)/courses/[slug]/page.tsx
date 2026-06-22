@@ -158,7 +158,7 @@ export default async function CoursePage({ params }: Props) {
                     <TrackedLink href={courseFields.externalEnrolmentLink}>Enrol Today</TrackedLink>
                   </Button>
                   {courseFields.brochureLink && (
-                    <Button size="lg" variant="outline" className="h-14 px-10 text-lg rounded-full border-white/30 hover:bg-white hover:text-slate-900 text-white transition-all" asChild>
+                    <Button size="lg" variant="outline" className="h-14 px-10 text-lg rounded-full border-white/30 bg-transparent hover:bg-white hover:text-slate-900 text-white transition-all" asChild>
                       <TrackedLink href={courseFields.brochureLink}>Download Brochure</TrackedLink>
                     </Button>
                   )}

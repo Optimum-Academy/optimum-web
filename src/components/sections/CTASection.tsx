@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { TrackedLink } from '@/components/ui/tracked-link';
 
 export function CTASection() {
   return (
@@ -19,10 +19,10 @@ export function CTASection() {
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button size="lg" className="h-14 px-10 text-lg font-semibold w-full sm:w-auto" asChild>
-                <Link href="/contact">Enquire Now</Link>
+                <TrackedLink href="/contact">Enquire Now</TrackedLink>
               </Button>
-              <Button size="lg" variant="outline" className="h-14 px-10 text-lg font-semibold text-white border-slate-700 hover:bg-slate-800 w-full sm:w-auto" asChild>
-                <Link href="/courses">View All Courses</Link>
+              <Button size="lg" variant="outline" className="h-14 px-10 text-lg font-semibold text-white border-slate-700 bg-transparent hover:bg-slate-800 w-full sm:w-auto" asChild>
+                <TrackedLink href="/courses">View All Courses</TrackedLink>
               </Button>
             </div>
             <p className="mt-8 text-sm text-slate-400">
