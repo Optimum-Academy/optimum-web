@@ -244,20 +244,84 @@ export const mockCourses: Course[] = [
     courseFields: {
       qualificationCode: 'CHC33021',
       audience: 'Domestic',
-      duration: '26 Weeks',
-      deliveryMode: 'Blended',
+      duration: 'Up to 52 weeks',
+      deliveryMode: 'Online Training + Vocational Placement',
       level: 'Certificate III',
-      price: '$3,500.00',
+      totalHours: 'Approx. 1223 hours',
+      price: '$3,000.00',
       externalEnrolmentLink: '#',
       careerOutcomes: [
-        'Personal Care Assistant',
-        'Community Care Worker',
-        'In-home Respite Care Worker',
+        'Home Care Assistant',
+        'Family Support Worker',
+        'Nurse’s Assistant',
+        'Respite Care Worker',
       ],
       entryRequirements: [
         'Must be 18 years of age or older',
-        'Successful completion of Year 10 or equivalent',
+        'Have sound language, literacy, and numeracy skills (at least Year 10 English, or equivalent)',
+        'Have basic computer skills',
+        'Must have completed or be eligible to complete HLTAID011 – Provide First Aid',
       ],
+      whyStudy: [
+        'Nationally recognised qualification (Release 1) aimed at endowing individuals with requisite skills.',
+        'Quality content and robust training programs by Optimum Training Academy (RTO#46534).',
+        'Flexible delivery model via Online Training combined with hands-on Vocational Placement.',
+        'Direct pathway to roles in community, home, or residential care settings.',
+      ],
+      whatYouWillLearn: [
+        'Provide individualised support',
+        'Communicate and work in health or community services',
+        'Apply basic principles and practices of infection prevention and control',
+        'Contribute to ongoing skills development using a strengths-based approach',
+        'Recognise health body systems',
+      ],
+      vocationalPlacement: 'Learners are required to undertake a minimum of 120 hours of vocational placement within a registered and approved care centre. This must occur after the student has satisfactorily completed all the other units/subjects in this qualification. During this time, the learners are required to complete a skills workbook.',
+      structure: 'Assessment includes observation (on-the-job or role play/simulation), questioning (self-assessment, verbal, written, activity modules), and structured activities (projects, case studies, presentations).',
+      resources: {
+        provided: [
+          'CHC33021 learning and assessment suite (Learner Guides, Assessment Workbooks, Templates)',
+          'Simulated resources for assessment pathways',
+          'Additional course readings and resources recommended by trainers',
+          'Vocational Placement Pack',
+        ],
+        required: [
+          'Computer/laptop with internet access (Google Chrome preferred)',
+          'Microsoft Word and PowerPoint',
+          'Adobe Acrobat Reader',
+          'Webcam, headset, and microphone',
+        ],
+      },
+      units: [
+        { code: 'CHCCCS031', title: 'Provide individualised support', type: 'CORE' },
+        { code: 'CHCCCS038', title: 'Facilitate the empowerment of people receiving support', type: 'CORE' },
+        { code: 'CHCCCS040', title: 'Support independence and well being', type: 'CORE' },
+        { code: 'CHCCCS041', title: 'Recognise health body systems', type: 'CORE' },
+        { code: 'CHCCOM005', title: 'Communicate and work in health or community services', type: 'CORE' },
+        { code: 'CHCDIV001', title: 'Work with diverse people', type: 'CORE' },
+        { code: 'HLTWHS002', title: 'Follow safe work practices for direct client care', type: 'CORE' },
+        { code: 'CHCLEG001', title: 'Work legally and ethically', type: 'CORE' },
+        { code: 'HLTINF006', title: 'Apply basic principles and practices of infection prevention and control', type: 'CORE' },
+        { code: 'CHCAGE011', title: 'Provide support to people living with dementia', type: 'ELECTIVE' },
+        { code: 'CHCAGE013', title: 'Work effectively in aged care', type: 'ELECTIVE' },
+        { code: 'CHCPAL003', title: 'Deliver care services using a palliative approach', type: 'ELECTIVE' },
+        { code: 'CHCDIS011', title: 'Contribute to ongoing skills development using a strengths-based approach', type: 'ELECTIVE' },
+        { code: 'CHCDIS012', title: 'Support community participation and social inclusion', type: 'ELECTIVE' },
+        { code: 'CHCDIS020', title: 'Work effectively in disability support', type: 'ELECTIVE' },
+      ],
+      faqs: [
+        {
+          question: 'Are there payment plans available?',
+          answer: 'Yes. After an initial deposit of $1,500, you can pay the remainder through 11 scheduled monthly payments of $136.36.'
+        },
+        {
+          question: 'Is Recognition of Prior Learning (RPL) available?',
+          answer: 'Yes, Optimum Academy has an RPL Policy to recognise your prior learning through formal/informal training or work experience.'
+        },
+        {
+          question: 'What are the vocational placement options?',
+          answer: 'You can source your own provider, ask Optimum Academy for assistance, or use our established network including Spry Support Services and Dynamic Care.'
+        }
+      ]
     },
     featuredImage: {
       node: {
@@ -301,23 +365,88 @@ export const mockCourses: Course[] = [
     slug: 'chc33021-certificate-iii-individual-support-international',
     courseFields: {
       qualificationCode: 'CHC33021',
-      cricosCode: '107474K',
+      cricosCode: '04432K',
       audience: 'International',
-      duration: '52 Weeks',
-      deliveryMode: 'On-campus + Placement',
+      duration: 'Up to 52 Weeks',
+      deliveryMode: 'Face-to-face + Online distance + Vocational Placement',
       level: 'Certificate III',
-      price: '$11,000.00',
+      totalHours: 'Approx. 1204 hours',
+      price: '$8,000.00',
       externalEnrolmentLink: '#',
       careerOutcomes: [
-        'Nursing Assistant',
-        'Community Support Worker',
-        'Residential Care Worker',
+        'Home Care Assistant',
+        'Family Support Worker',
+        'Nurse’s Assistant',
+        'Respite Care Worker',
       ],
       entryRequirements: [
         'Must be 18 years of age or older',
-        'IELTS 5.5 or equivalent',
-        'Completion of Year 12 or equivalent',
+        'Must hold a current Student Visa',
+        'Sound language, literacy, and numeracy skills (at least Year 10 English, or equivalent)',
+        'Basic computer skills',
+        'English Proficiency: IELTS 5.5 (no band < 5.0) or equivalent (PTE 43, TOEFL 46)',
+        'Must have completed or be eligible to complete HLTAID011 – Provide First Aid',
       ],
+      whyStudy: [
+        'Nationally recognised qualification (Release 1) for international students.',
+        'Comprehensive 52-week program designed for rapid industry entry.',
+        'Includes 120 hours of mandatory vocational placement for real-world experience.',
+        'Blended learning model combining face-to-face and online distance education.',
+      ],
+      whatYouWillLearn: [
+        'Provide individualised support',
+        'Communicate and work in health or community services',
+        'Apply basic principles and practices of infection prevention and control',
+        'Contribute to ongoing skills development using a strengths-based approach',
+        'Recognise health body systems',
+      ],
+      vocationalPlacement: 'Learners are required to undertake a minimum of 120 hours of vocational placement within a registered and approved care centre. This must occur after the student has satisfactorily completed all the other units/subjects in this qualification. During this time, the learners are required to complete a skills workbook.',
+      structure: 'Assessment includes observation (on-the-job or role play/simulation), questioning (self-assessment, verbal, written, activity modules), and structured activities (projects, case studies, presentations).',
+      resources: {
+        provided: [
+          'CHC33021 learning and assessment suite (Learner Guides, Assessment Workbooks, Templates)',
+          'Simulated resources for assessment pathways',
+          'Additional course readings and resources recommended by trainers',
+          'Vocational Placement Pack',
+        ],
+        required: [
+          'Computer/laptop with internet access (Google Chrome preferred)',
+          'Microsoft Word and PowerPoint',
+          'Adobe Acrobat Reader',
+          'Webcam, headset, and microphone',
+        ],
+      },
+      units: [
+        { code: 'CHCCCS031', title: 'Provide individualised support', type: 'CORE' },
+        { code: 'CHCCCS038', title: 'Facilitate the empowerment of people receiving support', type: 'CORE' },
+        { code: 'CHCCCS040', title: 'Support independence and well being', type: 'CORE' },
+        { code: 'CHCCCS041', title: 'Recognise health body systems', type: 'CORE' },
+        { code: 'CHCCOM005', title: 'Communicate and work in health or community services', type: 'CORE' },
+        { code: 'CHCDIV001', title: 'Work with diverse people', type: 'CORE' },
+        { code: 'HLTWHS002', title: 'Follow safe work practices for direct client care', type: 'CORE' },
+        { code: 'CHCLEG001', title: 'Work legally and ethically', type: 'CORE' },
+        { code: 'HLTINF006', title: 'Apply basic principles and practices of infection prevention and control', type: 'CORE' },
+        { code: 'CHCAGE011', title: 'Provide support to people living with dementia', type: 'ELECTIVE' },
+        { code: 'CHCAGE013', title: 'Work effectively in aged care', type: 'ELECTIVE' },
+        { code: 'CHCPAL003', title: 'Deliver care services using a palliative approach', type: 'ELECTIVE' },
+        { code: 'CHCDIS011', title: 'Contribute to ongoing skills development using a strengths-based approach', type: 'ELECTIVE' },
+        { code: 'CHCDIS012', title: 'Support community participation and social inclusion', type: 'ELECTIVE' },
+        { code: 'CHCDIS020', title: 'Work effectively in disability support', type: 'ELECTIVE' },
+      ],
+      faqs: [
+        {
+          question: 'Are there payment plans available?',
+          answer: 'Yes. After an initial deposit of $4,000, you can pay the remainder through 11 scheduled monthly payments of $363.64.'
+        },
+        {
+          question: 'Is Recognition of Prior Learning (RPL) available?',
+          answer: 'Yes, Optimum Academy has an RPL Policy to recognise your prior learning through formal/informal training or work experience.'
+        },
+        {
+          question: 'What are the vocational placement options?',
+          answer: 'You can source your own provider, ask Optimum Academy for assistance, or use our established network including Spry Support Services and Dynamic Care.'
+        }
+      ]
     },
     featuredImage: {
       node: {
