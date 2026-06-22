@@ -4,6 +4,7 @@ import { getCourseBySlug, getCourses } from '@/lib/api/cms';
 import { notFound } from 'next/navigation';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { TrackedLink } from '@/components/ui/tracked-link';
 import {
   Clock,
   Users,
@@ -154,11 +155,13 @@ export default async function CoursePage({ params }: Props) {
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="h-14 px-10 text-lg rounded-full" asChild>
-                    <a href={courseFields.externalEnrolmentLink}>Enrol Today</a>
+                    <TrackedLink href={courseFields.externalEnrolmentLink}>Enrol Today</TrackedLink>
                   </Button>
-                  <Button size="lg" variant="outline" className="h-14 px-10 text-lg rounded-full border-white/20 hover:bg-white/10 hover:text-white transition-all">
-                    Download Brochure
-                  </Button>
+                  {courseFields.brochureLink && (
+                    <Button size="lg" variant="outline" className="h-14 px-10 text-lg rounded-full border-white/30 hover:bg-white hover:text-slate-900 text-white transition-all" asChild>
+                      <TrackedLink href={courseFields.brochureLink}>Download Brochure</TrackedLink>
+                    </Button>
+                  )}
                 </div>
               </div>
               <div className="relative">
@@ -406,7 +409,7 @@ export default async function CoursePage({ params }: Props) {
                          </div>
 
                          <Button className="w-full h-14 rounded-full bg-brand-purple-500 hover:bg-brand-purple-600 text-white" size="lg" asChild>
-                            <a href={courseFields.externalEnrolmentLink}>Enrol Now</a>
+                            <TrackedLink href={courseFields.externalEnrolmentLink}>Enrol Now</TrackedLink>
                          </Button>
 
                          <p className="text-center text-[10px] text-slate-500 mt-4 uppercase tracking-widest font-bold">

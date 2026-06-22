@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter, Manrope } from 'next/font/google';
 import './globals.css';
 import Script from 'next/script';
+import { TrackingProvider } from '@/components/providers/TrackingProvider';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -110,7 +111,11 @@ export default function RootLayout({
           </Script>
         )}
       </head>
-      <body className="font-sans antialiased">{children}</body>
+      <body className="font-sans antialiased">
+        <TrackingProvider>
+          {children}
+        </TrackingProvider>
+      </body>
     </html>
   );
 }
