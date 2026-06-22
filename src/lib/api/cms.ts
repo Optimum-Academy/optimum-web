@@ -4,6 +4,9 @@ import { Course, Post } from '../types';
  * Mock data for development until CMS is connected
  */
 
+const DOMESTIC_BROCHURE = 'https://clients.360rto.com.au/OptimumTrainingAcademy/wp-content/uploads/2026/03/OTA-Student-Handbook-v1.0.pdf';
+const INTERNATIONAL_BROCHURE = 'https://clients.360rto.com.au/OptimumTrainingAcademy/wp-content/uploads/2026/03/OTA-CRICOS-Student-Handbook-v1.0.pdf';
+
 export const mockCourses: Course[] = [
   {
     id: '1',
@@ -17,7 +20,8 @@ export const mockCourses: Course[] = [
       level: 'Diploma',
       totalHours: 'Approx. 1230 hours',
       price: '$7,000.00',
-      externalEnrolmentLink: '#',
+      externalEnrolmentLink: 'https://optimumtrainingacademy.rto.net.au/Form/Index?formType=1&directLink=true&id=optimumtrainingacademy&del=52986&courseCode=CHC52025',
+      brochureLink: DOMESTIC_BROCHURE,
       careerOutcomes: [
         'Community Care Manager',
         'Support Facilitator',
@@ -125,6 +129,7 @@ export const mockCourses: Course[] = [
       totalHours: 'Approx. 2110 hours',
       price: '$15,000.00',
       externalEnrolmentLink: '#',
+      brochureLink: INTERNATIONAL_BROCHURE,
       careerOutcomes: [
         'Community Care Manager',
         'Support Facilitator',
@@ -223,7 +228,8 @@ export const mockCourses: Course[] = [
       level: 'Certificate III',
       totalHours: 'Approx. 1223 hours',
       price: '$3,000.00',
-      externalEnrolmentLink: '#',
+      externalEnrolmentLink: 'https://optimumtrainingacademy.rto.net.au/Form/Index?formType=1&directLink=true&id=optimumtrainingacademy&del=7260&courseCode=CHC33021',
+      brochureLink: DOMESTIC_BROCHURE,
       careerOutcomes: [
         'Home Care Assistant',
         'Family Support Worker',
@@ -316,7 +322,8 @@ export const mockCourses: Course[] = [
       level: 'Unit of Competency',
       totalHours: '7.25 – 9.25 hours',
       price: '$100.00',
-      externalEnrolmentLink: '#',
+      externalEnrolmentLink: '/contact',
+      brochureLink: DOMESTIC_BROCHURE,
       careerOutcomes: [
         'First Aid Officer',
         'WHS Representative',
@@ -333,7 +340,7 @@ export const mockCourses: Course[] = [
         'Quality content and robust training programs by Optimum Training Academy.',
         'Half-day intensive session for rapid skill acquisition.',
       ],
-      whatYouWillLearn: [
+       whatYouWillLearn: [
         'Respond to an emergency situation',
         'Perform CPR procedure',
         'Communicate details of the incident',
@@ -393,6 +400,7 @@ export const mockCourses: Course[] = [
       totalHours: 'Approx. 1204 hours',
       price: '$8,000.00',
       externalEnrolmentLink: '#',
+      brochureLink: INTERNATIONAL_BROCHURE,
       careerOutcomes: [
         'Home Care Assistant',
         'Family Support Worker',
@@ -487,7 +495,8 @@ export const mockCourses: Course[] = [
       level: 'Unit of Competency',
       totalHours: 'Approx. 10 hours',
       price: '$200.00',
-      externalEnrolmentLink: '#',
+      externalEnrolmentLink: '/contact',
+      brochureLink: DOMESTIC_BROCHURE,
       careerOutcomes: [
         'First Aid Officer',
         'WHS Representative',
@@ -561,7 +570,8 @@ export const mockCourses: Course[] = [
       level: 'Unit of Competency',
       totalHours: 'Approx. 8 hours',
       price: '$250.00',
-      externalEnrolmentLink: '#',
+      externalEnrolmentLink: '/contact',
+      brochureLink: DOMESTIC_BROCHURE,
       careerOutcomes: [
         'Individual support workers',
         'Health care workers',

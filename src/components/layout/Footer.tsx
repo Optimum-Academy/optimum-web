@@ -80,15 +80,19 @@ export function Footer() {
             <ul className="mt-4 space-y-4">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 mr-3 text-primary shrink-0" />
-                <span className="text-sm text-slate-400">Melbourne, Victoria, Australia</span>
+                <span className="text-sm text-slate-400 text-balance">
+                  28B Anderson Walk<br />
+                  Smithfield Plains SA 5114<br />
+                  Australia
+                </span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-3 text-primary shrink-0" />
-                <span className="text-sm text-slate-400">+61 123 456 789</span>
+                <span className="text-sm text-slate-400">08 7095 9486</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-3 text-primary shrink-0" />
-                <span className="text-sm text-slate-400">info@optimumacademy.edu.au</span>
+                <span className="text-sm text-slate-400">enquiries@optimumacademy.edu.au</span>
               </li>
             </ul>
           </div>

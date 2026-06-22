@@ -52,6 +52,7 @@ export interface Course {
     careerOutcomes: string[];
     entryRequirements: string[];
     externalEnrolmentLink: string;
+    brochureLink?: string;
     price?: string;
     level?: string;
     totalHours?: string;
