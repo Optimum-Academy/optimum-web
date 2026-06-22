@@ -212,32 +212,6 @@ export const mockCourses: Course[] = [
     },
   },
   {
-    id: '2',
-    title: 'Certificate IV in Disability Support',
-    slug: 'cert-iv-disability-support',
-    courseFields: {
-      qualificationCode: 'CHC43121',
-      audience: 'Domestic',
-      duration: '9 Months',
-      deliveryMode: 'On-campus',
-      careerOutcomes: [
-        'Disability Officer',
-        'Social Educator',
-        'Behavioural Support Officer',
-      ],
-      entryRequirements: ['Certificate III in Individual Support'],
-      externalEnrolmentLink: '#',
-      level: 'Certificate IV',
-      price: '$5,500.00',
-    },
-    featuredImage: {
-      node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?q=80&w=1932',
-        altText: 'Healthcare professionals in discussion',
-      },
-    },
-  },
-  {
     id: '4',
     title: 'Certificate III in Individual Support',
     slug: 'chc33021-certificate-iii-individual-support',
@@ -325,37 +299,8 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1581578731522-745505146317?q=80&w=2070',
+        sourceUrl: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070',
         altText: 'Caregiver assisting an elderly person',
-      },
-    },
-  },
-  {
-    id: '5',
-    title: 'Certificate IV in Ageing Support',
-    slug: 'chc43015-certificate-iv-ageing-support',
-    courseFields: {
-      qualificationCode: 'CHC43015',
-      audience: 'Domestic',
-      duration: '38 Weeks',
-      deliveryMode: 'Online + Placement',
-      level: 'Certificate IV',
-      price: '$4,800.00',
-      externalEnrolmentLink: '#',
-      careerOutcomes: [
-        'Aged Care Activity Officer',
-        'Care Supervisor',
-        'Support Coordinator',
-      ],
-      entryRequirements: [
-        'Must be 18 years of age or older',
-        'HLTINF001 - Comply with infection prevention and control policies and procedures',
-      ],
-    },
-    featuredImage: {
-      node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?q=80&w=2070',
-        altText: 'Elderly person smiling with a nurse',
       },
     },
   },
@@ -525,7 +470,7 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=2070',
+        sourceUrl: 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=2043',
         altText: 'Healthcare students in a lab',
       },
     },
@@ -599,7 +544,7 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1505751172107-573225a9402c?q=80&w=2070',
+        sourceUrl: 'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?q=80&w=2070',
         altText: 'First aid kit and medical equipment',
       },
     },
