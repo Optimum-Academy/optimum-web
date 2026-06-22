@@ -530,6 +530,80 @@ export const mockCourses: Course[] = [
       },
     },
   },
+  {
+    id: '8',
+    title: 'Provide First Aid',
+    slug: 'hltaid011-provide-first-aid',
+    courseFields: {
+      qualificationCode: 'HLTAID011',
+      audience: 'Domestic',
+      duration: '1 day training and assessment session',
+      deliveryMode: 'Blended (Distance + Face-to-face)',
+      level: 'Unit of Competency',
+      totalHours: 'Approx. 10 hours',
+      price: '$200.00',
+      externalEnrolmentLink: '#',
+      careerOutcomes: [
+        'First Aid Officer',
+        'WHS Representative',
+      ],
+      entryRequirements: [
+        'Must be 18 years of age or older',
+        'Sound Language, Literacy, and Numeracy (LLN) skills',
+        'Physical capacity to perform 2 minutes of uninterrupted CPR on the floor',
+        'Basic computer skills (for pre-course learning activities)',
+      ],
+      whyStudy: [
+        'Nationally recognised unit (Release 1) in line with Australian Resuscitation Council (ARC) guidelines.',
+        'Quality content and robust training programs by Optimum Training Academy (RTO#46534).',
+        'Essential for First Aid Officers and Workplace Health & Safety (WHS) Representatives.',
+        'Combines self-paced distance learning with hands-on intensive training.',
+      ],
+      whatYouWillLearn: [
+        'Respond to an emergency situation',
+        'Apply appropriate first aid procedures',
+        'Communicate details of the incident',
+        'Review the incident',
+      ],
+      vocationalPlacement: 'Not required for this unit.',
+      structure: 'Assessment includes observation during role play/simulation, questioning (verbal/written), and structured activities like projects and case studies.',
+      resources: {
+        provided: [
+          'Learner Guide and Assessment Workbook',
+          'Templates and forms for assessment',
+          'Medical equipment (Adult/Infant manikins, AED, Adrenaline auto-injector)',
+          'Personal protective equipment (PPE)',
+        ],
+        required: [
+          'Computer with internet access (Google Chrome preferred)',
+          'MS Word, MS PowerPoint, and Adobe Acrobat Reader',
+        ],
+      },
+      units: [
+        { code: 'HLTAID011', title: 'Provide First Aid', type: 'CORE' },
+      ],
+      faqs: [
+        {
+          question: 'How often should I refresh my First Aid training?',
+          answer: 'ARC guidelines require first aid certification to be renewed every three (3) years.'
+        },
+        {
+          question: 'Is RPL available for this unit?',
+          answer: 'Due to the high-risk nature of the course and certificate requirements, RPL is not offered for this unit of competency.'
+        },
+        {
+          question: 'What are the physical requirements?',
+          answer: 'You must be able to perform 2 minutes of uninterrupted single rescuer CPR on an adult manikin on the floor and an infant manikin on a firm surface.'
+        }
+      ]
+    },
+    featuredImage: {
+      node: {
+        sourceUrl: 'https://images.unsplash.com/photo-1505751172107-573225a9402c?q=80&w=2070',
+        altText: 'First aid kit and medical equipment',
+      },
+    },
+  },
 ];
 
 export const mockPosts: Post[] = [
