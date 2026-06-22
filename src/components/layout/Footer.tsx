@@ -95,7 +95,7 @@ export function Footer() {
         </div>
         <div className="mt-12 border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-slate-500">
-            &copy; {new Date().getFullYear()} Optimum Academy. All rights reserved. RTO Code: [XXXXX]
+              &copy; {new Date().getFullYear()} Optimum Academy. All rights reserved. RTO Code: 46534
           </p>
           <p className="text-sm text-slate-500">
             We acknowledge the Traditional Owners of the land on which we work.

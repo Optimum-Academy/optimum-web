@@ -360,6 +360,81 @@ export const mockCourses: Course[] = [
     },
   },
   {
+    id: '7',
+    title: 'Provide cardiopulmonary resuscitation',
+    slug: 'hltaid009-provide-cardiopulmonary-resuscitation',
+    courseFields: {
+      qualificationCode: 'HLTAID009',
+      audience: 'Domestic',
+      duration: 'Half-day training and assessment session',
+      deliveryMode: 'Face-to-face',
+      level: 'Unit of Competency',
+      totalHours: '7.25 – 9.25 hours',
+      price: '$100.00',
+      externalEnrolmentLink: '#',
+      careerOutcomes: [
+        'First Aid Officer',
+        'WHS Representative',
+      ],
+      entryRequirements: [
+        'Must have physical capacity to perform 2 minutes of uninterrupted single rescuer CPR on an adult manikin on the floor',
+        'Must have physical capacity to perform 2 minutes of uninterrupted single rescuer CPR on an infant manikin on a firm surface',
+        'Ability to perform manual handling tasks safely',
+        'Must be 18 years of age or older',
+      ],
+      whyStudy: [
+        'Nationally recognised unit (Release 1) in line with Australian Resuscitation Council (ARC) guidelines.',
+        'Essential for First Aid Officers and WHS Representatives.',
+        'Quality content and robust training programs by Optimum Training Academy.',
+        'Half-day intensive session for rapid skill acquisition.',
+      ],
+      whatYouWillLearn: [
+        'Respond to an emergency situation',
+        'Perform CPR procedure',
+        'Communicate details of the incident',
+        'Review the incident',
+      ],
+      vocationalPlacement: 'Not required for this unit.',
+      structure: 'Assessment includes scenario-based assessments, practical skills demonstration, and written or verbal questioning.',
+      resources: {
+        provided: [
+          'Reading Materials and Assessment Workbook',
+          'Adult and infant resuscitation manikins',
+          'AED training devices',
+          'Personal protective equipment (PPE)',
+        ],
+        required: [
+          'Computer/laptop with internet access (Google Chrome preferred)',
+          'Microsoft Word and PowerPoint',
+          'Adobe Acrobat Reader',
+        ],
+      },
+      units: [
+        { code: 'HLTAID009', title: 'Provide cardiopulmonary resuscitation', type: 'CORE' },
+      ],
+      faqs: [
+        {
+          question: 'How often should I refresh my CPR training?',
+          answer: 'Refresher training in CPR must be carried out annually according to relevant national/state/territory Work Health and Safety Regulatory Authorities.'
+        },
+        {
+          question: 'Is RPL available for this unit?',
+          answer: 'Due to the requirement for annual retraining, Recognition of Prior Learning (RPL) is not offered for this unit.'
+        },
+        {
+          question: 'What are the physical requirements?',
+          answer: 'You must be able to perform at least 2 minutes of uninterrupted single rescuer CPR on an adult manikin on the floor and an infant manikin on a firm surface.'
+        }
+      ]
+    },
+    featuredImage: {
+      node: {
+        sourceUrl: 'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?q=80&w=2070',
+        altText: 'Medical training session',
+      },
+    },
+  },
+  {
     id: '6',
     title: 'Certificate III in Individual Support (International)',
     slug: 'chc33021-certificate-iii-individual-support-international',
@@ -452,6 +527,155 @@ export const mockCourses: Course[] = [
       node: {
         sourceUrl: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=2070',
         altText: 'Healthcare students in a lab',
+      },
+    },
+  },
+  {
+    id: '8',
+    title: 'Provide First Aid',
+    slug: 'hltaid011-provide-first-aid',
+    courseFields: {
+      qualificationCode: 'HLTAID011',
+      audience: 'Domestic',
+      duration: '1 day training and assessment session',
+      deliveryMode: 'Blended (Distance + Face-to-face)',
+      level: 'Unit of Competency',
+      totalHours: 'Approx. 10 hours',
+      price: '$200.00',
+      externalEnrolmentLink: '#',
+      careerOutcomes: [
+        'First Aid Officer',
+        'WHS Representative',
+      ],
+      entryRequirements: [
+        'Must be 18 years of age or older',
+        'Sound Language, Literacy, and Numeracy (LLN) skills',
+        'Physical capacity to perform 2 minutes of uninterrupted CPR on the floor',
+        'Basic computer skills (for pre-course learning activities)',
+      ],
+      whyStudy: [
+        'Nationally recognised unit (Release 1) in line with Australian Resuscitation Council (ARC) guidelines.',
+        'Quality content and robust training programs by Optimum Training Academy (RTO#46534).',
+        'Essential for First Aid Officers and Workplace Health & Safety (WHS) Representatives.',
+        'Combines self-paced distance learning with hands-on intensive training.',
+      ],
+      whatYouWillLearn: [
+        'Respond to an emergency situation',
+        'Apply appropriate first aid procedures',
+        'Communicate details of the incident',
+        'Review the incident',
+      ],
+      vocationalPlacement: 'Not required for this unit.',
+      structure: 'Assessment includes observation during role play/simulation, questioning (verbal/written), and structured activities like projects and case studies.',
+      resources: {
+        provided: [
+          'Learner Guide and Assessment Workbook',
+          'Templates and forms for assessment',
+          'Medical equipment (Adult/Infant manikins, AED, Adrenaline auto-injector)',
+          'Personal protective equipment (PPE)',
+        ],
+        required: [
+          'Computer with internet access (Google Chrome preferred)',
+          'MS Word, MS PowerPoint, and Adobe Acrobat Reader',
+        ],
+      },
+      units: [
+        { code: 'HLTAID011', title: 'Provide First Aid', type: 'CORE' },
+      ],
+      faqs: [
+        {
+          question: 'How often should I refresh my First Aid training?',
+          answer: 'ARC guidelines require first aid certification to be renewed every three (3) years.'
+        },
+        {
+          question: 'Is RPL available for this unit?',
+          answer: 'Due to the high-risk nature of the course and certificate requirements, RPL is not offered for this unit of competency.'
+        },
+        {
+          question: 'What are the physical requirements?',
+          answer: 'You must be able to perform 2 minutes of uninterrupted single rescuer CPR on an adult manikin on the floor and an infant manikin on a firm surface.'
+        }
+      ]
+    },
+    featuredImage: {
+      node: {
+        sourceUrl: 'https://images.unsplash.com/photo-1505751172107-573225a9402c?q=80&w=2070',
+        altText: 'First aid kit and medical equipment',
+      },
+    },
+  },
+  {
+    id: '9',
+    title: 'Conduct manual tasks safely',
+    slug: 'hltwhs005-conduct-manual-tasks-safely',
+    courseFields: {
+      qualificationCode: 'HLTWHS005',
+      audience: 'Domestic',
+      duration: 'Half-day training and assessment session',
+      deliveryMode: 'Face-to-face',
+      level: 'Unit of Competency',
+      totalHours: 'Approx. 8 hours',
+      price: '$250.00',
+      externalEnrolmentLink: '#',
+      careerOutcomes: [
+        'Individual support workers',
+        'Health care workers',
+        'Retail workers',
+        'Tradesmen',
+      ],
+      entryRequirements: [
+        'Must be able to perform manual handling tasks safely',
+        'Physical capacity to use appropriate equipment, posture and handling techniques',
+        'Must be 18 years of age or older (recommended)',
+      ],
+      whyStudy: [
+        'Nationally accredited unit (Release 1) describing skills to recognise potentially hazardous manual tasks.',
+        'Quality content and robust training programs by Optimum Training Academy (RTO#46534).',
+        'Essential for workers in individual support, health care, retail, and trades.',
+        'Develops requisite skills to prepare for and complete manual tasks in a safe manner.',
+      ],
+      whatYouWillLearn: [
+        'Identify manual tasks involving risk',
+        'Prepare for manual tasks',
+        'Complete manual tasks',
+        'Contribute to safe work practices',
+      ],
+      vocationalPlacement: 'Not required for this unit.',
+      structure: 'Assessment includes scenario-based assessments, practical skills demonstration assessments, and written or verbal questioning.',
+      resources: {
+        provided: [
+          'Reading Materials and Assessment Workbook',
+          'Access to suitable facilities and compliant workplace procedures',
+          'Manual handling equipment (Mobile hoists, Slide sheets, Stretchers)',
+        ],
+        required: [
+          'Computer/laptop with internet access (Google Chrome preferred)',
+          'MS Word and PowerPoint',
+          'Adobe Acrobat Reader',
+        ],
+      },
+      units: [
+        { code: 'HLTWHS005', title: 'Conduct manual tasks safely', type: 'CORE' },
+      ],
+      faqs: [
+        {
+          question: 'Is Recognition of Prior Learning (RPL) available?',
+          answer: 'Due to the requirement for annual retraining in the competencies contained within this unit, RPL will not be offered.'
+        },
+        {
+          question: 'How often should I refresh my manual handling training?',
+          answer: 'Industry standards recommend that manual handling training be conducted every two years.'
+        },
+        {
+          question: 'What are the physical requirements?',
+          answer: 'Students must have the physical capacity to use appropriate equipment, posture and handling techniques to conduct a manual move and/or lift safely.'
+        }
+      ]
+    },
+    featuredImage: {
+      node: {
+        sourceUrl: 'https://images.unsplash.com/photo-1581056771107-24ca5f033842?q=80&w=2070',
+        altText: 'Worker lifting a box safely',
       },
     },
   },
