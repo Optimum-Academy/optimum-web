@@ -360,6 +360,81 @@ export const mockCourses: Course[] = [
     },
   },
   {
+    id: '7',
+    title: 'Provide cardiopulmonary resuscitation',
+    slug: 'hltaid009-provide-cardiopulmonary-resuscitation',
+    courseFields: {
+      qualificationCode: 'HLTAID009',
+      audience: 'Domestic',
+      duration: 'Half-day training and assessment session',
+      deliveryMode: 'Face-to-face',
+      level: 'Unit of Competency',
+      totalHours: '7.25 – 9.25 hours',
+      price: '$100.00',
+      externalEnrolmentLink: '#',
+      careerOutcomes: [
+        'First Aid Officer',
+        'WHS Representative',
+      ],
+      entryRequirements: [
+        'Must have physical capacity to perform 2 minutes of uninterrupted single rescuer CPR on an adult manikin on the floor',
+        'Must have physical capacity to perform 2 minutes of uninterrupted single rescuer CPR on an infant manikin on a firm surface',
+        'Ability to perform manual handling tasks safely',
+        'Must be 18 years of age or older',
+      ],
+      whyStudy: [
+        'Nationally recognised unit (Release 1) in line with Australian Resuscitation Council (ARC) guidelines.',
+        'Essential for First Aid Officers and WHS Representatives.',
+        'Quality content and robust training programs by Optimum Training Academy.',
+        'Half-day intensive session for rapid skill acquisition.',
+      ],
+      whatYouWillLearn: [
+        'Respond to an emergency situation',
+        'Perform CPR procedure',
+        'Communicate details of the incident',
+        'Review the incident',
+      ],
+      vocationalPlacement: 'Not required for this unit.',
+      structure: 'Assessment includes scenario-based assessments, practical skills demonstration, and written or verbal questioning.',
+      resources: {
+        provided: [
+          'Reading Materials and Assessment Workbook',
+          'Adult and infant resuscitation manikins',
+          'AED training devices',
+          'Personal protective equipment (PPE)',
+        ],
+        required: [
+          'Computer/laptop with internet access (Google Chrome preferred)',
+          'Microsoft Word and PowerPoint',
+          'Adobe Acrobat Reader',
+        ],
+      },
+      units: [
+        { code: 'HLTAID009', title: 'Provide cardiopulmonary resuscitation', type: 'CORE' },
+      ],
+      faqs: [
+        {
+          question: 'How often should I refresh my CPR training?',
+          answer: 'Refresher training in CPR must be carried out annually according to relevant national/state/territory Work Health and Safety Regulatory Authorities.'
+        },
+        {
+          question: 'Is RPL available for this unit?',
+          answer: 'Due to the requirement for annual retraining, Recognition of Prior Learning (RPL) is not offered for this unit.'
+        },
+        {
+          question: 'What are the physical requirements?',
+          answer: 'You must be able to perform at least 2 minutes of uninterrupted single rescuer CPR on an adult manikin on the floor and an infant manikin on a firm surface.'
+        }
+      ]
+    },
+    featuredImage: {
+      node: {
+        sourceUrl: 'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?q=80&w=2070',
+        altText: 'Medical training session',
+      },
+    },
+  },
+  {
     id: '6',
     title: 'Certificate III in Individual Support (International)',
     slug: 'chc33021-certificate-iii-individual-support-international',
