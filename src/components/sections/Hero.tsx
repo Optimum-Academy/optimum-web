@@ -48,7 +48,7 @@ export function Hero() {
           <div className="relative lg:h-[600px]">
              {/* Simple visual placeholder for hero image */}
              <div className="w-full h-full min-h-[400px] rounded-3xl bg-slate-100 relative overflow-hidden shadow-2xl">
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=2000')] bg-cover bg-center mix-blend-overlay opacity-80" />
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2000')] bg-cover bg-center mix-blend-overlay opacity-80" />
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent" />
 
                 {/* Floating trust card */}

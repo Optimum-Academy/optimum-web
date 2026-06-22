@@ -110,8 +110,8 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070',
-        altText: 'Care worker assisting an elderly person',
+        sourceUrl: 'https://images.unsplash.com/photo-1531050171669-01c4f4205ade?q=80&w=2070',
+        altText: 'A support worker having a friendly conversation with a client in a home setting',
       },
     },
   },
@@ -211,8 +211,8 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=2043',
-        altText: 'International students studying together',
+        sourceUrl: 'https://images.unsplash.com/photo-1523240715632-d984bb4b990a?q=80&w=2070',
+        altText: 'A diverse group of international students collaborating on a project in a modern campus environment',
       },
     },
   },
@@ -305,8 +305,8 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070',
-        altText: 'Caregiver assisting an elderly person',
+        sourceUrl: 'https://images.unsplash.com/photo-1581578731548-c64695cc6954?q=80&w=2070',
+        altText: 'An authentic moment of care and support between a professional caregiver and an elderly client',
       },
     },
   },
@@ -478,8 +478,8 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=2043',
-        altText: 'Healthcare students in a lab',
+        sourceUrl: 'https://images.unsplash.com/photo-1523240715632-d984bb4b990a?q=80&w=2070',
+        altText: 'International students in a collaborative learning environment',
       },
     },
   },
@@ -645,8 +645,8 @@ export const mockPosts: Post[] = [
     date: '2024-03-20',
     featuredImage: {
       node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1581056771107-24ca5f033842?q=80&w=2070',
-        altText: 'A nursing student practicing',
+        sourceUrl: 'https://images.unsplash.com/photo-1521791136364-798a7bc0d26c?q=80&w=2070',
+        altText: 'A professional handshake symbolizing career growth and opportunity in the care sector',
       },
     },
     categories: {
@@ -661,8 +661,8 @@ export const mockPosts: Post[] = [
     date: '2024-04-15',
     featuredImage: {
       node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=2043',
-        altText: 'NDIS discussion',
+        sourceUrl: 'https://images.unsplash.com/photo-1508847154043-be1276f8bc1d?q=80&w=2070',
+        altText: 'Hands together symbolizing community and support within the NDIS framework',
       },
     },
     categories: {
@@ -677,8 +677,8 @@ export const mockPosts: Post[] = [
     date: '2024-05-10',
     featuredImage: {
       node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=2070',
-        altText: 'Community worker helping people',
+        sourceUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070',
+        altText: 'A collaborative workshop focus on soft skills and community service development',
       },
     },
     categories: {
