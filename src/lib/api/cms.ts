@@ -604,6 +604,81 @@ export const mockCourses: Course[] = [
       },
     },
   },
+  {
+    id: '9',
+    title: 'Conduct manual tasks safely',
+    slug: 'hltwhs005-conduct-manual-tasks-safely',
+    courseFields: {
+      qualificationCode: 'HLTWHS005',
+      audience: 'Domestic',
+      duration: 'Half-day training and assessment session',
+      deliveryMode: 'Face-to-face',
+      level: 'Unit of Competency',
+      totalHours: 'Approx. 8 hours',
+      price: '$250.00',
+      externalEnrolmentLink: '#',
+      careerOutcomes: [
+        'Individual support workers',
+        'Health care workers',
+        'Retail workers',
+        'Tradesmen',
+      ],
+      entryRequirements: [
+        'Must be able to perform manual handling tasks safely',
+        'Physical capacity to use appropriate equipment, posture and handling techniques',
+        'Must be 18 years of age or older (recommended)',
+      ],
+      whyStudy: [
+        'Nationally accredited unit (Release 1) describing skills to recognise potentially hazardous manual tasks.',
+        'Quality content and robust training programs by Optimum Training Academy (RTO#46534).',
+        'Essential for workers in individual support, health care, retail, and trades.',
+        'Develops requisite skills to prepare for and complete manual tasks in a safe manner.',
+      ],
+      whatYouWillLearn: [
+        'Identify manual tasks involving risk',
+        'Prepare for manual tasks',
+        'Complete manual tasks',
+        'Contribute to safe work practices',
+      ],
+      vocationalPlacement: 'Not required for this unit.',
+      structure: 'Assessment includes scenario-based assessments, practical skills demonstration assessments, and written or verbal questioning.',
+      resources: {
+        provided: [
+          'Reading Materials and Assessment Workbook',
+          'Access to suitable facilities and compliant workplace procedures',
+          'Manual handling equipment (Mobile hoists, Slide sheets, Stretchers)',
+        ],
+        required: [
+          'Computer/laptop with internet access (Google Chrome preferred)',
+          'MS Word and PowerPoint',
+          'Adobe Acrobat Reader',
+        ],
+      },
+      units: [
+        { code: 'HLTWHS005', title: 'Conduct manual tasks safely', type: 'CORE' },
+      ],
+      faqs: [
+        {
+          question: 'Is Recognition of Prior Learning (RPL) available?',
+          answer: 'Due to the requirement for annual retraining in the competencies contained within this unit, RPL will not be offered.'
+        },
+        {
+          question: 'How often should I refresh my manual handling training?',
+          answer: 'Industry standards recommend that manual handling training be conducted every two years.'
+        },
+        {
+          question: 'What are the physical requirements?',
+          answer: 'Students must have the physical capacity to use appropriate equipment, posture and handling techniques to conduct a manual move and/or lift safely.'
+        }
+      ]
+    },
+    featuredImage: {
+      node: {
+        sourceUrl: 'https://images.unsplash.com/photo-1581056771107-24ca5f033842?q=80&w=2070',
+        altText: 'Worker lifting a box safely',
+      },
+    },
+  },
 ];
 
 export const mockPosts: Post[] = [
