@@ -5,9 +5,9 @@ import { Mail, MapPin, Phone, Globe } from 'lucide-react';
 const footerNavigation = {
   courses: [
     { name: 'Individual Support', href: '/courses/cert-iii-individual-support' },
-    { name: 'Disability Support', href: '/courses/cert-iv-disability-support' },
-    { name: 'Community Services', href: '/courses' },
-    { name: 'Aged Care', href: '/courses' },
+    { name: 'First Aid Training', href: '/courses/hltaid011-first-aid' },
+    { name: 'Manual Tasks Safely', href: '/courses/hltwhs005-manual-tasks' },
+    { name: 'Aged Care Basics', href: '/courses/cert-iii-individual-support' },
   ],
   company: [
     { name: 'About Us', href: '/about' },
