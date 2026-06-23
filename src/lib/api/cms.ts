@@ -305,8 +305,8 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?q=80&w=2070',
-        altText: 'An authentic moment of care and support between a professional caregiver and an elderly client',
+        sourceUrl: '/images/[CHC33021] side-view-smiley-nurse-patient.jpg',
+        altText: 'A smiling nurse providing supportive care to a patient',
       },
     },
   },
@@ -478,8 +478,8 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1543269664-56d93c1b41a6?q=80&w=2070',
-        altText: 'International students in a collaborative learning environment',
+        sourceUrl: '/images/[CHC33021 International] medical-assistant-giving-assistance-disabled-old-woman.jpg',
+        altText: 'International medical assistant providing dedicated support to an elderly woman',
       },
     },
   },
@@ -553,8 +553,8 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?q=80&w=2070',
-        altText: 'First aid and emergency response training equipment',
+        sourceUrl: '/images/[HLTAID011] people-are-practicing-medicine.jpg',
+        altText: 'Students practicing first aid and medical response techniques',
       },
     },
   },
@@ -629,8 +629,8 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=2070',
-        altText: 'Worker lifting a box safely',
+        sourceUrl: '/images/[HLTWHS005] people-with-physical-health-condition-doing-teamwork-startup-office-dealing-with-chronic-disability-job-business-partners-with-impairment-working-project-using-wheelchair-crutches.jpg',
+        altText: 'Professionals with diverse physical health conditions collaborating in a modern workplace',
       },
     },
   },

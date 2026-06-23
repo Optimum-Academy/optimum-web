@@ -23,7 +23,7 @@ export function Navbar() {
       <div className="container mx-auto flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center space-x-2">
-            <div className="relative h-12 w-40">
+            <div className="relative h-14 w-48 md:h-12 md:w-40">
               <Image
                 src="/logo.png"
                 alt="Optimum Academy Logo"
