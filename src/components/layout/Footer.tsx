@@ -4,10 +4,11 @@ import { Mail, MapPin, Phone, Globe } from 'lucide-react';
 
 const footerNavigation = {
   courses: [
-    { name: 'Individual Support', href: '/courses/cert-iii-individual-support' },
-    { name: 'First Aid Training', href: '/courses/hltaid011-first-aid' },
-    { name: 'Manual Tasks Safely', href: '/courses/hltwhs005-manual-tasks' },
-    { name: 'Aged Care Basics', href: '/courses/cert-iii-individual-support' },
+    { name: 'Diploma of Community Services', href: '/courses/chc52025-diploma-community-services' },
+    { name: 'Certificate III in Individual Support', href: '/courses/chc33021-certificate-iii-individual-support' },
+    { name: 'Provide First Aid', href: '/courses/hltaid011-provide-first-aid' },
+    { name: 'Conduct manual tasks safely', href: '/courses/hltwhs005-manual-tasks-safely' },
+    { name: 'Provide CPR', href: '/courses/hltaid009-provide-cardiopulmonary-resuscitation' },
   ],
   company: [
     { name: 'About Us', href: '/about' },

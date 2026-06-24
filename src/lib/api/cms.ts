@@ -110,8 +110,8 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=2070',
-        altText: 'A professional support worker providing guidance to a client in a modern setting',
+        sourceUrl: '/images/[CHC52025] group-different-people-volunteering-foodbank.jpg',
+        altText: 'A professional group of diverse people volunteering at a foodbank, representing community service outcomes',
       },
     },
   },
@@ -211,8 +211,8 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=2070',
-        altText: 'A diverse group of international students collaborating on a project in a modern campus environment',
+        sourceUrl: '/images/[CHC52025 International] different-people-doing-volunteer-work-foodbank.jpg',
+        altText: 'International students and professionals engaged in community support and volunteer work',
       },
     },
   },
@@ -305,8 +305,8 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: '/images/[CHC33021] side-view-smiley-nurse-patient.jpg',
-        altText: 'A smiling nurse providing supportive care to a patient',
+        sourceUrl: '/images/[CHC33021 International] medical-assistant-giving-assistance-disabled-old-woman.jpg',
+        altText: 'A support worker providing dedicated assistance to an elderly client in a home setting',
       },
     },
   },
@@ -381,8 +381,8 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=2070',
-        altText: 'Medical and first aid equipment in a professional healthcare environment',
+        sourceUrl: '/images/[HLTAID009] group-diverse-people-cpr-training-class.jpg',
+        altText: 'A diverse group of students practicing CPR techniques in a professional training environment',
       },
     },
   },
@@ -478,8 +478,8 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: '/images/[CHC33021 International] medical-assistant-giving-assistance-disabled-old-woman.jpg',
-        altText: 'International medical assistant providing dedicated support to an elderly woman',
+        sourceUrl: '/images/[CHC33021] side-view-smiley-nurse-patient.jpg',
+        altText: 'A professional and supportive care interaction representing career-ready skills',
       },
     },
   },
