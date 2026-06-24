@@ -110,8 +110,8 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1531050171669-01c4f4205ade?q=80&w=2070',
-        altText: 'A support worker having a friendly conversation with a client in a home setting',
+        sourceUrl: '/images/[CHC52025] group-different-people-volunteering-foodbank.jpg',
+        altText: 'A professional group of diverse people volunteering at a foodbank, representing community service outcomes',
       },
     },
   },
@@ -211,8 +211,8 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1523240715632-d984bb4b990a?q=80&w=2070',
-        altText: 'A diverse group of international students collaborating on a project in a modern campus environment',
+        sourceUrl: '/images/[CHC52025 International] different-people-doing-volunteer-work-foodbank.jpg',
+        altText: 'International students and professionals engaged in community support and volunteer work',
       },
     },
   },
@@ -305,8 +305,8 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1581578731548-c64695cc6954?q=80&w=2070',
-        altText: 'An authentic moment of care and support between a professional caregiver and an elderly client',
+        sourceUrl: '/images/[CHC33021 International] medical-assistant-giving-assistance-disabled-old-woman.jpg',
+        altText: 'A support worker providing dedicated assistance to an elderly client in a home setting',
       },
     },
   },
@@ -381,8 +381,8 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?q=80&w=2070',
-        altText: 'Medical training session',
+        sourceUrl: '/images/[HLTAID009] group-diverse-people-cpr-training-class.jpg',
+        altText: 'A diverse group of students practicing CPR techniques in a professional training environment',
       },
     },
   },
@@ -478,8 +478,8 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1523240715632-d984bb4b990a?q=80&w=2070',
-        altText: 'International students in a collaborative learning environment',
+        sourceUrl: '/images/[CHC33021] side-view-smiley-nurse-patient.jpg',
+        altText: 'A professional and supportive care interaction representing career-ready skills',
       },
     },
   },
@@ -553,8 +553,8 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?q=80&w=2070',
-        altText: 'First aid kit and medical equipment',
+        sourceUrl: '/images/[HLTAID011] people-are-practicing-medicine.jpg',
+        altText: 'Students practicing first aid and medical response techniques',
       },
     },
   },
@@ -629,8 +629,8 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1581056771107-24ca5f033842?q=80&w=2070',
-        altText: 'Worker lifting a box safely',
+        sourceUrl: '/images/[HLTWHS005] people-with-physical-health-condition-doing-teamwork-startup-office-dealing-with-chronic-disability-job-business-partners-with-impairment-working-project-using-wheelchair-crutches.jpg',
+        altText: 'Professionals with diverse physical health conditions collaborating in a modern workplace',
       },
     },
   },
@@ -645,8 +645,8 @@ export const mockPosts: Post[] = [
     date: '2024-03-20',
     featuredImage: {
       node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1521791136364-798a7bc0d26c?q=80&w=2070',
-        altText: 'A professional handshake symbolizing career growth and opportunity in the care sector',
+        sourceUrl: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070',
+        altText: 'A successful professional in the care sector environment',
       },
     },
     categories: {
@@ -661,8 +661,8 @@ export const mockPosts: Post[] = [
     date: '2024-04-15',
     featuredImage: {
       node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1508847154043-be1276f8bc1d?q=80&w=2070',
-        altText: 'Hands together symbolizing community and support within the NDIS framework',
+        sourceUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2070',
+        altText: 'Care professionals discussing support strategies in a modern office',
       },
     },
     categories: {
@@ -677,8 +677,8 @@ export const mockPosts: Post[] = [
     date: '2024-05-10',
     featuredImage: {
       node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070',
-        altText: 'A collaborative workshop focus on soft skills and community service development',
+        sourceUrl: 'https://images.unsplash.com/photo-1543269664-76bc3997d9ea?q=80&w=2070',
+        altText: 'Authentic interaction between diverse people in a community setting',
       },
     },
     categories: {

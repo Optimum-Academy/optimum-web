@@ -35,7 +35,7 @@ export function CourseCard({ course }: CourseCardProps) {
               International
             </Badge>
           ) : (
-            <Badge variant="outline" className="text-slate-400 border-slate-200 text-[10px] uppercase">
+            <Badge className="bg-brand-blue-500 text-white border-none text-[10px] uppercase">
               Domestic
             </Badge>
           )}

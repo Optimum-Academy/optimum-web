@@ -17,7 +17,7 @@ export function Hero() {
               Nationally Recognised Training
             </Badge>
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.1]">
-              Your Pathway to a <span className="text-primary">Rewarding Career</span> in Care.
+              Become job-ready for Australia&apos;s <span className="text-primary">growing care sector</span>.
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed">
               Empowering you with the skills, confidence, and industry connections to thrive in Australia’s fast-growing disability, aged care, and community service sectors.
@@ -46,9 +46,9 @@ export function Hero() {
             </div>
           </div>
           <div className="relative lg:h-[600px]">
-             {/* Simple visual placeholder for hero image */}
+             {/* Authentic hero image */}
              <div className="w-full h-full min-h-[400px] rounded-3xl bg-slate-100 relative overflow-hidden shadow-2xl">
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2000')] bg-cover bg-center mix-blend-overlay opacity-80" />
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581578731522-7454671420cd?q=80&w=2070')] bg-cover bg-center mix-blend-overlay opacity-80" />
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent" />
 
                 {/* Floating trust card */}
@@ -60,8 +60,7 @@ export function Hero() {
                          ))}
                       </div>
                       <div>
-                        <p className="text-sm font-bold text-slate-900">Join 5,000+ Students</p>
-                        <p className="text-xs text-slate-500">Graduated since 2018</p>
+                        <p className="text-sm font-bold text-slate-900 leading-tight">Become job-ready for in-demand roles in care and community services.</p>
                       </div>
                    </div>
                 </div>
