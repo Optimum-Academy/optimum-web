@@ -36,7 +36,7 @@ export function Navbar() {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-6">
           {navigation.map((item) => (
             <Link
               key={item.name}
@@ -46,9 +46,16 @@ export function Navbar() {
               {item.name}
             </Link>
           ))}
-          <Button asChild>
-            <Link href="/contact">Enquire Now</Link>
-          </Button>
+          <div className="flex items-center gap-3">
+            <Button variant="outline" asChild>
+              <a href="https://optimumtrainingacademy.rto.net.au/Account/Index" target="_blank" rel="noopener noreferrer">
+                Student Portal
+              </a>
+            </Button>
+            <Button asChild>
+              <Link href="/contact">Enquire Now</Link>
+            </Button>
+          </div>
         </nav>
 
         {/* Mobile Navigation */}
@@ -72,9 +79,16 @@ export function Navbar() {
                     {item.name}
                   </Link>
                 ))}
-                <Button asChild className="w-full">
-                  <Link href="/contact">Enquire Now</Link>
-                </Button>
+                <div className="flex flex-col gap-3 pt-2">
+                  <Button variant="outline" asChild className="w-full">
+                    <a href="https://optimumtrainingacademy.rto.net.au/Account/Index" target="_blank" rel="noopener noreferrer">
+                      Student Portal
+                    </a>
+                  </Button>
+                  <Button asChild className="w-full">
+                    <Link href="/contact">Enquire Now</Link>
+                  </Button>
+                </div>
               </div>
             </SheetContent>
           </Sheet>
