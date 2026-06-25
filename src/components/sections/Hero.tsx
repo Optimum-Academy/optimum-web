@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { CheckCircle2 } from 'lucide-react';
@@ -48,7 +49,13 @@ export function Hero() {
           <div className="relative lg:h-[600px]">
              {/* Authentic hero image */}
              <div className="w-full h-full min-h-[400px] rounded-3xl bg-slate-100 relative overflow-hidden shadow-2xl">
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581578731522-7454671420cd?q=80&w=2070')] bg-cover bg-center mix-blend-overlay opacity-80" />
+                <Image
+                  src="/images/homepage-hero.jpg"
+                  alt="Students collaborating and giving feedback"
+                  fill
+                  className="object-cover mix-blend-overlay opacity-80"
+                  priority
+                />
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent" />
 
                 {/* Floating trust card */}
