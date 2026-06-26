@@ -553,8 +553,8 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: '/images/[HLTAID011] people-are-practicing-medicine.jpg',
-        altText: 'Students practicing first aid and medical response techniques',
+        sourceUrl: '/images/cpr-first-aid-training-concept.jpg',
+        altText: 'Professional first aid training session showing CPR practice on a manikin',
       },
     },
   },
