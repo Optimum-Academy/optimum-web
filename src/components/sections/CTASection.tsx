@@ -21,7 +21,7 @@ export function CTASection() {
               <Button size="lg" className="h-14 px-10 text-lg font-semibold w-full sm:w-auto" asChild>
                 <Link href="/contact">Enquire Now</Link>
               </Button>
-              <Button size="lg" variant="outline" className="h-14 px-10 text-lg font-semibold text-white border-white/20 bg-transparent hover:bg-white hover:text-slate-900 w-full sm:w-auto transition-all" asChild>
+              <Button size="lg" variant="outline" className="h-14 px-10 text-lg font-semibold text-white border-slate-700 hover:bg-slate-800 w-full sm:w-auto" asChild>
                 <Link href="/courses">View All Courses</Link>
               </Button>
             </div>

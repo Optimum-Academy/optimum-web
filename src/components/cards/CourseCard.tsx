@@ -1,9 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { TrackedLink } from '@/components/ui/tracked-link';
-import { ArrowRight, Users, Clock, FileText } from 'lucide-react';
+import { ArrowRight, Users, Clock } from 'lucide-react';
 import { Course } from '@/lib/types';
 
 interface CourseCardProps {
@@ -60,26 +58,10 @@ export function CourseCard({ course }: CourseCardProps) {
            </div>
         </div>
 
-        <div className="mt-6 pt-6 border-t flex flex-col gap-4">
-          <div className="flex items-center justify-between">
-            <span className="text-sm font-semibold text-primary inline-flex items-center gap-1">
-              View Course <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </span>
-          </div>
-
-          {course.courseFields.brochureLink && (
-            <Button
-              variant="outline"
-              size="sm"
-              className="relative z-10 w-full h-10 border-slate-200 hover:bg-brand-purple-50 hover:text-brand-purple-700 hover:border-brand-purple-200 transition-all gap-2"
-              asChild
-            >
-              <TrackedLink href={course.courseFields.brochureLink}>
-                <FileText className="h-4 w-4" />
-                Download Brochure
-              </TrackedLink>
-            </Button>
-          )}
+        <div className="mt-6 pt-6 border-t flex items-center justify-between">
+          <span className="text-sm font-semibold text-primary inline-flex items-center gap-1">
+            View Course <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </span>
         </div>
       </div>
     </div>
