@@ -60,7 +60,7 @@ export default async function Home() {
                   Find the right pathway for your career in the care and support sector.
                 </p>
               </div>
-              <Button variant="ghost" className="text-primary hover:text-primary-foreground hover:bg-primary font-bold group transition-all" asChild>
+              <Button variant="ghost" className="text-primary font-bold group" asChild>
                 <Link href="/courses">
                   View All Courses <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
