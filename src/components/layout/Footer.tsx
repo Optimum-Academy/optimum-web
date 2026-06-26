@@ -5,12 +5,15 @@ import { Mail, MapPin, Phone, Globe } from 'lucide-react';
 const footerNavigation = {
   courses: [
     { name: 'Diploma of Community Services', href: '/courses/chc52025-diploma-community-services' },
+    { name: 'Diploma of Community Services (International)', href: '/courses/chc52025-diploma-community-services-international' },
     { name: 'Certificate III in Individual Support', href: '/courses/chc33021-certificate-iii-individual-support' },
+    { name: 'Certificate III in Individual Support (International)', href: '/courses/chc33021-certificate-iii-individual-support-international' },
     { name: 'Provide First Aid', href: '/courses/hltaid011-provide-first-aid' },
     { name: 'Conduct manual tasks safely', href: '/courses/hltwhs005-manual-tasks-safely' },
     { name: 'Provide CPR', href: '/courses/hltaid009-provide-cardiopulmonary-resuscitation' },
   ],
   company: [
+    { name: 'Student Portal', href: 'https://optimumtrainingacademy.rto.net.au/Account/Index', external: true },
     { name: 'About Us', href: '/about' },
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
@@ -69,9 +72,20 @@ export function Footer() {
             <ul className="mt-4 space-y-3">
               {footerNavigation.company.map((item) => (
                 <li key={item.name}>
-                  <Link href={item.href} className="text-sm text-slate-400 hover:text-white transition-colors">
-                    {item.name}
-                  </Link>
+                  {item.external ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-slate-400 hover:text-white transition-colors"
+                    >
+                      {item.name}
+                    </a>
+                  ) : (
+                    <Link href={item.href} className="text-sm text-slate-400 hover:text-white transition-colors">
+                      {item.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
