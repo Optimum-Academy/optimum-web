@@ -85,3 +85,34 @@ export function appendTrackingToUrl(url: string) {
     return url;
   }
 }
+
+/**
+ * Triggers event tracking for GA4, GTM, and Meta Pixel.
+ * Placeholder implementation until IDs are configured.
+ */
+export function trackEvent(eventName: string, data?: Record<string, unknown>) {
+  if (typeof window === 'undefined') return;
+
+  // Log to console for debugging in development
+  if (process.env.NODE_ENV === 'development') {
+    console.log(`[Tracking] Event: ${eventName}`, data);
+  }
+
+  // GA4 Placeholder
+  if (typeof (window as unknown as Window & { gtag: (command: string, event: string, data?: Record<string, unknown>) => void }).gtag === 'function') {
+    (window as unknown as Window & { gtag: (command: string, event: string, data?: Record<string, unknown>) => void }).gtag('event', eventName, data);
+  }
+
+  // GTM Placeholder
+  if (typeof (window as unknown as Window & { dataLayer: unknown[] }).dataLayer !== 'undefined' && Array.isArray((window as unknown as Window & { dataLayer: unknown[] }).dataLayer)) {
+    (window as unknown as Window & { dataLayer: unknown[] }).dataLayer.push({
+      event: eventName,
+      ...data
+    });
+  }
+
+  // Meta Pixel Placeholder
+  if (typeof (window as unknown as Window & { fbq: (command: string, event: string, data?: Record<string, unknown>) => void }).fbq === 'function') {
+    (window as unknown as Window & { fbq: (command: string, event: string, data?: Record<string, unknown>) => void }).fbq('trackCustom', eventName, data);
+  }
+}
