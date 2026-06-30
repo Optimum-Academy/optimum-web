@@ -14,6 +14,9 @@ export function CourseCard({ course }: CourseCardProps) {
   return (
     <div className="group relative flex flex-col overflow-hidden rounded-2xl bg-white border transition-all hover:shadow-xl">
       <div className="aspect-[16/9] overflow-hidden relative">
+        <Badge className="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur text-primary font-bold border-none">
+          {course.courseFields.qualificationCode}
+        </Badge>
         {course.featuredImage?.node.sourceUrl ? (
           <Image
             src={course.featuredImage.node.sourceUrl}
