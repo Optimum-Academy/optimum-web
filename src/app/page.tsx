@@ -3,7 +3,7 @@ import { Footer } from '@/components/layout/Footer';
 import { Hero } from '@/components/sections/Hero';
 import { CourseCard } from '@/components/cards/CourseCard';
 // import { Testimonials } from '@/components/sections/Testimonials';
-import { CareerPathways } from '@/components/sections/CareerPathways';
+// import { CareerPathways } from '@/components/sections/CareerPathways';
 import { CTASection } from '@/components/sections/CTASection';
 import { FAQSection } from '@/components/sections/FAQSection';
 import { getCourses } from '@/lib/api/cms';
@@ -77,7 +77,7 @@ export default async function Home() {
         </section>
 
         {/* <Testimonials /> */}
-        <CareerPathways />
+        {/* <CareerPathways /> */}
         <FAQSection />
         <CTASection />
       </main>
