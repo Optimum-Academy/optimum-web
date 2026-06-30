@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Mail, MapPin, Phone, Globe } from 'lucide-react';
+import { Mail, MapPin, Phone, Globe, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { getSiteSettings } from '@/lib/api/cms';
 
 const footerNavigation = {
   courses: [
@@ -20,14 +21,26 @@ const footerNavigation = {
     { name: 'Terms of Service', href: '#' },
     { name: 'Privacy Policy', href: '#' },
   ],
-  social: [
+};
+
+export async function Footer() {
+  const settings = await getSiteSettings();
+  const fields = settings?.siteSettingsFields;
+
+  const socialLinks = [
+    { name: 'Facebook', href: fields?.socialLinks?.facebook, icon: Facebook },
+    { name: 'Instagram', href: fields?.socialLinks?.instagram, icon: Instagram },
+    { name: 'LinkedIn', href: fields?.socialLinks?.linkedin, icon: Linkedin },
+    { name: 'Twitter', href: fields?.socialLinks?.twitter, icon: Twitter },
+  ].filter(link => link.href);
+
+  // Default social links if none in CMS
+  const finalSocialLinks = socialLinks.length > 0 ? socialLinks : [
     { name: 'Facebook', href: '#', icon: Globe },
     { name: 'Instagram', href: '#', icon: Globe },
     { name: 'LinkedIn', href: '#', icon: Globe },
-  ],
-};
+  ];
 
-export function Footer() {
   return (
     <footer className="bg-slate-900 text-slate-200">
       <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
@@ -44,11 +57,11 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-sm leading-relaxed text-slate-400">
-              Empowering the next generation of care and support professionals in Australia with industry-focused vocational training.
+              {fields?.footerText || 'Empowering the next generation of care and support professionals in Australia with industry-focused vocational training.'}
             </p>
             <div className="flex space-x-5">
-              {footerNavigation.social.map((item) => (
-                <Link key={item.name} href={item.href} className="text-slate-400 hover:text-white">
+              {finalSocialLinks.map((item) => (
+                <Link key={item.name} href={item.href || '#'} className="text-slate-400 hover:text-white">
                   <span className="sr-only">{item.name}</span>
                   <item.icon className="h-6 w-6" aria-hidden="true" />
                 </Link>
@@ -96,25 +109,31 @@ export function Footer() {
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 mr-3 text-primary shrink-0" />
                 <span className="text-sm text-slate-400 text-balance">
-                  28B Anderson Walk<br />
-                  Smithfield Plains SA 5114<br />
-                  Australia
+                  {fields?.address ? (
+                    <span dangerouslySetInnerHTML={{ __html: fields.address.replace(/\n/g, '<br />') }} />
+                  ) : (
+                    <>
+                      28B Anderson Walk<br />
+                      Smithfield Plains SA 5114<br />
+                      Australia
+                    </>
+                  )}
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-3 text-primary shrink-0" />
-                <span className="text-sm text-slate-400">08 7095 9486</span>
+                <span className="text-sm text-slate-400">{fields?.phoneNumber || '08 7095 9486'}</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-3 text-primary shrink-0" />
-                <span className="text-sm text-slate-400">enquiries@optimumacademy.edu.au</span>
+                <span className="text-sm text-slate-400">{fields?.contactEmail || 'enquiries@optimumacademy.edu.au'}</span>
               </li>
             </ul>
           </div>
         </div>
         <div className="mt-12 border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-slate-500">
-              &copy; {new Date().getFullYear()} Optimum Academy. All rights reserved. RTO Code: 46534
+              &copy; {new Date().getFullYear()} Optimum Academy. All rights reserved. RTO Code: {fields?.businessInformation?.rtoCode || '46534'}
           </p>
           <p className="text-sm text-slate-500">
             We acknowledge the Traditional Owners of the land on which we work.

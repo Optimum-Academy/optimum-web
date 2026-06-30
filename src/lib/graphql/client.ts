@@ -1,13 +1,15 @@
 import { GraphQLClient } from 'graphql-request';
 
-const endpoint = process.env.NEXT_PUBLIC_GRAPHQL_ENDPOINT || '';
+const endpoint = process.env.NEXT_PUBLIC_GRAPHQL_ENDPOINT;
 
-export const client = new GraphQLClient(endpoint, {
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  fetch,
-});
+export const client = endpoint
+  ? new GraphQLClient(endpoint, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      fetch,
+    })
+  : null;
 
 /**
  * Helper for fetching with revalidation tags
@@ -17,6 +19,10 @@ export const fetchGraphQL = async <T>(
   variables?: Record<string, unknown>,
   tags: string[] = []
 ): Promise<T> => {
+  if (!client) {
+    throw new Error('GraphQL client not initialized. Check NEXT_PUBLIC_GRAPHQL_ENDPOINT.');
+  }
+
   return client.request<T>({
     document: query,
     variables,
