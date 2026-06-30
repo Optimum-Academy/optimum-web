@@ -1,4 +1,11 @@
-import { Course, Post } from '../types';
+import { fetchGraphQL } from '../graphql/client';
+import { GET_COURSES, GET_COURSE_BY_SLUG } from '../graphql/queries/courses';
+import { GET_POSTS, GET_POST_BY_SLUG } from '../graphql/queries/posts';
+import { GET_TESTIMONIALS } from '../graphql/queries/testimonials';
+import { GET_SITE_SETTINGS } from '../graphql/queries/siteSettings';
+import { GET_PAGE_BY_SLUG } from '../graphql/queries/pages';
+import { GET_CAREER_PATHWAYS } from '../graphql/queries/careerPathways';
+import { Course, Post, Testimonial, SiteSettings, Page, CareerPathway } from '../types';
 
 /**
  * Mock data for development until CMS is connected
@@ -687,20 +694,162 @@ export const mockPosts: Post[] = [
   },
 ];
 
+export const mockTestimonials: Testimonial[] = [
+  {
+    id: 't1',
+    title: 'Sarah Johnson',
+    testimonialFields: {
+      studentName: 'Sarah Johnson',
+      courseGraduated: 'Individual Support Graduate',
+      quoteContent: 'Optimum Academy gave me the confidence and skills to start my career in aged care. The trainers were incredibly supportive and the practical training was exactly what I needed.',
+    },
+  },
+  {
+    id: 't2',
+    title: 'Michael Chen',
+    testimonialFields: {
+      studentName: 'Michael Chen',
+      courseGraduated: 'Disability Support Worker',
+      quoteContent: 'I transitioned from a completely different industry. The flexible learning options at Optimum Academy allowed me to study while working. I had a job offer before I even finished my course!',
+    },
+  },
+  {
+    id: 't3',
+    title: 'Emma Thompson',
+    testimonialFields: {
+      studentName: 'Emma Thompson',
+      courseGraduated: 'Community Services Student',
+      quoteContent: 'The facilities are top-notch and simulate real-world environments perfectly. I feel truly prepared for my placement and future career. Highly recommend to anyone looking to enter the care sector.',
+    },
+  },
+];
+
+/**
+ * API Methods with Fallback Logic
+ */
+
 export const getCourses = async (): Promise<Course[]> => {
-  // Simulate API delay
-  await new Promise((resolve) => setTimeout(resolve, 100));
+  try {
+    const data = await fetchGraphQL<{ courses: { nodes: Course[] } }>(GET_COURSES);
+    if (data?.courses?.nodes && data.courses.nodes.length > 0) {
+      return data.courses.nodes;
+    }
+  } catch (error) {
+    console.error('Error fetching courses from CMS:', error);
+  }
   return mockCourses;
 };
 
 export const getCourseBySlug = async (slug: string): Promise<Course | null> => {
+  try {
+    const data = await fetchGraphQL<{ course: Course | null }>(GET_COURSE_BY_SLUG, { slug });
+    if (data?.course) {
+      return data.course;
+    }
+  } catch (error) {
+    console.error(`Error fetching course ${slug} from CMS:`, error);
+  }
   return mockCourses.find((c) => c.slug === slug) || null;
 };
 
 export const getPosts = async (): Promise<Post[]> => {
+  try {
+    const data = await fetchGraphQL<{ posts: { nodes: Post[] } }>(GET_POSTS);
+    if (data?.posts?.nodes && data.posts.nodes.length > 0) {
+      return data.posts.nodes;
+    }
+  } catch (error) {
+    console.error('Error fetching posts from CMS:', error);
+  }
   return mockPosts;
 };
 
 export const getPostBySlug = async (slug: string): Promise<Post | null> => {
+  try {
+    const data = await fetchGraphQL<{ post: Post | null }>(GET_POST_BY_SLUG, { slug });
+    if (data?.post) {
+      return data.post;
+    }
+  } catch (error) {
+    console.error(`Error fetching post ${slug} from CMS:`, error);
+  }
   return mockPosts.find((p) => p.slug === slug) || null;
+};
+
+export const getTestimonials = async (): Promise<Testimonial[]> => {
+  try {
+    const data = await fetchGraphQL<{ testimonials: { nodes: Testimonial[] } }>(GET_TESTIMONIALS);
+    if (data?.testimonials?.nodes && data.testimonials.nodes.length > 0) {
+      return data.testimonials.nodes;
+    }
+  } catch (error) {
+    console.error('Error fetching testimonials from CMS:', error);
+  }
+  return mockTestimonials;
+};
+
+export const getSiteSettings = async (): Promise<SiteSettings | null> => {
+  try {
+    const data = await fetchGraphQL<{ siteSettings: SiteSettings }>(GET_SITE_SETTINGS);
+    if (data?.siteSettings) {
+      return data.siteSettings;
+    }
+  } catch (error) {
+    console.error('Error fetching site settings from CMS:', error);
+  }
+  return null;
+};
+
+export const getPageBySlug = async (slug: string): Promise<Page | null> => {
+  try {
+    const data = await fetchGraphQL<{ page: Page | null }>(GET_PAGE_BY_SLUG, { slug });
+    if (data?.page) {
+      return data.page;
+    }
+  } catch (error) {
+    console.error(`Error fetching page ${slug} from CMS:`, error);
+  }
+  return null;
+};
+
+export const mockCareerPathways: CareerPathway[] = [
+  {
+    id: 'cp1',
+    title: 'Aged Care Worker',
+    slug: 'aged-care-worker',
+    careerPathwayFields: {
+      description: 'Provide essential support and care to elderly individuals in residential facilities or their own homes.',
+      salaryRange: '$55k - $75k',
+    }
+  },
+  {
+    id: 'cp2',
+    title: 'Disability Support Practitioner',
+    slug: 'disability-support-practitioner',
+    careerPathwayFields: {
+      description: 'Empower people living with disabilities to achieve their goals and participate fully in their communities.',
+      salaryRange: '$60k - $85k',
+    }
+  },
+  {
+    id: 'cp3',
+    title: 'Community Services Coordinator',
+    slug: 'community-services-coordinator',
+    careerPathwayFields: {
+      description: 'Manage and coordinate person-centred services to individuals, groups, and communities.',
+      salaryRange: '$75k - $110k',
+    }
+  }
+];
+
+export const getCareerPathways = async (): Promise<CareerPathway[]> => {
+  try {
+    const data = await fetchGraphQL<{ careerPathways: { nodes: CareerPathway[] } }>(GET_CAREER_PATHWAYS);
+    if (data?.careerPathways?.nodes && data.careerPathways.nodes.length > 0) {
+      return data.careerPathways.nodes;
+    }
+  } catch (error) {
+    console.error('Error fetching career pathways from CMS:', error);
+  }
+  return mockCareerPathways;
 };

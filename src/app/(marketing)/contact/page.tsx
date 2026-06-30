@@ -4,13 +4,17 @@ import { Footer } from '@/components/layout/Footer';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import { ContactForm } from '@/components/forms/ContactForm';
 import { Metadata } from 'next';
+import { getSiteSettings } from '@/lib/api/cms';
 
 export const metadata: Metadata = {
   title: 'Contact Us',
   description: 'Get in touch with Optimum Academy. We are here to help you with your vocational education and training needs.',
 };
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const siteSettings = await getSiteSettings();
+  const settings = siteSettings?.siteSettingsFields;
+
   return (
     <div className="flex min-h-screen flex-col">
       <Navbar />
@@ -35,7 +39,7 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <h3 className="font-bold text-slate-900">Call Us</h3>
-                        <p className="text-slate-600">08 7095 9486</p>
+                        <p className="text-slate-600">{settings?.phoneNumber || '08 7095 9486'}</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
@@ -44,7 +48,7 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <h3 className="font-bold text-slate-900">Email Us</h3>
-                        <p className="text-slate-600">enquiries@optimumacademy.edu.au</p>
+                        <p className="text-slate-600">{settings?.contactEmail || 'enquiries@optimumacademy.edu.au'}</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
@@ -53,7 +57,7 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <h3 className="font-bold text-slate-900">Visit Us</h3>
-                        <p className="text-slate-600">28B Anderson Walk, Smithfield Plains SA 5114</p>
+                        <p className="text-slate-600">{settings?.address || '28B Anderson Walk, Smithfield Plains SA 5114'}</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
