@@ -8,6 +8,7 @@ import {
   SheetTrigger,
   SheetTitle,
 } from '@/components/ui/sheet';
+import { getSiteSettings } from '@/lib/api/cms';
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -17,7 +18,10 @@ const navigation = [
   { name: 'Contact', href: '/contact' },
 ];
 
-export function Navbar() {
+export async function Navbar() {
+  const settings = await getSiteSettings();
+  const ctaLabels = settings?.siteSettingsFields?.ctaLabels;
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -49,11 +53,11 @@ export function Navbar() {
           <div className="flex items-center gap-3">
             <Button variant="outline" asChild>
               <a href="https://optimumtrainingacademy.rto.net.au/Account/Index" target="_blank" rel="noopener noreferrer">
-                Student Portal
+                {ctaLabels?.secondaryCta || 'Student Portal'}
               </a>
             </Button>
             <Button asChild>
-              <Link href="/contact">Enquire Now</Link>
+              <Link href="/contact">{ctaLabels?.primaryCta || 'Enquire Now'}</Link>
             </Button>
           </div>
         </nav>
@@ -82,11 +86,11 @@ export function Navbar() {
                 <div className="flex flex-col gap-3 pt-2">
                   <Button variant="outline" asChild className="w-full">
                     <a href="https://optimumtrainingacademy.rto.net.au/Account/Index" target="_blank" rel="noopener noreferrer">
-                      Student Portal
+                      {ctaLabels?.secondaryCta || 'Student Portal'}
                     </a>
                   </Button>
                   <Button asChild className="w-full">
-                    <Link href="/contact">Enquire Now</Link>
+                    <Link href="/contact">{ctaLabels?.primaryCta || 'Enquire Now'}</Link>
                   </Button>
                 </div>
               </div>

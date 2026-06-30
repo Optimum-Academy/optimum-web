@@ -93,3 +93,54 @@ export interface PageMetadata {
   description: string;
   ogImage?: string;
 }
+
+export interface Page {
+  id: string;
+  title: string;
+  slug: string;
+  content?: string;
+  featuredImage?: {
+    node: {
+      sourceUrl: string;
+      altText: string;
+    };
+  };
+}
+
+export interface SiteSettings {
+  siteSettingsFields: {
+    contactEmail?: string;
+    phoneNumber?: string;
+    address?: string;
+    socialLinks?: {
+      facebook?: string;
+      instagram?: string;
+      linkedin?: string;
+      twitter?: string;
+    };
+    ctaLabels?: {
+      primaryCta?: string;
+      secondaryCta?: string;
+    };
+    footerText?: string;
+    businessInformation?: {
+      rtoCode?: string;
+      abn?: string;
+    };
+  };
+}
+
+export interface CareerPathway {
+  id: string;
+  title: string;
+  slug: string;
+  careerPathwayFields: {
+    description?: string;
+    outcomes?: string[];
+    salaryRange?: string;
+    jobGrowth?: string;
+    icon?: {
+      sourceUrl: string;
+    };
+  };
+}
