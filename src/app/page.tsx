@@ -75,7 +75,7 @@ export default async function Home() {
           </div>
         </section>
 
-        <Testimonials />
+        {/* <Testimonials /> */}
         <FAQSection />
         <CTASection />
       </main>
