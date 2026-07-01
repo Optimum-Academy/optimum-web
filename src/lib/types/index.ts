@@ -49,6 +49,7 @@ export interface Course {
     audience: 'Domestic' | 'International';
     duration: string;
     deliveryMode: string;
+    paymentPlan?: string;
     careerOutcomes: string[];
     entryRequirements: string[];
     externalEnrolmentLink: string;

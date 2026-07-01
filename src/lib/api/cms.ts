@@ -27,6 +27,7 @@ export const mockCourses: Course[] = [
       level: 'Diploma',
       totalHours: 'Approx. 1230 hours',
       price: '$7,000.00',
+      paymentPlan: '$500.00/mo',
       externalEnrolmentLink: 'https://optimumtrainingacademy.rto.net.au/Form/Index?formType=1&directLink=true&id=optimumtrainingacademy&del=52986&courseCode=CHC52025',
       brochureLink: DOMESTIC_BROCHURE,
       careerOutcomes: [
@@ -99,7 +100,7 @@ export const mockCourses: Course[] = [
       faqs: [
         {
           question: 'Do I need to find my own vocational placement?',
-          answer: 'You have options: you can source your own provider (subject to suitability check), ask Optimum Training Academy for assistance, or use our established network of partners including Spry Support Services and Dynamic Care.'
+          answer: 'Optimum Academy provides direct support for vocational placement. You can also source your own provider (subject to suitability check), and our team will assist you in ensuring it meets all training requirements.'
         },
         {
           question: 'What happens if I don\'t meet the LLN requirements?',
@@ -135,6 +136,7 @@ export const mockCourses: Course[] = [
       level: 'Diploma',
       totalHours: 'Approx. 2110 hours',
       price: '$15,000.00',
+      paymentPlan: '$681.82/mo',
       externalEnrolmentLink: '#',
       brochureLink: INTERNATIONAL_BROCHURE,
       careerOutcomes: [
@@ -212,7 +214,7 @@ export const mockCourses: Course[] = [
         },
         {
           question: 'Is vocational placement mandatory?',
-          answer: 'Yes, 400 hours of vocational placement is mandatory. Optimum Training Academy can assist you in finding placement through our partner network.'
+          answer: 'Yes, 400 hours of vocational placement is mandatory. Optimum Academy provides direct support to help you secure a suitable placement.'
         }
       ]
     },
@@ -230,18 +232,20 @@ export const mockCourses: Course[] = [
     courseFields: {
       qualificationCode: 'CHC33021',
       audience: 'Domestic',
+      // TODO: Verify and update course duration with client
       duration: 'Up to 52 weeks',
       deliveryMode: 'Online Training + Vocational Placement',
+      paymentPlan: '$136.36/mo',
       level: 'Certificate III',
       totalHours: 'Approx. 1223 hours',
       price: '$3,000.00',
       externalEnrolmentLink: 'https://optimumtrainingacademy.rto.net.au/Form/Index?formType=1&directLink=true&id=optimumtrainingacademy&del=7260&courseCode=CHC33021',
       brochureLink: DOMESTIC_BROCHURE,
       careerOutcomes: [
+        'Disability Support Worker',
+        'Aged Care Carer',
         'Home Care Assistant',
-        'Family Support Worker',
-        'Nurse’s Assistant',
-        'Respite Care Worker',
+        'Personal Care Assistant',
       ],
       entryRequirements: [
         'Must be 18 years of age or older',
@@ -256,11 +260,11 @@ export const mockCourses: Course[] = [
         'Direct pathway to roles in community, home, or residential care settings.',
       ],
       whatYouWillLearn: [
-        'Provide individualised support',
-        'Communicate and work in health or community services',
-        'Apply basic principles and practices of infection prevention and control',
-        'Contribute to ongoing skills development using a strengths-based approach',
-        'Recognise health body systems',
+        'Provide Individualised Support using a Person-centred Approach',
+        'Promote Independence and Empowerment for Your Clients',
+        'Work Legally, Ethically, and with Diverse People',
+        'Work and Communicate Effectively in the Care Sector',
+        'Prioritise Health, Safety, and Infection Control',
       ],
       vocationalPlacement: 'Learners are required to undertake a minimum of 120 hours of vocational placement within a registered and approved care centre. This must occur after the student has satisfactorily completed all the other units/subjects in this qualification. During this time, the learners are required to complete a skills workbook.',
       structure: 'Assessment includes observation (on-the-job or role play/simulation), questioning (self-assessment, verbal, written, activity modules), and structured activities (projects, case studies, presentations).',
@@ -306,7 +310,7 @@ export const mockCourses: Course[] = [
         },
         {
           question: 'What are the vocational placement options?',
-          answer: 'You can source your own provider, ask Optimum Academy for assistance, or use our established network including Spry Support Services and Dynamic Care.'
+          answer: 'Optimum Academy provides direct support for vocational placement. You can also source your own provider, and our team will assist you in ensuring it meets all training requirements.'
         }
       ]
     },
@@ -325,6 +329,7 @@ export const mockCourses: Course[] = [
       qualificationCode: 'HLTAID009',
       audience: 'Domestic',
       duration: 'Half-day training and assessment session',
+      paymentPlan: 'Full payment required',
       deliveryMode: 'Face-to-face',
       level: 'Unit of Competency',
       totalHours: '7.25 – 9.25 hours',
@@ -403,16 +408,17 @@ export const mockCourses: Course[] = [
       audience: 'International',
       duration: 'Up to 52 Weeks',
       deliveryMode: 'Face-to-face + Online distance + Vocational Placement',
+      paymentPlan: '$363.64/mo',
       level: 'Certificate III',
       totalHours: 'Approx. 1204 hours',
       price: '$8,000.00',
       externalEnrolmentLink: '#',
       brochureLink: INTERNATIONAL_BROCHURE,
       careerOutcomes: [
+        'Disability Support Worker',
+        'Aged Care Carer',
         'Home Care Assistant',
-        'Family Support Worker',
-        'Nurse’s Assistant',
-        'Respite Care Worker',
+        'Personal Care Assistant',
       ],
       entryRequirements: [
         'Must be 18 years of age or older',
@@ -429,11 +435,11 @@ export const mockCourses: Course[] = [
         'Blended learning model combining face-to-face and online distance education.',
       ],
       whatYouWillLearn: [
-        'Provide individualised support',
-        'Communicate and work in health or community services',
-        'Apply basic principles and practices of infection prevention and control',
-        'Contribute to ongoing skills development using a strengths-based approach',
-        'Recognise health body systems',
+        'Provide Individualised Support using a Person-centred Approach',
+        'Promote Independence and Empowerment for Your Clients',
+        'Work Legally, Ethically, and with Diverse People',
+        'Work and Communicate Effectively in the Care Sector',
+        'Prioritise Health, Safety, and Infection Control',
       ],
       vocationalPlacement: 'Learners are required to undertake a minimum of 120 hours of vocational placement within a registered and approved care centre. This must occur after the student has satisfactorily completed all the other units/subjects in this qualification. During this time, the learners are required to complete a skills workbook.',
       structure: 'Assessment includes observation (on-the-job or role play/simulation), questioning (self-assessment, verbal, written, activity modules), and structured activities (projects, case studies, presentations).',
@@ -479,7 +485,7 @@ export const mockCourses: Course[] = [
         },
         {
           question: 'What are the vocational placement options?',
-          answer: 'You can source your own provider, ask Optimum Academy for assistance, or use our established network including Spry Support Services and Dynamic Care.'
+          answer: 'Optimum Academy provides direct support for vocational placement. You can also source your own provider, and our team will assist you in ensuring it meets all training requirements.'
         }
       ]
     },
@@ -498,6 +504,7 @@ export const mockCourses: Course[] = [
       qualificationCode: 'HLTAID011',
       audience: 'Domestic',
       duration: '1 day training and assessment session',
+      paymentPlan: 'Full payment required',
       deliveryMode: 'Blended (Distance + Face-to-face)',
       level: 'Unit of Competency',
       totalHours: 'Approx. 10 hours',
@@ -573,6 +580,7 @@ export const mockCourses: Course[] = [
       qualificationCode: 'HLTWHS005',
       audience: 'Domestic',
       duration: 'Half-day training and assessment session',
+      paymentPlan: 'Full payment required',
       deliveryMode: 'Face-to-face',
       level: 'Unit of Competency',
       totalHours: 'Approx. 8 hours',
