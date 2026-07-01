@@ -122,3 +122,4 @@ Error fetching site settings from CMS: Error: GraphQL client not initialized. Ch
   25 |
   26 |   return client.request<T>({
  GET / 200 in 669ms
+ ✓ Compiled in 775ms

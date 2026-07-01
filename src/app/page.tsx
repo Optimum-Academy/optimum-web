@@ -2,7 +2,6 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Hero } from '@/components/sections/Hero';
 import { CourseCard } from '@/components/cards/CourseCard';
-import { Testimonials } from '@/components/sections/Testimonials';
 import { CTASection } from '@/components/sections/CTASection';
 import { FAQSection } from '@/components/sections/FAQSection';
 import { getCourses } from '@/lib/api/cms';
