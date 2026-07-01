@@ -334,9 +334,9 @@ export default async function CoursePage({ params }: Props) {
                                   Placement Options
                                 </h4>
                                 <ul className="text-sm text-slate-600 space-y-2">
-                                  <li>• Source your own local provider</li>
-                                  <li>• Assistance from Optimum Academy</li>
-                                  <li>• Access our partner network (Spry, Dynamic Care)</li>
+                                  <li>• Direct support from Optimum Academy</li>
+                                  <li>• Assistance in securing a local placement</li>
+                                  <li>• Guidance on meeting industry requirements</li>
                                 </ul>
                              </div>
                              <div className="space-y-4">
@@ -345,7 +345,7 @@ export default async function CoursePage({ params }: Props) {
                                   Support Provided
                                 </h4>
                                 <p className="text-sm text-slate-600">
-                                  We provide a comprehensive Vocational Placement Pack and continuous support to ensure you meet the required 400 hours of workplace experience.
+                                  We provide a comprehensive Vocational Placement Pack and continuous support to ensure you meet the required workplace experience hours.
                                 </p>
                              </div>
                           </div>
@@ -407,7 +407,7 @@ export default async function CoursePage({ params }: Props) {
                             <Separator className="bg-white/10" />
                             <div className="flex justify-between items-center text-sm">
                                <span className="text-slate-400">Payment Plan</span>
-                               <span className="font-bold">From $500/mo</span>
+                               <span className="font-bold">{courseFields.paymentPlan || 'Contact us'}</span>
                             </div>
                          </div>
 
