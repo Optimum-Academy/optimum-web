@@ -23,7 +23,7 @@ export const mockCourses: Course[] = [
       qualificationCode: 'CHC52025',
       audience: 'Domestic',
       duration: 'Up to 52 Weeks',
-      deliveryMode: 'Online + Vocational Placement',
+      deliveryMode: 'Online, Face-to-Face, Blended',
       level: 'Diploma',
       totalHours: 'Approx. 1230 hours',
       price: '$7,000.00',
@@ -39,7 +39,6 @@ export const mockCourses: Course[] = [
         'Disability Officer',
       ],
       entryRequirements: [
-        'Must be 18 years of age or older',
         'Living or working in Australia',
         'Successful completion of Australian Year 10 or equivalent',
         'Sound Language, Literacy, and Numeracy (LLN) skills',
@@ -52,6 +51,7 @@ export const mockCourses: Course[] = [
         'Direct pathways to management and coordination roles in the fast-growing community services sector.',
         'Expert support from industry-experienced trainers throughout your 52-week journey.',
       ],
+      description: 'The CHC52025 Diploma of Community Services reflects the role of community services workers involved in the delivery, management, and coordination of person-centred services to individuals, groups, and communities.',
       whatYouWillLearn: [
         'Develop and implement comprehensive service programs for diverse communities.',
         'Facilitate workplace debriefing and professional support processes.',
@@ -132,7 +132,7 @@ export const mockCourses: Course[] = [
       cricosCode: '04432K',
       audience: 'International',
       duration: 'Up to 104 Weeks (including holidays)',
-      deliveryMode: 'Blended + Vocational Placement',
+      deliveryMode: 'Face-to-Face, Vocational Placement',
       level: 'Diploma',
       totalHours: 'Approx. 2110 hours',
       price: '$15,000.00',
@@ -141,7 +141,8 @@ export const mockCourses: Course[] = [
       brochureLink: INTERNATIONAL_BROCHURE,
       careerOutcomes: [
         'Community Care Manager',
-        'Support Facilitator',
+        'Disability Services Officer',
+        'Housing & Homelessness Support Worker',
         'Community Development Worker',
         'Case Coordinator',
       ],
@@ -158,6 +159,7 @@ export const mockCourses: Course[] = [
         'Includes mandatory vocational placement to build practical skills in Australian settings.',
         'Tailored support for international learners adapting to the Australian care sector.',
       ],
+      description: 'The CHC52025 Diploma of Community Services reflects the role of community services workers involved in the delivery, management, and coordination of person-centred services to individuals, groups, and communities.',
       whatYouWillLearn: [
         'Develop and implement service programs',
         'Facilitate workplace debriefing and support processes',
@@ -232,23 +234,16 @@ export const mockCourses: Course[] = [
     courseFields: {
       qualificationCode: 'CHC33021',
       audience: 'Domestic',
-      // TODO: Verify and update course duration with client
-      duration: 'Up to 52 weeks',
-      deliveryMode: 'Online Training + Vocational Placement',
+      duration: '18 weeks',
+      deliveryMode: 'Online, Face-to-Face, Blended',
       paymentPlan: '$136.36/mo',
       level: 'Certificate III',
       totalHours: 'Approx. 1223 hours',
       price: '$3,000.00',
       externalEnrolmentLink: 'https://optimumtrainingacademy.rto.net.au/Form/Index?formType=1&directLink=true&id=optimumtrainingacademy&del=7260&courseCode=CHC33021',
       brochureLink: DOMESTIC_BROCHURE,
-      careerOutcomes: [
-        'Disability Support Worker',
-        'Aged Care Carer',
-        'Home Care Assistant',
-        'Personal Care Assistant',
-      ],
+      careerOutcomes: [],
       entryRequirements: [
-        'Must be 18 years of age or older',
         'Have sound language, literacy, and numeracy skills (at least Year 10 English, or equivalent)',
         'Have basic computer skills',
         'Must have completed or be eligible to complete HLTAID011 – Provide First Aid',
@@ -259,6 +254,7 @@ export const mockCourses: Course[] = [
         'Flexible delivery model via Online Training combined with hands-on Vocational Placement.',
         'Direct pathway to roles in community, home, or residential care settings.',
       ],
+      description: 'The CHC33021 Certificate III in Individual Support reflects the role of workers in the community and/or residential setting who follow an individualised plan to provide person-centred support to people who may require support due to ageing, disability or some other reason.',
       whatYouWillLearn: [
         'Provide Individualised Support using a Person-centred Approach',
         'Promote Independence and Empowerment for Your Clients',
@@ -266,7 +262,7 @@ export const mockCourses: Course[] = [
         'Work and Communicate Effectively in the Care Sector',
         'Prioritise Health, Safety, and Infection Control',
       ],
-      vocationalPlacement: 'Learners are required to undertake a minimum of 120 hours of vocational placement within a registered and approved care centre. This must occur after the student has satisfactorily completed all the other units/subjects in this qualification. During this time, the learners are required to complete a skills workbook.',
+      vocationalPlacement: '',
       structure: 'Assessment includes observation (on-the-job or role play/simulation), questioning (self-assessment, verbal, written, activity modules), and structured activities (projects, case studies, presentations).',
       resources: {
         provided: [
@@ -330,21 +326,17 @@ export const mockCourses: Course[] = [
       audience: 'Domestic',
       duration: 'Half-day training and assessment session',
       paymentPlan: 'Full payment required',
-      deliveryMode: 'Face-to-face',
+      deliveryMode: 'Online, Face-to-Face, Blended',
       level: 'Unit of Competency',
       totalHours: '7.25 – 9.25 hours',
       price: '$100.00',
       externalEnrolmentLink: '/contact',
       brochureLink: DOMESTIC_BROCHURE,
-      careerOutcomes: [
-        'First Aid Officer',
-        'WHS Representative',
-      ],
+      careerOutcomes: [],
       entryRequirements: [
         'Must have physical capacity to perform 2 minutes of uninterrupted single rescuer CPR on an adult manikin on the floor',
         'Must have physical capacity to perform 2 minutes of uninterrupted single rescuer CPR on an infant manikin on a firm surface',
         'Ability to perform manual handling tasks safely',
-        'Must be 18 years of age or older',
       ],
       whyStudy: [
         'Nationally recognised unit (Release 1) in line with Australian Resuscitation Council (ARC) guidelines.',
@@ -352,13 +344,14 @@ export const mockCourses: Course[] = [
         'Quality content and robust training programs by Optimum Training Academy.',
         'Half-day intensive session for rapid skill acquisition.',
       ],
+      description: 'The HLTAID009 Provide cardiopulmonary resuscitation unit describes the skills and knowledge required to perform cardiopulmonary resuscitation (CPR) in line with the Australian Resuscitation Council (ARC) guidelines.',
        whatYouWillLearn: [
         'Respond to an emergency situation',
         'Perform CPR procedure',
         'Communicate details of the incident',
         'Review the incident',
       ],
-      vocationalPlacement: 'Not required for this unit.',
+      vocationalPlacement: '',
       structure: 'Assessment includes scenario-based assessments, practical skills demonstration, and written or verbal questioning.',
       resources: {
         provided: [
@@ -407,7 +400,7 @@ export const mockCourses: Course[] = [
       cricosCode: '04432K',
       audience: 'International',
       duration: 'Up to 52 Weeks',
-      deliveryMode: 'Face-to-face + Online distance + Vocational Placement',
+      deliveryMode: 'Face-to-Face, Vocational Placement',
       paymentPlan: '$363.64/mo',
       level: 'Certificate III',
       totalHours: 'Approx. 1204 hours',
@@ -426,7 +419,6 @@ export const mockCourses: Course[] = [
         'Sound language, literacy, and numeracy skills (at least Year 10 English, or equivalent)',
         'Basic computer skills',
         'English Proficiency: IELTS 5.5 (no band < 5.0) or equivalent (PTE 43, TOEFL 46)',
-        'Must have completed or be eligible to complete HLTAID011 – Provide First Aid',
       ],
       whyStudy: [
         'Nationally recognised qualification (Release 1) for international students.',
@@ -434,6 +426,7 @@ export const mockCourses: Course[] = [
         'Includes 120 hours of mandatory vocational placement for real-world experience.',
         'Blended learning model combining face-to-face and online distance education.',
       ],
+      description: 'The CHC33021 Certificate III in Individual Support reflects the role of workers in the community and/or residential setting who follow an individualised plan to provide person-centred support to people who may require support due to ageing, disability or some other reason.',
       whatYouWillLearn: [
         'Provide Individualised Support using a Person-centred Approach',
         'Promote Independence and Empowerment for Your Clients',
@@ -505,7 +498,7 @@ export const mockCourses: Course[] = [
       audience: 'Domestic',
       duration: '1 day training and assessment session',
       paymentPlan: 'Full payment required',
-      deliveryMode: 'Blended (Distance + Face-to-face)',
+      deliveryMode: 'Blended',
       level: 'Unit of Competency',
       totalHours: 'Approx. 10 hours',
       price: '$200.00',
@@ -516,7 +509,6 @@ export const mockCourses: Course[] = [
         'WHS Representative',
       ],
       entryRequirements: [
-        'Must be 18 years of age or older',
         'Sound Language, Literacy, and Numeracy (LLN) skills',
         'Physical capacity to perform 2 minutes of uninterrupted CPR on the floor',
         'Basic computer skills (for pre-course learning activities)',
@@ -527,6 +519,7 @@ export const mockCourses: Course[] = [
         'Essential for First Aid Officers and Workplace Health & Safety (WHS) Representatives.',
         'Combines self-paced distance learning with hands-on intensive training.',
       ],
+      description: 'The HLTAID011 Provide First Aid unit describes the skills and knowledge required to provide a first aid response to a casualty in line with first aid guidelines determined by the Australian Resuscitation Council (ARC) and other Australian national peak clinical bodies.',
       whatYouWillLearn: [
         'Respond to an emergency situation',
         'Apply appropriate first aid procedures',
@@ -587,30 +580,25 @@ export const mockCourses: Course[] = [
       price: '$250.00',
       externalEnrolmentLink: '/contact',
       brochureLink: DOMESTIC_BROCHURE,
-      careerOutcomes: [
-        'Individual support workers',
-        'Health care workers',
-        'Retail workers',
-        'Tradesmen',
-      ],
+      careerOutcomes: [],
       entryRequirements: [
         'Must be able to perform manual handling tasks safely',
         'Physical capacity to use appropriate equipment, posture and handling techniques',
-        'Must be 18 years of age or older (recommended)',
       ],
       whyStudy: [
         'Nationally accredited unit (Release 1) describing skills to recognise potentially hazardous manual tasks.',
         'Quality content and robust training programs by Optimum Training Academy (RTO#46534).',
-        'Essential for workers in individual support, health care, retail, and trades.',
+        'Essential for workers in a broad range of industries and professions.',
         'Develops requisite skills to prepare for and complete manual tasks in a safe manner.',
       ],
+      description: 'The HLTWHS005 Conduct manual tasks safely unit describes the skills and knowledge required to recognise potentially hazardous manual tasks, and then to prepare for and complete those tasks in a safe manner.',
       whatYouWillLearn: [
         'Identify manual tasks involving risk',
         'Prepare for manual tasks',
         'Complete manual tasks',
         'Contribute to safe work practices',
       ],
-      vocationalPlacement: 'Not required for this unit.',
+      vocationalPlacement: '',
       structure: 'Assessment includes scenario-based assessments, practical skills demonstration assessments, and written or verbal questioning.',
       resources: {
         provided: [

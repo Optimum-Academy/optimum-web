@@ -1,16 +1,21 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { TrackedLink } from '@/components/ui/tracked-link';
 import { ArrowRight, Users, Clock, FileText } from 'lucide-react';
 import { Course } from '@/lib/types';
+import { useState } from 'react';
+import { BrochureDownloadModal } from '@/components/modals/BrochureDownloadModal';
 
 interface CourseCardProps {
   course: Course;
 }
 
 export function CourseCard({ course }: CourseCardProps) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="group relative flex flex-col overflow-hidden rounded-2xl bg-white border transition-all hover:shadow-xl">
       <div className="aspect-[16/9] overflow-hidden relative">
@@ -71,17 +76,23 @@ export function CourseCard({ course }: CourseCardProps) {
           </div>
 
           {course.courseFields.brochureLink && (
-            <Button
-              variant="outline"
-              size="sm"
-              className="relative z-10 w-full h-10 border-slate-200 hover:bg-brand-purple-50 hover:text-brand-purple-700 hover:border-brand-purple-200 transition-all gap-2"
-              asChild
-            >
-              <TrackedLink href={course.courseFields.brochureLink}>
+            <>
+              <Button
+                variant="outline"
+                size="sm"
+                className="relative z-10 w-full h-10 border-slate-200 hover:bg-brand-purple-50 hover:text-brand-purple-700 hover:border-brand-purple-200 transition-all gap-2"
+                onClick={() => setIsModalOpen(true)}
+              >
                 <FileText className="h-4 w-4" />
                 Download Brochure
-              </TrackedLink>
-            </Button>
+              </Button>
+              <BrochureDownloadModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                courseTitle={course.title}
+                brochureLink={course.courseFields.brochureLink}
+              />
+            </>
           )}
         </div>
       </div>

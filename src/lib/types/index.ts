@@ -57,6 +57,7 @@ export interface Course {
     price?: string;
     level?: string;
     totalHours?: string;
+    description?: string;
     vocationalPlacement?: string;
     whyStudy?: string[];
     whatYouWillLearn?: string[];
