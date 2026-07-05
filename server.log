@@ -1,0 +1,152 @@
+
+> optimum-web@0.1.0 dev
+> next dev --turbopack
+
+   ▲ Next.js 15.1.12 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.0.2:3000
+
+ ✓ Starting...
+ ✓ Ready in 1860ms
+ ○ Compiling / ...
+ ✓ Compiled / in 9.3s
+Error fetching site settings from CMS: Error: GraphQL client not initialized. Check NEXT_PUBLIC_GRAPHQL_ENDPOINT.
+    at fetchGraphQL (src/lib/graphql/client.ts:23:10)
+    at getSiteSettings (src/lib/api/cms.ts:790:68)
+    at Navbar (src/components/layout/Navbar.tsx:21:39)
+  21 | ): Promise<T> => {
+  22 |   if (!client) {
+> 23 |     throw new Error('GraphQL client not initialized. Check NEXT_PUBLIC_GRAPHQL_ENDPOINT.');
+     |          ^
+  24 |   }
+  25 |
+  26 |   return client.request<T>({
+Error fetching site settings from CMS: Error: GraphQL client not initialized. Check NEXT_PUBLIC_GRAPHQL_ENDPOINT.
+    at fetchGraphQL (src/lib/graphql/client.ts:23:10)
+    at getSiteSettings (src/lib/api/cms.ts:790:68)
+    at Footer (src/components/layout/Footer.tsx:26:39)
+  21 | ): Promise<T> => {
+  22 |   if (!client) {
+> 23 |     throw new Error('GraphQL client not initialized. Check NEXT_PUBLIC_GRAPHQL_ENDPOINT.');
+     |          ^
+  24 |   }
+  25 |
+  26 |   return client.request<T>({
+Error fetching courses from CMS: Error: GraphQL client not initialized. Check NEXT_PUBLIC_GRAPHQL_ENDPOINT.
+    at fetchGraphQL (src/lib/graphql/client.ts:23:10)
+    at getCourses (src/lib/api/cms.ts:730:70)
+    at Home (src/app/page.tsx:14:33)
+  21 | ): Promise<T> => {
+  22 |   if (!client) {
+> 23 |     throw new Error('GraphQL client not initialized. Check NEXT_PUBLIC_GRAPHQL_ENDPOINT.');
+     |          ^
+  24 |   }
+  25 |
+  26 |   return client.request<T>({
+Error fetching site settings from CMS: Error: GraphQL client not initialized. Check NEXT_PUBLIC_GRAPHQL_ENDPOINT.
+    at fetchGraphQL (src/lib/graphql/client.ts:23:10)
+    at getSiteSettings (src/lib/api/cms.ts:790:68)
+    at Navbar (src/components/layout/Navbar.tsx:21:39)
+  21 | ): Promise<T> => {
+  22 |   if (!client) {
+> 23 |     throw new Error('GraphQL client not initialized. Check NEXT_PUBLIC_GRAPHQL_ENDPOINT.');
+     |          ^
+  24 |   }
+  25 |
+  26 |   return client.request<T>({
+Error fetching site settings from CMS: Error: GraphQL client not initialized. Check NEXT_PUBLIC_GRAPHQL_ENDPOINT.
+    at fetchGraphQL (src/lib/graphql/client.ts:23:10)
+    at getSiteSettings (src/lib/api/cms.ts:790:68)
+    at Footer (src/components/layout/Footer.tsx:26:39)
+  21 | ): Promise<T> => {
+  22 |   if (!client) {
+> 23 |     throw new Error('GraphQL client not initialized. Check NEXT_PUBLIC_GRAPHQL_ENDPOINT.');
+     |          ^
+  24 |   }
+  25 |
+  26 |   return client.request<T>({
+ GET / 200 in 10484ms
+ ○ Compiling /courses/[slug] ...
+ ✓ Compiled /courses/[slug] in 604ms
+Error fetching courses from CMS: Error: GraphQL client not initialized. Check NEXT_PUBLIC_GRAPHQL_ENDPOINT.
+    at fetchGraphQL (src/lib/graphql/client.ts:23:10)
+    at getCourses (src/lib/api/cms.ts:730:70)
+    at Object.generateStaticParams (src/app/(marketing)/courses/[slug]/page.tsx:13:33)
+  21 | ): Promise<T> => {
+  22 |   if (!client) {
+> 23 |     throw new Error('GraphQL client not initialized. Check NEXT_PUBLIC_GRAPHQL_ENDPOINT.');
+     |          ^
+  24 |   }
+  25 |
+  26 |   return client.request<T>({
+Error fetching site settings from CMS: Error: GraphQL client not initialized. Check NEXT_PUBLIC_GRAPHQL_ENDPOINT.
+    at fetchGraphQL (src/lib/graphql/client.ts:23:10)
+    at getSiteSettings (src/lib/api/cms.ts:790:68)
+    at Navbar (src/components/layout/Navbar.tsx:21:39)
+  21 | ): Promise<T> => {
+  22 |   if (!client) {
+> 23 |     throw new Error('GraphQL client not initialized. Check NEXT_PUBLIC_GRAPHQL_ENDPOINT.');
+     |          ^
+  24 |   }
+  25 |
+  26 |   return client.request<T>({
+Error fetching site settings from CMS: Error: GraphQL client not initialized. Check NEXT_PUBLIC_GRAPHQL_ENDPOINT.
+    at fetchGraphQL (src/lib/graphql/client.ts:23:10)
+    at getSiteSettings (src/lib/api/cms.ts:790:68)
+    at Footer (src/components/layout/Footer.tsx:26:39)
+  21 | ): Promise<T> => {
+  22 |   if (!client) {
+> 23 |     throw new Error('GraphQL client not initialized. Check NEXT_PUBLIC_GRAPHQL_ENDPOINT.');
+     |          ^
+  24 |   }
+  25 |
+  26 |   return client.request<T>({
+Error fetching course hltaid011-provide-first-aid from CMS: Error: GraphQL client not initialized. Check NEXT_PUBLIC_GRAPHQL_ENDPOINT.
+    at fetchGraphQL (src/lib/graphql/client.ts:23:10)
+    at getCourseBySlug (src/lib/api/cms.ts:742:63)
+    at CoursePage (src/app/(marketing)/courses/[slug]/page.tsx:34:39)
+  21 | ): Promise<T> => {
+  22 |   if (!client) {
+> 23 |     throw new Error('GraphQL client not initialized. Check NEXT_PUBLIC_GRAPHQL_ENDPOINT.');
+     |          ^
+  24 |   }
+  25 |
+  26 |   return client.request<T>({
+Error fetching site settings from CMS: Error: GraphQL client not initialized. Check NEXT_PUBLIC_GRAPHQL_ENDPOINT.
+    at fetchGraphQL (src/lib/graphql/client.ts:23:10)
+    at getSiteSettings (src/lib/api/cms.ts:790:68)
+    at Navbar (src/components/layout/Navbar.tsx:21:39)
+  21 | ): Promise<T> => {
+  22 |   if (!client) {
+> 23 |     throw new Error('GraphQL client not initialized. Check NEXT_PUBLIC_GRAPHQL_ENDPOINT.');
+     |          ^
+  24 |   }
+  25 |
+  26 |   return client.request<T>({
+Error fetching site settings from CMS: Error: GraphQL client not initialized. Check NEXT_PUBLIC_GRAPHQL_ENDPOINT.
+    at fetchGraphQL (src/lib/graphql/client.ts:23:10)
+    at getSiteSettings (src/lib/api/cms.ts:790:68)
+    at Footer (src/components/layout/Footer.tsx:26:39)
+  21 | ): Promise<T> => {
+  22 |   if (!client) {
+> 23 |     throw new Error('GraphQL client not initialized. Check NEXT_PUBLIC_GRAPHQL_ENDPOINT.');
+     |          ^
+  24 |   }
+  25 |
+  26 |   return client.request<T>({
+Error fetching course hltaid011-provide-first-aid from CMS: Error: GraphQL client not initialized. Check NEXT_PUBLIC_GRAPHQL_ENDPOINT.
+    at fetchGraphQL (src/lib/graphql/client.ts:23:10)
+    at getCourseBySlug (src/lib/api/cms.ts:742:63)
+    at Module.generateMetadata (src/app/(marketing)/courses/[slug]/page.tsx:21:39)
+  21 | ): Promise<T> => {
+  22 |   if (!client) {
+> 23 |     throw new Error('GraphQL client not initialized. Check NEXT_PUBLIC_GRAPHQL_ENDPOINT.');
+     |          ^
+  24 |   }
+  25 |
+  26 |   return client.request<T>({
+ GET /courses/hltaid011-provide-first-aid 200 in 2537ms
+ ✓ Compiled in 151ms
+ ✓ Compiled in 176ms
+ ✓ Compiled in 180ms
+ ✓ Compiled in 170ms

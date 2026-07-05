@@ -32,7 +32,6 @@ export const mockCourses: Course[] = [
       brochureLink: DOMESTIC_BROCHURE,
       careerOutcomes: [
         'Community Care Manager',
-        'Support Facilitator',
         'Community Development Worker',
         'Case Coordinator',
         'Social Educator',
@@ -242,12 +241,7 @@ export const mockCourses: Course[] = [
       price: '$3,000.00',
       externalEnrolmentLink: 'https://optimumtrainingacademy.rto.net.au/Form/Index?formType=1&directLink=true&id=optimumtrainingacademy&del=7260&courseCode=CHC33021',
       brochureLink: DOMESTIC_BROCHURE,
-      careerOutcomes: [
-        'Disability Support Worker',
-        'Aged Care Carer',
-        'Home Care Assistant',
-        'Personal Care Assistant',
-      ],
+      careerOutcomes: [],
       entryRequirements: [
         'Have sound language, literacy, and numeracy skills (at least Year 10 English, or equivalent)',
         'Have basic computer skills',
@@ -267,7 +261,7 @@ export const mockCourses: Course[] = [
         'Work and Communicate Effectively in the Care Sector',
         'Prioritise Health, Safety, and Infection Control',
       ],
-      vocationalPlacement: 'A minimum of 120 hours of vocational placement in a relevant care setting is required to complete this qualification. This provides students with essential hands-on experience and the opportunity to apply their skills in a real-world environment.',
+      vocationalPlacement: '',
       structure: 'Assessment includes observation (on-the-job or role play/simulation), questioning (self-assessment, verbal, written, activity modules), and structured activities (projects, case studies, presentations).',
       resources: {
         provided: [
@@ -421,7 +415,8 @@ export const mockCourses: Course[] = [
       entryRequirements: [
         'Must be 18 years of age or older',
         'Must hold a current Student Visa',
-        'Sound language, literacy, and numeracy skills (at least Year 10 English, or equivalent)',
+        'Successful completion of Australian Year 12 or equivalent',
+        'Sound language, literacy, and numeracy skills',
         'Basic computer skills',
         'English Proficiency: IELTS 5.5 (no band < 5.0) or equivalent (PTE 43, TOEFL 46)',
       ],
@@ -562,7 +557,7 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: '/images/cpr-first-aid-training-concept.jpg',
+        sourceUrl: '/images/hltaid011-first-aid.png',
         altText: 'Professional first aid training session showing CPR practice on a manikin',
       },
     },
