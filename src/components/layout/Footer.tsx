@@ -16,7 +16,6 @@ const footerNavigation = {
   company: [
     { name: 'Student Portal', href: 'https://optimumtrainingacademy.rto.net.au/Account/Index', external: true },
     { name: 'About Us', href: '/about' },
-    { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
     { name: 'Terms of Service', href: '#' },
     { name: 'Privacy Policy', href: '#' },
@@ -56,9 +55,19 @@ export async function Footer() {
                 />
               </div>
             </Link>
-            <p className="text-sm leading-relaxed text-slate-400">
-              {fields?.footerText || 'Empowering the next generation of care and support professionals in Australia with industry-focused vocational training.'}
-            </p>
+            <div className="space-y-4">
+              <p className="text-sm leading-relaxed text-slate-400">
+                {fields?.footerText || 'Empowering the next generation of care and support professionals in Australia with industry-focused vocational training.'}
+              </p>
+              <div className="relative h-16 w-32 grayscale brightness-200 opacity-80 transition-all hover:grayscale-0 hover:opacity-100">
+                <Image
+                  src="/nrt-logo.webp"
+                  alt="Nationally Recognised Training"
+                  fill
+                  className="object-contain object-left"
+                />
+              </div>
+            </div>
             <div className="flex space-x-5">
               {finalSocialLinks.map((item) => (
                 <Link key={item.name} href={item.href || '#'} className="text-slate-400 hover:text-white">
