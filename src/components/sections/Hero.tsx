@@ -56,7 +56,7 @@ export function Hero() {
                   className="object-cover mix-blend-normal opacity-100"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent" />
 
                 {/* Floating trust card */}
                 <div className="absolute bottom-8 left-8 right-8 bg-white/90 backdrop-blur p-6 rounded-2xl border shadow-lg max-w-sm hidden sm:block">

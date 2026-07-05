@@ -235,14 +235,19 @@ export const mockCourses: Course[] = [
       qualificationCode: 'CHC33021',
       audience: 'Domestic',
       duration: '18 weeks',
-      deliveryMode: 'Online, Face-to-Face, Blended',
+      deliveryMode: 'Blended',
       paymentPlan: '$136.36/mo',
       level: 'Certificate III',
       totalHours: 'Approx. 1223 hours',
       price: '$3,000.00',
       externalEnrolmentLink: 'https://optimumtrainingacademy.rto.net.au/Form/Index?formType=1&directLink=true&id=optimumtrainingacademy&del=7260&courseCode=CHC33021',
       brochureLink: DOMESTIC_BROCHURE,
-      careerOutcomes: [],
+      careerOutcomes: [
+        'Disability Support Worker',
+        'Aged Care Carer',
+        'Home Care Assistant',
+        'Personal Care Assistant',
+      ],
       entryRequirements: [
         'Have sound language, literacy, and numeracy skills (at least Year 10 English, or equivalent)',
         'Have basic computer skills',
@@ -262,7 +267,7 @@ export const mockCourses: Course[] = [
         'Work and Communicate Effectively in the Care Sector',
         'Prioritise Health, Safety, and Infection Control',
       ],
-      vocationalPlacement: '',
+      vocationalPlacement: 'A minimum of 120 hours of vocational placement in a relevant care setting is required to complete this qualification. This provides students with essential hands-on experience and the opportunity to apply their skills in a real-world environment.',
       structure: 'Assessment includes observation (on-the-job or role play/simulation), questioning (self-assessment, verbal, written, activity modules), and structured activities (projects, case studies, presentations).',
       resources: {
         provided: [
@@ -386,7 +391,7 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: '/images/[HLTAID009] group-diverse-people-cpr-training-class.jpg',
+        sourceUrl: '/images/hltaid009-cpr.png',
         altText: 'A diverse group of students practicing CPR techniques in a professional training environment',
       },
     },
@@ -504,10 +509,7 @@ export const mockCourses: Course[] = [
       price: '$200.00',
       externalEnrolmentLink: '/contact',
       brochureLink: DOMESTIC_BROCHURE,
-      careerOutcomes: [
-        'First Aid Officer',
-        'WHS Representative',
-      ],
+      careerOutcomes: [],
       entryRequirements: [
         'Sound Language, Literacy, and Numeracy (LLN) skills',
         'Physical capacity to perform 2 minutes of uninterrupted CPR on the floor',
@@ -516,7 +518,7 @@ export const mockCourses: Course[] = [
       whyStudy: [
         'Nationally recognised unit (Release 1) in line with Australian Resuscitation Council (ARC) guidelines.',
         'Quality content and robust training programs by Optimum Training Academy (RTO#46534).',
-        'Essential for First Aid Officers and Workplace Health & Safety (WHS) Representatives.',
+        'Essential skills for safety across all industries and professional environments.',
         'Combines self-paced distance learning with hands-on intensive training.',
       ],
       description: 'The HLTAID011 Provide First Aid unit describes the skills and knowledge required to provide a first aid response to a casualty in line with first aid guidelines determined by the Australian Resuscitation Council (ARC) and other Australian national peak clinical bodies.',
@@ -526,7 +528,7 @@ export const mockCourses: Course[] = [
         'Communicate details of the incident',
         'Review the incident',
       ],
-      vocationalPlacement: 'Not required for this unit.',
+      vocationalPlacement: '',
       structure: 'Assessment includes observation during role play/simulation, questioning (verbal/written), and structured activities like projects and case studies.',
       resources: {
         provided: [
@@ -574,7 +576,7 @@ export const mockCourses: Course[] = [
       audience: 'Domestic',
       duration: 'Half-day training and assessment session',
       paymentPlan: 'Full payment required',
-      deliveryMode: 'Face-to-face',
+      deliveryMode: 'Blended',
       level: 'Unit of Competency',
       totalHours: 'Approx. 8 hours',
       price: '$250.00',
@@ -588,10 +590,10 @@ export const mockCourses: Course[] = [
       whyStudy: [
         'Nationally accredited unit (Release 1) describing skills to recognise potentially hazardous manual tasks.',
         'Quality content and robust training programs by Optimum Training Academy (RTO#46534).',
-        'Essential for workers in a broad range of industries and professions.',
+        'Essential for workers in a broad range of industries and professions, from healthcare to logistics.',
         'Develops requisite skills to prepare for and complete manual tasks in a safe manner.',
       ],
-      description: 'The HLTWHS005 Conduct manual tasks safely unit describes the skills and knowledge required to recognise potentially hazardous manual tasks, and then to prepare for and complete those tasks in a safe manner.',
+      description: 'The HLTWHS005 Conduct manual tasks safely unit describes the skills and knowledge required to recognise potentially hazardous manual tasks, and then to prepare for and complete those tasks in a safe manner. This general workplace safety course is suitable for a broad range of industries and professions.',
       whatYouWillLearn: [
         'Identify manual tasks involving risk',
         'Prepare for manual tasks',

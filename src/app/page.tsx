@@ -4,6 +4,7 @@ import { Hero } from '@/components/sections/Hero';
 import { CourseCard } from '@/components/cards/CourseCard';
 import { CTASection } from '@/components/sections/CTASection';
 import { FAQSection } from '@/components/sections/FAQSection';
+// import { Testimonials } from '@/components/sections/Testimonials';
 import { getCourses } from '@/lib/api/cms';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';

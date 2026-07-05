@@ -59,7 +59,7 @@ export async function Footer() {
               <p className="text-sm leading-relaxed text-slate-400">
                 {fields?.footerText || 'Empowering the next generation of care and support professionals in Australia with industry-focused vocational training.'}
               </p>
-              <div className="relative h-16 w-32 grayscale brightness-200 opacity-80 transition-all hover:grayscale-0 hover:opacity-100">
+              <div className="relative h-16 w-32 brightness-0 invert opacity-80 transition-all hover:opacity-100">
                 <Image
                   src="/nrt-logo.webp"
                   alt="Nationally Recognised Training"
