@@ -182,7 +182,7 @@ export function ContactForm() {
             onChange={handleChange}
             className={errors.name ? "border-red-500 focus-visible:ring-red-500" : ""}
           />
-          {errors.name && <p className="text-xs text-red-500 font-medium">{errors.name}</p>}
+          {errors.name && <p className="text-sm text-red-500 font-medium">{errors.name}</p>}
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -197,7 +197,7 @@ export function ContactForm() {
               onChange={handleChange}
               className={errors.email ? "border-red-500 focus-visible:ring-red-500" : ""}
             />
-            {errors.email && <p className="text-xs text-red-500 font-medium">{errors.email}</p>}
+            {errors.email && <p className="text-sm text-red-500 font-medium">{errors.email}</p>}
           </div>
           <div className="space-y-2">
             <Label htmlFor="phone">Phone Number</Label>
@@ -210,7 +210,7 @@ export function ContactForm() {
               onChange={handleChange}
               className={errors.phone ? "border-red-500 focus-visible:ring-red-500" : ""}
             />
-            {errors.phone && <p className="text-xs text-red-500 font-medium">{errors.phone}</p>}
+            {errors.phone && <p className="text-sm text-red-500 font-medium">{errors.phone}</p>}
           </div>
         </div>
 
@@ -231,7 +231,7 @@ export function ContactForm() {
               <option value="Partnership Enquiry">Partnership Enquiry</option>
               <option value="Student Support">Student Support</option>
             </select>
-            {errors.enquiry_type && <p className="text-xs text-red-500 font-medium">{errors.enquiry_type}</p>}
+            {errors.enquiry_type && <p className="text-sm text-red-500 font-medium">{errors.enquiry_type}</p>}
           </div>
           <div className="space-y-2">
             <Label htmlFor="course">Course of Interest</Label>
@@ -265,7 +265,7 @@ export function ContactForm() {
             value={formData.message}
             onChange={handleChange}
           />
-          {errors.message && <p className="text-xs text-red-500 font-medium">{errors.message}</p>}
+          {errors.message && <p className="text-sm text-red-500 font-medium">{errors.message}</p>}
         </div>
 
         {status === 'error' && (

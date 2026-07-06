@@ -19,11 +19,11 @@ export default async function Home() {
         <Hero />
 
         {/* Featured Courses */}
-        <section className="py-20 bg-slate-50">
+        <section className="py-12 md:py-20 bg-slate-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-12 gap-6">
               <div className="max-w-2xl">
-                <h2 className="font-heading text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+                <h2 className="font-heading text-2xl font-bold tracking-tight text-slate-900 sm:text-4xl">
                   Explore Our Courses
                 </h2>
                 <p className="mt-4 text-lg text-slate-600">
@@ -46,7 +46,7 @@ export default async function Home() {
         </section>
 
         {/* Value Propositions */}
-        <section className="py-20 bg-white">
+        <section className="py-12 md:py-20 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div className="p-8 rounded-2xl bg-slate-50 border transition-all hover:shadow-md">

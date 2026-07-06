@@ -179,7 +179,7 @@ export function BrochureDownloadModal({
                   onChange={handleChange}
                   className={errors.name ? "border-red-500 focus-visible:ring-red-500" : ""}
                 />
-                {errors.name && <p className="text-xs text-red-500">{errors.name}</p>}
+                {errors.name && <p className="text-sm text-red-500">{errors.name}</p>}
               </div>
 
               <div className="space-y-2">
@@ -193,7 +193,7 @@ export function BrochureDownloadModal({
                   onChange={handleChange}
                   className={errors.email ? "border-red-500 focus-visible:ring-red-500" : ""}
                 />
-                {errors.email && <p className="text-xs text-red-500">{errors.email}</p>}
+                {errors.email && <p className="text-sm text-red-500">{errors.email}</p>}
               </div>
 
               <div className="space-y-2">
@@ -207,7 +207,7 @@ export function BrochureDownloadModal({
                   onChange={handleChange}
                   className={errors.phone ? "border-red-500 focus-visible:ring-red-500" : ""}
                 />
-                {errors.phone && <p className="text-xs text-red-500">{errors.phone}</p>}
+                {errors.phone && <p className="text-sm text-red-500">{errors.phone}</p>}
               </div>
 
               {status === 'error' && (

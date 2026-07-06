@@ -14,10 +14,10 @@ export default function AboutPage() {
       <Navbar />
       <main className="flex-1">
         {/* About Hero */}
-        <section className="relative py-24 bg-white overflow-hidden">
+        <section className="relative py-12 md:py-24 bg-white overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-               <h1 className="font-heading text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 mb-8">
+               <h1 className="font-heading text-3xl sm:text-5xl font-bold tracking-tight text-slate-900 mb-8">
                  Empowering Careers in <span className="text-primary">Community Care.</span>
                </h1>
                <p className="text-xl text-slate-600 leading-relaxed">
@@ -28,17 +28,17 @@ export default function AboutPage() {
         </section>
 
         {/* Mission/Vision */}
-        <section className="py-20 bg-slate-50">
+        <section className="py-12 md:py-20 bg-slate-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div className="bg-white p-10 rounded-3xl border shadow-sm">
-                   <h2 className="text-2xl font-bold mb-4 text-primary">Our Mission</h2>
+             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                <div className="bg-white p-6 md:p-10 rounded-3xl border shadow-sm">
+                   <h2 className="text-xl md:text-2xl font-bold mb-4 text-primary">Our Mission</h2>
                    <p className="text-slate-600 leading-relaxed">
                      To provide accessible and exceptional education that empowers individuals to build meaningful careers and make a positive impact in the lives of those they care for.
                    </p>
                 </div>
-                <div className="bg-white p-10 rounded-3xl border shadow-sm">
-                   <h2 className="text-2xl font-bold mb-4 text-brand-blue-600">Our Vision</h2>
+                <div className="bg-white p-6 md:p-10 rounded-3xl border shadow-sm">
+                   <h2 className="text-xl md:text-2xl font-bold mb-4 text-brand-blue-600">Our Vision</h2>
                    <p className="text-slate-600 leading-relaxed">
                      To be the leading vocational training provider in Australia, recognised for producing highly skilled, compassionate, and employment-ready professionals.
                    </p>
@@ -48,10 +48,10 @@ export default function AboutPage() {
         </section>
 
         {/* Why Us */}
-        <section className="py-20 bg-white">
+        <section className="py-12 md:py-20 bg-white">
            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center max-w-3xl mx-auto mb-16">
-                 <h2 className="text-3xl sm:text-4xl font-bold mb-4">Why Choose Optimum Academy?</h2>
+              <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+                 <h2 className="text-2xl sm:text-4xl font-bold mb-4">Why Choose Optimum Academy?</h2>
                  <p className="text-slate-600">We go beyond the classroom to ensure our students are ready for the real world.</p>
               </div>
 

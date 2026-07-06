@@ -26,7 +26,7 @@ export async function Navbar() {
       <div className="container mx-auto flex h-24 items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center space-x-2">
-            <div className="relative h-16 w-56 md:h-14 md:w-48">
+            <div className="relative h-14 w-40 md:h-16 md:w-56 transition-all">
               <Image
                 src="/logo.png"
                 alt="Optimum Academy Logo"
@@ -65,8 +65,8 @@ export async function Navbar() {
         <div className="md:hidden">
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="h-10 w-10">
-                <Menu className="h-6 w-6" />
+              <Button variant="ghost" size="icon" className="h-11 w-11">
+                <Menu className="h-7 w-7" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>

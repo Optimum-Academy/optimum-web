@@ -19,7 +19,7 @@ export function CourseCard({ course }: CourseCardProps) {
   return (
     <div className="group relative flex flex-col overflow-hidden rounded-2xl bg-white border transition-all hover:shadow-xl">
       <div className="aspect-[16/9] overflow-hidden relative">
-        <Badge className="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur text-primary font-bold border-none">
+        <Badge className="absolute top-3 left-3 sm:top-4 sm:left-4 z-10 bg-white/90 backdrop-blur text-primary font-bold border-none text-[10px] sm:text-sm">
           {course.courseFields.qualificationCode}
         </Badge>
         {course.featuredImage?.node.sourceUrl ? (
@@ -50,7 +50,7 @@ export function CourseCard({ course }: CourseCardProps) {
             </Badge>
           )}
         </div>
-        <h3 className="font-heading text-xl font-bold leading-tight text-slate-900 group-hover:text-primary transition-colors">
+        <h3 className="font-heading text-lg sm:text-xl font-bold leading-tight text-slate-900 group-hover:text-primary transition-colors">
           <Link href={`/courses/${course.slug}`}>
             <span className="absolute inset-0" />
             {course.title}
@@ -80,7 +80,7 @@ export function CourseCard({ course }: CourseCardProps) {
               <Button
                 variant="outline"
                 size="sm"
-                className="relative z-10 w-full h-10 border-slate-200 hover:bg-brand-purple-50 hover:text-brand-purple-700 hover:border-brand-purple-200 transition-all gap-2"
+                className="relative z-10 w-full h-11 border-slate-200 hover:bg-brand-purple-50 hover:text-brand-purple-700 hover:border-brand-purple-200 transition-all gap-2"
                 onClick={() => setIsModalOpen(true)}
               >
                 <FileText className="h-4 w-4" />

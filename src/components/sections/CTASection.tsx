@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 
 export function CTASection() {
   return (
-    <section className="py-20">
+    <section className="py-12 md:py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-[2.5rem] bg-slate-900 px-8 py-16 text-center shadow-2xl lg:px-16 lg:py-24">
           {/* Decorative circles */}
@@ -11,7 +11,7 @@ export function CTASection() {
           <div className="absolute -right-20 -bottom-20 h-64 w-64 rounded-full bg-brand-blue-500/20 blur-3xl" />
 
           <div className="relative z-10 mx-auto max-w-3xl">
-            <h2 className="font-heading text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+            <h2 className="font-heading text-2xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
               Ready to Start Your Career in Care?
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg text-slate-300">
