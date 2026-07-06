@@ -26,7 +26,7 @@ export async function Navbar() {
       <div className="container mx-auto flex h-24 items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center space-x-2">
-            <div className="relative h-24 w-80 md:h-20 md:w-72">
+            <div className="relative h-20 w-72 md:h-24 md:w-80">
               <Image
                 src="/logo.png"
                 alt="Optimum Academy Logo"

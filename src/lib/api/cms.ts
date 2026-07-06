@@ -118,7 +118,7 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: '/images/CHC52025 Dip Community Service Domestic.png',
+        sourceUrl: '/images/chc52025-dip-community-service-domestic.png',
         altText: 'Professional group of care workers collaborating in a community service environment',
       },
     },
@@ -222,7 +222,7 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: '/images/CHC52025 Diploma Community Service INternational.png',
+        sourceUrl: '/images/chc52025-diploma-community-service-international.png',
         altText: 'International students engaged in a professional community support training session',
       },
     },
@@ -312,7 +312,7 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: '/images/CHC33021 Cert III Individual Support Domestic.png',
+        sourceUrl: '/images/chc33021-cert-iii-individual-support-domestic.png',
         altText: 'Dedicated support worker providing person-centred care to an elderly individual',
       },
     },
@@ -484,7 +484,7 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: '/images/CRICOS 04432K Cert III Individual Support International.png',
+        sourceUrl: '/images/cricos-04432k-cert-iii-individual-support-international.png',
         altText: 'Supportive care interaction between a professional worker and a client in a healthcare setting',
       },
     },
@@ -632,7 +632,7 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: '/images/HLTWHS005 Manual Tasks.png',
+        sourceUrl: '/images/hltwhs005-manual-tasks.png',
         altText: 'Care professionals demonstrating safe manual handling and workplace safety techniques',
       },
     },
