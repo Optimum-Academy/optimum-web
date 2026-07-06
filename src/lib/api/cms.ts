@@ -118,8 +118,8 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: '/images/[CHC52025] group-different-people-volunteering-foodbank.jpg',
-        altText: 'A professional group of diverse people volunteering at a foodbank, representing community service outcomes',
+        sourceUrl: '/images/CHC52025 Dip Community Service Domestic.png',
+        altText: 'Professional group of care workers collaborating in a community service environment',
       },
     },
   },
@@ -222,8 +222,8 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: '/images/[CHC52025 International] different-people-doing-volunteer-work-foodbank.jpg',
-        altText: 'International students and professionals engaged in community support and volunteer work',
+        sourceUrl: '/images/CHC52025 Diploma Community Service INternational.png',
+        altText: 'International students engaged in a professional community support training session',
       },
     },
   },
@@ -312,8 +312,8 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: '/images/[CHC33021 International] medical-assistant-giving-assistance-disabled-old-woman.jpg',
-        altText: 'A support worker providing dedicated assistance to an elderly client in a home setting',
+        sourceUrl: '/images/CHC33021 Cert III Individual Support Domestic.png',
+        altText: 'Dedicated support worker providing person-centred care to an elderly individual',
       },
     },
   },
@@ -484,8 +484,8 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: '/images/[CHC33021] side-view-smiley-nurse-patient.jpg',
-        altText: 'A professional and supportive care interaction representing career-ready skills',
+        sourceUrl: '/images/CRICOS 04432K Cert III Individual Support International.png',
+        altText: 'Supportive care interaction between a professional worker and a client in a healthcare setting',
       },
     },
   },
@@ -632,8 +632,8 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: '/images/[HLTWHS005] people-with-physical-health-condition-doing-teamwork-startup-office-dealing-with-chronic-disability-job-business-partners-with-impairment-working-project-using-wheelchair-crutches.jpg',
-        altText: 'Professionals with diverse physical health conditions collaborating in a modern workplace',
+        sourceUrl: '/images/HLTWHS005 Manual Tasks.png',
+        altText: 'Care professionals demonstrating safe manual handling and workplace safety techniques',
       },
     },
   },
