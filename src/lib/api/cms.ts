@@ -242,7 +242,12 @@ export const mockCourses: Course[] = [
       price: '$3,000.00',
       externalEnrolmentLink: 'https://optimumtrainingacademy.rto.net.au/Form/Index?formType=1&directLink=true&id=optimumtrainingacademy&del=7260&courseCode=CHC33021',
       brochureLink: DOMESTIC_BROCHURE,
-      careerOutcomes: [],
+      careerOutcomes: [
+        'Disability Support Worker',
+        'Aged Care Carer',
+        'Home Care Assistant',
+        'Personal Care Assistant',
+      ],
       entryRequirements: [
         'Have sound language, literacy, and numeracy skills (at least Year 10 English, or equivalent)',
         'Have basic computer skills',
@@ -386,7 +391,7 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: '/images/[HLTAID009] group-diverse-people-cpr-training-class.jpg',
+        sourceUrl: '/images/hltaid009-provide-cpr.png',
         altText: 'A diverse group of students practicing CPR techniques in a professional training environment',
       },
     },
@@ -560,7 +565,7 @@ export const mockCourses: Course[] = [
     },
     featuredImage: {
       node: {
-        sourceUrl: '/images/cpr-first-aid-training-concept.jpg',
+        sourceUrl: '/images/hltaid011-provide-first-aid.png',
         altText: 'Professional first aid training session showing CPR practice on a manikin',
       },
     },
