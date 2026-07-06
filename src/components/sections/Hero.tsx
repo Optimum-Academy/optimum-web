@@ -6,7 +6,7 @@ import { CheckCircle2 } from 'lucide-react';
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-white py-20 lg:py-32">
+    <section className="relative overflow-hidden bg-white py-12 md:py-20 lg:py-32">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[800px] h-[800px] bg-brand-purple-50 rounded-full blur-3xl opacity-50 -z-10" />
       <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-[600px] h-[600px] bg-brand-blue-50 rounded-full blur-3xl opacity-50 -z-10" />
@@ -17,7 +17,7 @@ export function Hero() {
             <Badge className="mb-4 bg-brand-purple-100 text-brand-purple-700 hover:bg-brand-purple-100 border-none px-3 py-1">
               Nationally Recognised Training
             </Badge>
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.1]">
+            <h1 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.1]">
               Become job-ready for Australia&apos;s <span className="text-primary">growing care sector</span>.
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed">

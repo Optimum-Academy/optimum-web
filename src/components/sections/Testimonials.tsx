@@ -7,10 +7,10 @@ export async function Testimonials() {
   const testimonials = await getTestimonials();
 
   return (
-    <section className="py-24 bg-slate-50">
+    <section className="py-12 md:py-24 bg-slate-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">What Our Students Say</h2>
+        <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16">
+          <h2 className="text-2xl sm:text-4xl font-bold mb-4">What Our Students Say</h2>
           <p className="text-lg text-slate-600">
             Real stories from students who have transformed their careers with Optimum Academy.
           </p>

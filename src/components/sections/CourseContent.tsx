@@ -35,7 +35,7 @@ export function CourseContent({ course }: CourseContentProps) {
     <>
       <main className="flex-1">
         {/* Premium Hero */}
-        <section className="bg-slate-900 py-24 text-white relative overflow-hidden">
+        <section className="bg-slate-900 py-12 md:py-24 text-white relative overflow-hidden">
           <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_30%_50%,#6F1D77,transparent)]" />
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -65,7 +65,7 @@ export function CourseContent({ course }: CourseContentProps) {
                     )}
                   </div>
                 </div>
-                <h1 className="font-heading text-4xl sm:text-6xl font-bold tracking-tight leading-tight mb-8">
+                <h1 className="font-heading text-3xl sm:text-6xl font-bold tracking-tight leading-tight mb-8">
                   {course.title}
                 </h1>
                 <div className="grid grid-cols-2 gap-6 mb-10">
@@ -157,7 +157,7 @@ export function CourseContent({ course }: CourseContentProps) {
         </section>
 
         {/* Content Section */}
-        <section className="py-24 bg-white">
+        <section className="py-12 md:py-24 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
              <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
                 <div className="lg:col-span-8 space-y-20">
@@ -166,7 +166,7 @@ export function CourseContent({ course }: CourseContentProps) {
                    <div id="overview">
                      <div className="flex items-center gap-3 mb-6">
                         <div className="h-1 w-12 bg-brand-purple-500 rounded-full" />
-                        <h2 className="text-3xl font-bold">Course Overview</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold">Course Overview</h2>
                      </div>
                      <p className="text-xl text-slate-600 leading-relaxed mb-8">
                        {courseFields.description}
@@ -191,7 +191,7 @@ export function CourseContent({ course }: CourseContentProps) {
                      <div id="careers">
                        <div className="flex items-center gap-3 mb-6">
                           <div className="h-1 w-12 bg-brand-purple-500 rounded-full" />
-                          <h2 className="text-3xl font-bold">Career Pathways</h2>
+                          <h2 className="text-2xl md:text-3xl font-bold">Career Pathways</h2>
                        </div>
                        <p className="text-slate-600 mb-8">Graduates of this qualification are prepared for a variety of roles in the industry:</p>
                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -209,7 +209,7 @@ export function CourseContent({ course }: CourseContentProps) {
                    <div id="modules">
                      <div className="flex items-center gap-3 mb-6">
                         <div className="h-1 w-12 bg-brand-purple-500 rounded-full" />
-                        <h2 className="text-3xl font-bold">What You Will Learn</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold">What You Will Learn</h2>
                      </div>
                      <ul className="space-y-4">
                        {courseFields.whatYouWillLearn?.map((item, i) => (
@@ -229,24 +229,24 @@ export function CourseContent({ course }: CourseContentProps) {
                         <div className="flex items-center justify-between mb-8">
                           <div className="flex items-center gap-3">
                             <div className="h-1 w-12 bg-brand-purple-500 rounded-full" />
-                            <h2 className="text-3xl font-bold">Course Units</h2>
+                            <h2 className="text-2xl md:text-3xl font-bold">Course Units</h2>
                           </div>
                           <Badge variant="outline" className="px-4 py-1">
                             {courseFields.units.length} Units Total
                           </Badge>
                         </div>
                         <div className="rounded-3xl border border-slate-200 overflow-hidden">
-                           <div className="bg-slate-50 p-4 border-b grid grid-cols-12 text-xs font-bold uppercase tracking-wider text-slate-500">
+                           <div className="bg-slate-50 p-4 border-b hidden md:grid grid-cols-12 text-xs font-bold uppercase tracking-wider text-slate-500">
                              <div className="col-span-3">Code</div>
                              <div className="col-span-7">Title</div>
                              <div className="col-span-2 text-right">Type</div>
                            </div>
                            <div className="divide-y">
                               {courseFields.units.map((unit) => (
-                                <div key={unit.code} className="p-4 grid grid-cols-12 items-center hover:bg-slate-50/50 transition-colors">
-                                  <div className="col-span-3 font-mono text-sm font-bold text-slate-900">{unit.code}</div>
-                                  <div className="col-span-7 text-sm font-medium text-slate-700">{unit.title}</div>
-                                  <div className="col-span-2 text-right">
+                                <div key={unit.code} className="p-4 grid grid-cols-1 md:grid-cols-12 items-start md:items-center hover:bg-slate-50/50 transition-colors gap-2 md:gap-0">
+                                  <div className="md:col-span-3 font-mono text-sm font-bold text-slate-900">{unit.code}</div>
+                                  <div className="md:col-span-7 text-sm font-medium text-slate-700">{unit.title}</div>
+                                  <div className="md:col-span-2 md:text-right">
                                     <Badge variant="outline" className={unit.type === 'CORE' ? 'bg-brand-blue-50 text-brand-blue-700 border-brand-blue-100' : 'bg-slate-100 text-slate-600'}>
                                       {unit.type}
                                     </Badge>
@@ -262,7 +262,7 @@ export function CourseContent({ course }: CourseContentProps) {
                    <div id="requirements">
                      <div className="flex items-center gap-3 mb-6">
                         <div className="h-1 w-12 bg-brand-purple-500 rounded-full" />
-                        <h2 className="text-3xl font-bold">Entry Requirements</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold">Entry Requirements</h2>
                      </div>
                      <div className="p-8 rounded-3xl bg-brand-purple-50 border border-brand-purple-100 relative overflow-hidden">
                         <AlertCircle className="absolute -top-4 -right-4 h-32 w-32 text-brand-purple-100 -rotate-12" />
@@ -282,7 +282,7 @@ export function CourseContent({ course }: CourseContentProps) {
                      <div id="placement">
                         <div className="flex items-center gap-3 mb-6">
                           <div className="h-1 w-12 bg-brand-purple-500 rounded-full" />
-                          <h2 className="text-3xl font-bold">Vocational Placement</h2>
+                          <h2 className="text-2xl md:text-3xl font-bold">Vocational Placement</h2>
                         </div>
                         <div className="p-8 rounded-3xl border border-slate-200 bg-white">
                           <p className="text-lg text-slate-600 leading-relaxed mb-6">
@@ -319,7 +319,7 @@ export function CourseContent({ course }: CourseContentProps) {
                      <div id="faq">
                         <div className="flex items-center gap-3 mb-8">
                           <div className="h-1 w-12 bg-brand-purple-500 rounded-full" />
-                          <h2 className="text-3xl font-bold">Frequently Asked Questions</h2>
+                          <h2 className="text-2xl md:text-3xl font-bold">Frequently Asked Questions</h2>
                         </div>
                         <div className="space-y-4">
                            {courseFields.faqs.map((faq, i) => (
@@ -338,8 +338,8 @@ export function CourseContent({ course }: CourseContentProps) {
                 </div>
 
                 {/* Sidebar */}
-                <div className="lg:col-span-4 space-y-8">
-                   <div className="sticky top-24 space-y-8">
+                <div className="lg:col-span-4 space-y-8 mt-12 lg:mt-0">
+                   <div className="lg:sticky lg:top-24 space-y-8">
                       {/* Enrolment Widget */}
                       <div className="p-8 rounded-[2.5rem] bg-slate-900 text-white shadow-2xl relative overflow-hidden">
                          <div className="absolute top-0 right-0 h-32 w-32 bg-brand-purple-500/20 blur-3xl rounded-full -mr-16 -mt-16" />

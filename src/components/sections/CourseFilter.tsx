@@ -15,18 +15,18 @@ export function CourseFilter({ courses }: CourseFilterProps) {
 
   return (
     <Tabs defaultValue="all" className="w-full">
-      <div className="flex justify-center mb-12">
-        <TabsList className="bg-white border p-1 h-14 rounded-full shadow-sm">
-          <TabsTrigger value="all" className="rounded-full px-8 h-full data-active:bg-brand-purple-500 data-active:text-white">
+      <div className="flex justify-center mb-12 max-w-full overflow-x-auto pb-4 scrollbar-hide">
+        <TabsList className="bg-white border p-1 h-14 rounded-full shadow-sm whitespace-nowrap inline-flex">
+          <TabsTrigger value="all" className="rounded-full px-6 sm:px-8 h-full data-active:bg-brand-purple-500 data-active:text-white">
             All Courses
           </TabsTrigger>
-          <TabsTrigger value="short" className="rounded-full px-8 h-full data-active:bg-brand-purple-500 data-active:text-white">
+          <TabsTrigger value="short" className="rounded-full px-6 sm:px-8 h-full data-active:bg-brand-purple-500 data-active:text-white">
             Short Courses
           </TabsTrigger>
-          <TabsTrigger value="domestic" className="rounded-full px-8 h-full data-active:bg-brand-purple-500 data-active:text-white">
+          <TabsTrigger value="domestic" className="rounded-full px-6 sm:px-8 h-full data-active:bg-brand-purple-500 data-active:text-white">
             Domestic Students
           </TabsTrigger>
-          <TabsTrigger value="international" className="rounded-full px-8 h-full data-active:bg-brand-purple-500 data-active:text-white">
+          <TabsTrigger value="international" className="rounded-full px-6 sm:px-8 h-full data-active:bg-brand-purple-500 data-active:text-white">
             International (CRICOS)
           </TabsTrigger>
         </TabsList>
