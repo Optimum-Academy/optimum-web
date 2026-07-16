@@ -1,4 +1,6 @@
 
+import { sendGTMEvent } from '@next/third-parties/google';
+
 export const TRACKING_PARAMS = [
   'utm_source',
   'utm_medium',
@@ -103,13 +105,11 @@ export function trackEvent(eventName: string, data?: Record<string, unknown>) {
     (window as unknown as Window & { gtag: (command: string, event: string, data?: Record<string, unknown>) => void }).gtag('event', eventName, data);
   }
 
-  // GTM Placeholder
-  if (typeof (window as unknown as Window & { dataLayer: unknown[] }).dataLayer !== 'undefined' && Array.isArray((window as unknown as Window & { dataLayer: unknown[] }).dataLayer)) {
-    (window as unknown as Window & { dataLayer: unknown[] }).dataLayer.push({
-      event: eventName,
-      ...data
-    });
-  }
+  // GTM Event via Next.js @next/third-parties/google helper
+  sendGTMEvent({
+    event: eventName,
+    ...data,
+  });
 
   // Meta Pixel Placeholder
   if (typeof (window as unknown as Window & { fbq: (command: string, event: string, data?: Record<string, unknown>) => void }).fbq === 'function') {
