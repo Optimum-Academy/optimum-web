@@ -3,6 +3,7 @@ import { Inter, Manrope } from 'next/font/google';
 import './globals.css';
 import Script from 'next/script';
 import { TrackingProvider } from '@/components/providers/TrackingProvider';
+import { GoogleTagManager } from '@next/third-parties/google';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -78,25 +79,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${manrope.variable}`}>
+      <GoogleTagManager gtmId="GTM-N9SLFLGX" />
       <head>
-        {/* GA4 Placeholder */}
-        {process.env.NEXT_PUBLIC_GA_ID && (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-              strategy="afterInteractive"
-            />
-            <Script id="google-analytics" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
-              `}
-            </Script>
-          </>
-        )}
-
         {/* Meta Pixel Placeholder */}
         {process.env.NEXT_PUBLIC_META_PIXEL_ID && (
           <Script id="fb-pixel" strategy="afterInteractive">
