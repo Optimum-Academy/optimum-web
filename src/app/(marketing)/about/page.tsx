@@ -60,7 +60,7 @@ export default function AboutPage() {
                    { title: 'Industry Experts', desc: 'Our trainers are active professionals in the care sector.' },
                    { title: 'Modern Facilities', desc: 'Practical training rooms that simulate real-world environments.' },
                    { title: 'Supportive Culture', desc: 'We treat our students as individuals with unique goals.' },
-                   { title: 'Job Placement', desc: 'Strong links with healthcare providers across the country.' }
+                   { title: 'Vocational Placement Support', desc: 'Industry-informed training and placement support.' }
                  ].map((item, i) => (
                    <div key={i} className="text-center">
                       <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6">

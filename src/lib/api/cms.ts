@@ -43,12 +43,12 @@ export const mockCourses: Course[] = [
         'Successful completion of Australian Year 10 or equivalent',
         'Sound Language, Literacy, and Numeracy (LLN) skills',
         'Basic computer skills',
-        'Must hold or be eligible to complete HLTAID011 - Provide First Aid prior to placement',
+        'Must hold or be eligible to complete HLTAID011 – Provide First Aid prior to placement (can be completed through Optimum Academy or another registered provider)',
       ],
       whyStudy: [
         'Nationally recognised qualification accredited within the Australian Qualifications Framework (AQF).',
         'Flexible learning model combining online theory with hands-on vocational placement.',
-        'Direct pathways to management and coordination roles in the fast-growing community services sector.',
+        'May support progression towards relevant coordination or management roles in the community services sector.',
         'Expert support from industry-experienced trainers throughout your 52-week journey.',
       ],
       description: 'The CHC52025 Diploma of Community Services reflects the role of community services workers involved in the delivery, management, and coordination of person-centred services to individuals, groups, and communities.',
@@ -72,7 +72,7 @@ export const mockCourses: Course[] = [
           'Computer/laptop with reliable internet access',
           'Microsoft Word and PowerPoint',
           'Adobe Acrobat Reader',
-          'HLTAID011 Provide First Aid certificate (obtained externally)',
+          'HLTAID011 Provide First Aid certificate (not included in tuition; can be completed through Optimum Academy or another registered provider prior to placement)',
         ],
       },
       units: [
@@ -108,7 +108,7 @@ export const mockCourses: Course[] = [
         },
         {
           question: 'Is First Aid included in the course?',
-          answer: 'Optimum Training Academy does not currently deliver HLTAID011 - Provide First Aid. You must obtain this unit from an external provider before starting your vocational placement.'
+          answer: 'HLTAID011 – Provide First Aid is not included in the Diploma tuition fee. Students may complete it separately through Optimum Academy or another appropriately registered provider before commencing vocational placement.'
         },
         {
           question: 'Are there payment plans available?',
@@ -125,7 +125,7 @@ export const mockCourses: Course[] = [
   },
   {
     id: '3',
-    title: 'Diploma of Community Services (International)',
+    title: 'Diploma of Community Services (International) 120037M',
     slug: 'chc52025-diploma-community-services-international',
     courseFields: {
       qualificationCode: 'CHC52025',
@@ -148,7 +148,8 @@ export const mockCourses: Course[] = [
       ],
       entryRequirements: [
         'Must be 18 years of age or older',
-        'Must hold a current Student Visa',
+        "International applicants must meet the Academy's admission requirements. A valid student visa permitting study in Australia is required before commencing the course in Australia.",
+        "Optimum Academy does not provide immigration advice. Applicants should refer to the Australian Department of Home Affairs or a registered migration agent for visa advice.",
         'Sound language, literacy, and numeracy skills (at least Year 10 English, or equivalent)',
         'Basic computer skills',
         'English Proficiency: IELTS 5.5 (no band < 5.0) or equivalent (PTE 43, TOEFL 46)',
@@ -257,7 +258,7 @@ export const mockCourses: Course[] = [
         'Nationally recognised qualification (Release 1) aimed at endowing individuals with requisite skills.',
         'Quality content and robust training programs by Optimum Training Academy (RTO#46534).',
         'Flexible delivery model via Online Training combined with hands-on Vocational Placement.',
-        'Direct pathway to roles in community, home, or residential care settings.',
+        'Career-focused training for roles in community, home, or residential care settings.',
       ],
       description: 'The CHC33021 Certificate III in Individual Support reflects the role of workers in the community and/or residential setting who follow an individualised plan to provide person-centred support to people who may require support due to ageing, disability or some other reason.',
       whatYouWillLearn: [
@@ -286,8 +287,8 @@ export const mockCourses: Course[] = [
       units: [
         { code: 'CHCCCS031', title: 'Provide individualised support', type: 'CORE' },
         { code: 'CHCCCS038', title: 'Facilitate the empowerment of people receiving support', type: 'CORE' },
-        { code: 'CHCCCS040', title: 'Support independence and well being', type: 'CORE' },
-        { code: 'CHCCCS041', title: 'Recognise health body systems', type: 'CORE' },
+        { code: 'CHCCCS040', title: 'Support independence and wellbeing', type: 'CORE' },
+        { code: 'CHCCCS041', title: 'Recognise healthy body systems', type: 'CORE' },
         { code: 'CHCCOM005', title: 'Communicate and work in health or community services', type: 'CORE' },
         { code: 'CHCDIV001', title: 'Work with diverse people', type: 'CORE' },
         { code: 'HLTWHS002', title: 'Follow safe work practices for direct client care', type: 'CORE' },
@@ -398,7 +399,7 @@ export const mockCourses: Course[] = [
   },
   {
     id: '6',
-    title: 'Certificate III in Individual Support (International)',
+    title: 'Certificate III in Individual Support (International) 120036A',
     slug: 'chc33021-certificate-iii-individual-support-international',
     courseFields: {
       qualificationCode: 'CHC33021',
@@ -420,7 +421,8 @@ export const mockCourses: Course[] = [
       ],
       entryRequirements: [
         'Must be 18 years of age or older',
-        'Must hold a current Student Visa',
+        "International applicants must meet the Academy's admission requirements. A valid student visa permitting study in Australia is required before commencing the course in Australia.",
+        "Optimum Academy does not provide immigration advice. Applicants should refer to the Australian Department of Home Affairs or a registered migration agent for visa advice.",
         'Sound language, literacy, and numeracy skills (at least Year 10 English, or equivalent)',
         'Basic computer skills',
         'English Proficiency: IELTS 5.5 (no band < 5.0) or equivalent (PTE 43, TOEFL 46)',
@@ -458,8 +460,8 @@ export const mockCourses: Course[] = [
       units: [
         { code: 'CHCCCS031', title: 'Provide individualised support', type: 'CORE' },
         { code: 'CHCCCS038', title: 'Facilitate the empowerment of people receiving support', type: 'CORE' },
-        { code: 'CHCCCS040', title: 'Support independence and well being', type: 'CORE' },
-        { code: 'CHCCCS041', title: 'Recognise health body systems', type: 'CORE' },
+        { code: 'CHCCCS040', title: 'Support independence and wellbeing', type: 'CORE' },
+        { code: 'CHCCCS041', title: 'Recognise healthy body systems', type: 'CORE' },
         { code: 'CHCCOM005', title: 'Communicate and work in health or community services', type: 'CORE' },
         { code: 'CHCDIV001', title: 'Work with diverse people', type: 'CORE' },
         { code: 'HLTWHS002', title: 'Follow safe work practices for direct client care', type: 'CORE' },
@@ -591,7 +593,7 @@ export const mockCourses: Course[] = [
         'Physical capacity to use appropriate equipment, posture and handling techniques',
       ],
       whyStudy: [
-        'Nationally accredited unit (Release 1) describing skills to recognise potentially hazardous manual tasks.',
+        'Nationally Recognised Unit of Competency (Release 1) describing skills to recognise potentially hazardous manual tasks.',
         'Quality content and robust training programs by Optimum Training Academy (RTO#46534).',
         'Essential for workers in a broad range of industries and professions.',
         'Develops requisite skills to prepare for and complete manual tasks in a safe manner.',

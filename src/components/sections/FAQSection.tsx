@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     question: 'Is there a placement component for care courses?',
-    answer: 'Most of our care and support courses include a mandatory practical placement component. This ensures you gain real-world experience and are job-ready upon graduation. We help facilitate these placements with our industry partners.',
+    answer: 'Most of our care and support courses include a mandatory vocational placement component. This ensures you gain real-world experience and develop skills relevant to care-sector employment. We provide direct placement support.',
   },
   {
     question: 'How do I enrol in a course?',

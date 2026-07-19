@@ -26,7 +26,7 @@ export function CTASection() {
               </Button>
             </div>
             <p className="mt-8 text-sm text-slate-400">
-              No obligation enquiry • Personalised career guidance • RTO Accredited
+              No obligation enquiry • Personalised career guidance • Registered Training Organisation (RTO 46534)
             </p>
           </div>
         </div>
