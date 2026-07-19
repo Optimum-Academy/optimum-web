@@ -14,14 +14,19 @@ export function Hero() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="max-w-2xl">
-            <Badge className="mb-4 bg-brand-purple-100 text-brand-purple-700 hover:bg-brand-purple-100 border-none px-3 py-1">
-              Nationally Recognised Training
-            </Badge>
+            <div className="flex flex-wrap items-center gap-3 mb-4">
+              <Badge className="bg-brand-purple-100 text-brand-purple-700 hover:bg-brand-purple-100 border-none px-3 py-1">
+                Nationally Recognised Training
+              </Badge>
+              <div className="text-xs font-semibold text-slate-500 border-l pl-3 border-slate-300">
+                Registered Training Organisation 46534 | CRICOS Provider 04432K
+              </div>
+            </div>
             <h1 className="font-heading text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.1]">
-              Become job-ready for Australia&apos;s <span className="text-primary">growing care sector</span>.
+              Build practical skills for a career in care and community services.
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed">
-              Empowering you with the skills, confidence, and industry connections to thrive in Australia’s fast-growing disability, aged care, and community service sectors.
+              Study nationally recognised qualifications and short courses with industry-experienced trainers in Smithfield Plains, South Australia.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="h-14 px-8 text-lg font-semibold shadow-lg shadow-primary/20" asChild>
@@ -34,10 +39,10 @@ export function Hero() {
 
             <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                'Expert Industry Trainers',
-                'Flexible Learning Options',
-                'Job-Ready Certification',
-                'Pathway to Employment',
+                'Industry-Experienced Trainers',
+                'Domestic and International Study Options',
+                'Nationally Recognised Training',
+                'Vocational Placement Support',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-2">
                   <CheckCircle2 className="h-5 w-5 text-brand-blue-500" />
@@ -67,7 +72,7 @@ export function Hero() {
                          ))}
                       </div>
                       <div>
-                        <p className="text-sm font-bold text-slate-900 leading-tight">Become job-ready for in-demand roles in care and community services.</p>
+                        <p className="text-sm font-bold text-slate-900 leading-tight">Build practical skills for high-demand care and community service roles.</p>
                       </div>
                    </div>
                 </div>

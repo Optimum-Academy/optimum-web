@@ -244,9 +244,9 @@ export function ContactForm() {
             >
               <option value="">Select a course (if applicable)</option>
               <option value="Diploma of Community Services">Diploma of Community Services</option>
-              <option value="Diploma of Community Services (International)">Diploma of Community Services (International)</option>
+              <option value="Diploma of Community Services (International) 120037M">Diploma of Community Services (International) 120037M</option>
               <option value="Certificate III in Individual Support">Certificate III in Individual Support</option>
-              <option value="Certificate III in Individual Support (International)">Certificate III in Individual Support (International)</option>
+              <option value="Certificate III in Individual Support (International) 120036A">Certificate III in Individual Support (International) 120036A</option>
               <option value="Provide CPR (HLTAID009)">Provide CPR (HLTAID009)</option>
               <option value="Provide First Aid (HLTAID011)">Provide First Aid (HLTAID011)</option>
               <option value="Conduct manual tasks safely (HLTWHS005)">Conduct manual tasks safely (HLTWHS005)</option>

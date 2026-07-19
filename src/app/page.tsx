@@ -68,7 +68,7 @@ export default async function Home() {
                   <Briefcase className="w-8 h-8" />
                 </div>
                 <h3 className="text-xl font-bold mb-4">Career Outcomes</h3>
-                <p className="text-slate-600">Strong industry partnerships and practical placement that lead directly to employment opportunities.</p>
+                <p className="text-slate-600">Industry-informed training and vocational placement support to help students develop skills relevant to care-sector employment.</p>
               </div>
             </div>
           </div>

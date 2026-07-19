@@ -6,9 +6,9 @@ import { getSiteSettings } from '@/lib/api/cms';
 const footerNavigation = {
   courses: [
     { name: 'Diploma of Community Services', href: '/courses/chc52025-diploma-community-services' },
-    { name: 'Diploma of Community Services (International)', href: '/courses/chc52025-diploma-community-services-international' },
+    { name: 'Diploma of Community Services (International) 120037M', href: '/courses/chc52025-diploma-community-services-international' },
     { name: 'Certificate III in Individual Support', href: '/courses/chc33021-certificate-iii-individual-support' },
-    { name: 'Certificate III in Individual Support (International)', href: '/courses/chc33021-certificate-iii-individual-support-international' },
+    { name: 'Certificate III in Individual Support (International) 120036A', href: '/courses/chc33021-certificate-iii-individual-support-international' },
     { name: 'Provide First Aid', href: '/courses/hltaid011-provide-first-aid' },
     { name: 'Conduct manual tasks safely', href: '/courses/hltwhs005-manual-tasks-safely' },
     { name: 'Provide CPR', href: '/courses/hltaid009-provide-cardiopulmonary-resuscitation' },
@@ -140,13 +140,18 @@ export async function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-12 border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-slate-500">
-              &copy; {new Date().getFullYear()} Optimum Academy. All rights reserved. RTO Code: {fields?.businessInformation?.rtoCode || '46534'}
+        <div className="mt-12 border-t border-slate-800 pt-8">
+          <p className="text-xs text-slate-500 mb-6 leading-relaxed max-w-5xl">
+            <strong>Disclaimer:</strong> Completion of a qualification does not guarantee employment, professional registration, a particular salary, migration eligibility, or a visa outcome. Career outcomes depend on the individual, employer requirements, experience, and labour market conditions.
           </p>
-          <p className="text-sm text-slate-500">
-            We acknowledge the Traditional Owners of the land on which we work.
-          </p>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-slate-500">
+                &copy; {new Date().getFullYear()} Optimum Academy. All rights reserved. RTO Code: {fields?.businessInformation?.rtoCode || '46534'}
+            </p>
+            <p className="text-sm text-slate-500">
+              We acknowledge the Traditional Owners of the land on which we work.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
