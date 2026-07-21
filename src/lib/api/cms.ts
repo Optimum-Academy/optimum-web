@@ -11,8 +11,13 @@ import { Course, Post, Testimonial, SiteSettings, Page, CareerPathway } from '..
  * Mock data for development until CMS is connected
  */
 
-const DOMESTIC_BROCHURE = 'https://clients.360rto.com.au/OptimumTrainingAcademy/wp-content/uploads/2026/03/OTA-Student-Handbook-v1.0.pdf';
-const INTERNATIONAL_BROCHURE = 'https://clients.360rto.com.au/OptimumTrainingAcademy/wp-content/uploads/2026/03/OTA-CRICOS-Student-Handbook-v1.0.pdf';
+const BROCHURE_CERT_III_INDIV_SUPPORT_INT = 'https://cms.optimumacademy.edu.au/wp-content/uploads/2026/07/OTA-Brochure-CHC33021-CRICOS231.pdf';
+const BROCHURE_CERT_III_INDIV_SUPPORT_DOM = 'https://cms.optimumacademy.edu.au/wp-content/uploads/2026/07/OTA-Brochure-CHC33021-Domestic-211.pdf';
+const BROCHURE_DIP_COMM_SERVICES_INT = 'https://cms.optimumacademy.edu.au/wp-content/uploads/2026/07/OTA-Brochure-CHC52025-CRICOS-11.pdf';
+const BROCHURE_DIP_COMM_SERVICES_DOM = 'https://cms.optimumacademy.edu.au/wp-content/uploads/2026/07/OTA-Brochure-CHC52025-Domestic-21-1.pdf';
+const BROCHURE_FIRST_AID = 'https://cms.optimumacademy.edu.au/wp-content/uploads/2026/07/OTA-Brochure-HLTAID011-v11.pdf';
+const BROCHURE_MANUAL_TASKS = 'https://cms.optimumacademy.edu.au/wp-content/uploads/2026/07/OTA-Brochure-HLTWHS005-v1.1.pdf';
+const BROCHURE_CPR = 'https://cms.optimumacademy.edu.au/wp-content/uploads/2026/07/OTA-Brochure-HLTAID009-v11.pdf';
 
 export const mockCourses: Course[] = [
   {
@@ -29,7 +34,7 @@ export const mockCourses: Course[] = [
       price: '$7,000.00',
       paymentPlan: '$500.00/mo',
       externalEnrolmentLink: 'https://optimumtrainingacademy.rto.net.au/Form/Index?formType=1&directLink=true&id=optimumtrainingacademy&del=52986&courseCode=CHC52025',
-      brochureLink: DOMESTIC_BROCHURE,
+      brochureLink: BROCHURE_DIP_COMM_SERVICES_DOM,
       careerOutcomes: [
         'Community Care Manager',
         'Support Facilitator',
@@ -138,7 +143,7 @@ export const mockCourses: Course[] = [
       price: '$15,000.00',
       paymentPlan: '$681.82/mo',
       externalEnrolmentLink: '#',
-      brochureLink: INTERNATIONAL_BROCHURE,
+      brochureLink: BROCHURE_DIP_COMM_SERVICES_INT,
       careerOutcomes: [
         'Community Care Manager',
         'Disability Services Officer',
@@ -242,7 +247,7 @@ export const mockCourses: Course[] = [
       totalHours: 'Approx. 1223 hours',
       price: '$3,000.00',
       externalEnrolmentLink: 'https://optimumtrainingacademy.rto.net.au/Form/Index?formType=1&directLink=true&id=optimumtrainingacademy&del=7260&courseCode=CHC33021',
-      brochureLink: DOMESTIC_BROCHURE,
+      brochureLink: BROCHURE_CERT_III_INDIV_SUPPORT_DOM,
       careerOutcomes: [
         'Disability Support Worker',
         'Aged Care Carer',
@@ -337,7 +342,7 @@ export const mockCourses: Course[] = [
       totalHours: '7.25 – 9.25 hours',
       price: '$100.00',
       externalEnrolmentLink: '/contact',
-      brochureLink: DOMESTIC_BROCHURE,
+      brochureLink: BROCHURE_CPR,
       careerOutcomes: [],
       entryRequirements: [
         'Must have physical capacity to perform 2 minutes of uninterrupted single rescuer CPR on an adult manikin on the floor',
@@ -412,7 +417,7 @@ export const mockCourses: Course[] = [
       totalHours: 'Approx. 1204 hours',
       price: '$8,000.00',
       externalEnrolmentLink: '#',
-      brochureLink: INTERNATIONAL_BROCHURE,
+      brochureLink: BROCHURE_CERT_III_INDIV_SUPPORT_INT,
       careerOutcomes: [
         'Disability Support Worker',
         'Aged Care Carer',
@@ -510,7 +515,7 @@ export const mockCourses: Course[] = [
       totalHours: 'Approx. 10 hours',
       price: '$200.00',
       externalEnrolmentLink: '/contact',
-      brochureLink: DOMESTIC_BROCHURE,
+      brochureLink: BROCHURE_FIRST_AID,
       careerOutcomes: [
         'First Aid Officer',
         'WHS Representative',
@@ -586,7 +591,7 @@ export const mockCourses: Course[] = [
       totalHours: 'Approx. 8 hours',
       price: '$250.00',
       externalEnrolmentLink: '/contact',
-      brochureLink: DOMESTIC_BROCHURE,
+      brochureLink: BROCHURE_MANUAL_TASKS,
       careerOutcomes: [],
       entryRequirements: [
         'Must be able to perform manual handling tasks safely',

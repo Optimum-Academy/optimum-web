@@ -85,6 +85,9 @@ export function ContactForm() {
     });
 
     try {
+      const pageUrl = typeof window !== 'undefined' ? window.location.href : '';
+      const referrer = typeof document !== 'undefined' ? document.referrer : '';
+
       const response = await fetch("https://formsubmit.co/ajax/enquiries@optimumacademy.edu.au", {
         method: "POST",
         headers: {
@@ -96,7 +99,9 @@ export function ContactForm() {
           ...tracking,
           _subject: "New Website Enquiry – Optimum Academy",
           _template: "table",
-          _captcha: "false"
+          _captcha: "false",
+          page_url: pageUrl,
+          referrer_url: referrer
         })
       });
 
