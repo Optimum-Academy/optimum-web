@@ -89,6 +89,9 @@ export function BrochureDownloadModal({
     trackEvent('Brochure Form Submitted', { course: courseTitle });
 
     try {
+      const pageUrl = typeof window !== 'undefined' ? window.location.href : '';
+      const referrer = typeof document !== 'undefined' ? document.referrer : '';
+
       const response = await fetch("https://formsubmit.co/ajax/enquiries@optimumacademy.edu.au", {
         method: "POST",
         headers: {
@@ -102,7 +105,9 @@ export function BrochureDownloadModal({
           enquiry_type: "Brochure Download",
           _subject: `Brochure Download Lead – ${courseTitle}`,
           _template: "table",
-          _captcha: "false"
+          _captcha: "false",
+          page_url: pageUrl,
+          referrer_url: referrer
         })
       });
 
@@ -110,7 +115,14 @@ export function BrochureDownloadModal({
         setStatus('success');
         trackEvent('Brochure Download Successful', { course: courseTitle });
         // Trigger download
-        window.open(brochureLink, '_blank');
+        try {
+          const downloadWin = window.open(brochureLink, '_blank');
+          if (!downloadWin || downloadWin.closed || typeof downloadWin.closed === 'undefined') {
+            console.warn("Download window was blocked by browser popup blocker.")
+          }
+        } catch (e) {
+          console.error("Failed to automatically open brochure link:", e);
+        }
       } else {
         setStatus('error');
         trackEvent('Brochure Download Failed', { reason: 'Response not OK' });
@@ -131,9 +143,14 @@ export function BrochureDownloadModal({
               <CheckCircle2 className="w-8 h-8 text-green-600" />
             </div>
             <DialogTitle className="text-2xl font-bold mb-2">Download Started!</DialogTitle>
-            <DialogDescription className="text-slate-600 mb-6">
-              Thank you for your interest. Your brochure for <strong>{courseTitle}</strong> is opening in a new tab.
+            <DialogDescription className="text-slate-600 mb-4">
+              Thank you for your interest. Your brochure for <strong>{courseTitle}</strong> should have started downloading or opened in a new tab.
             </DialogDescription>
+            <div className="mb-6 p-4 bg-slate-50 border border-slate-100 rounded-2xl">
+              <p className="text-sm text-slate-600 font-medium">
+                Your brochure is ready. <a href={brochureLink} target="_blank" rel="noopener noreferrer" className="text-brand-purple-600 hover:text-brand-purple-800 underline font-semibold">Click here if your download doesn&apos;t start automatically.</a>
+              </p>
+            </div>
             <Button onClick={onClose} className="w-full rounded-full">Close</Button>
           </div>
         ) : (

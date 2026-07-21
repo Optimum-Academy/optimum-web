@@ -35,7 +35,7 @@ yarn-error.log*
 
 dev_server.log
 test-results/
-verification/screenshots/
+verification/
 
 # vercel
 .vercel

@@ -17,8 +17,7 @@ const footerNavigation = {
     { name: 'Student Portal', href: 'https://optimumtrainingacademy.rto.net.au/Account/Index', external: true },
     { name: 'About Us', href: '/about' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Terms of Service', href: '#' },
-    { name: 'Privacy Policy', href: '#' },
+    { name: 'Privacy Policy', href: '/privacy-policy' },
   ],
 };
 
