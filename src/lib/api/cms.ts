@@ -134,7 +134,7 @@ export const mockCourses: Course[] = [
     slug: 'chc52025-diploma-community-services-international',
     courseFields: {
       qualificationCode: 'CHC52025',
-      cricosCode: '04432K',
+      cricosCode: '120037M',
       audience: 'International',
       duration: 'Up to 104 Weeks (including holidays)',
       deliveryMode: 'Face-to-Face, Vocational Placement',
@@ -340,8 +340,9 @@ export const mockCourses: Course[] = [
       deliveryMode: 'Online, Face-to-Face, Blended',
       level: 'Unit of Competency',
       totalHours: '7.25 – 9.25 hours',
-      price: '$100.00',
-      externalEnrolmentLink: '/contact',
+      price: '$30.00',
+      discount: '10% Discount Available',
+      externalEnrolmentLink: 'https://optimumtrainingacademy.rto.net.au/Form/Index?formType=1&directLink=true&id=optimumtrainingacademy&del=61508&courseCode=HLTAID009',
       brochureLink: BROCHURE_CPR,
       careerOutcomes: [],
       entryRequirements: [
@@ -408,7 +409,7 @@ export const mockCourses: Course[] = [
     slug: 'chc33021-certificate-iii-individual-support-international',
     courseFields: {
       qualificationCode: 'CHC33021',
-      cricosCode: '04432K',
+      cricosCode: '120036A',
       audience: 'International',
       duration: 'Up to 52 Weeks',
       deliveryMode: 'Face-to-Face, Vocational Placement',
@@ -513,8 +514,9 @@ export const mockCourses: Course[] = [
       deliveryMode: 'Blended',
       level: 'Unit of Competency',
       totalHours: 'Approx. 10 hours',
-      price: '$200.00',
-      externalEnrolmentLink: '/contact',
+      price: '$97.00',
+      discount: '10% Discount Available',
+      externalEnrolmentLink: 'https://optimumtrainingacademy.rto.net.au/Form/Index?formType=1&directLink=true&id=optimumtrainingacademy&del=61509&courseCode=HLTAID011',
       brochureLink: BROCHURE_FIRST_AID,
       careerOutcomes: [
         'First Aid Officer',
@@ -589,8 +591,9 @@ export const mockCourses: Course[] = [
       deliveryMode: 'Face-to-face',
       level: 'Unit of Competency',
       totalHours: 'Approx. 8 hours',
-      price: '$250.00',
-      externalEnrolmentLink: '/contact',
+      price: '$125.00',
+      discount: '10% Discount Available',
+      externalEnrolmentLink: 'https://optimumtrainingacademy.rto.net.au/Form/Index?formType=1&directLink=true&id=optimumtrainingacademy&del=61510&courseCode=HLTWHS005',
       brochureLink: BROCHURE_MANUAL_TASKS,
       careerOutcomes: [],
       entryRequirements: [
