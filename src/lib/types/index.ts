@@ -55,6 +55,7 @@ export interface Course {
     externalEnrolmentLink: string;
     brochureLink?: string;
     price?: string;
+    discount?: string;
     level?: string;
     totalHours?: string;
     description?: string;

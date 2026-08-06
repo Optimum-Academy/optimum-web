@@ -102,7 +102,14 @@ export function CourseContent({ course }: CourseContentProps) {
                     </div>
                     <div>
                       <p className="text-xs text-slate-400 uppercase tracking-wider font-bold">Course Fees</p>
-                      <p className="font-semibold">{courseFields.price || 'Contact us'}</p>
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <p className="font-semibold">{courseFields.price || 'Contact us'}</p>
+                        {courseFields.discount && (
+                          <Badge variant="outline" className="bg-emerald-500/10 text-emerald-400 border-emerald-500/20 text-[10px] font-bold px-2 py-0.5">
+                            {courseFields.discount}
+                          </Badge>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -379,9 +386,16 @@ export function CourseContent({ course }: CourseContentProps) {
                               </>
                             )}
                             <Separator className="bg-white/10" />
-                            <div className="flex justify-between items-center text-sm">
-                               <span className="text-slate-400">Total Investment</span>
-                               <span className="font-bold text-brand-purple-400 text-lg">{courseFields.price}</span>
+                            <div className="flex justify-between items-start text-sm">
+                               <span className="text-slate-400 mt-1">Total Investment</span>
+                               <div className="text-right flex flex-col items-end">
+                                 <span className="font-bold text-brand-purple-400 text-lg">{courseFields.price}</span>
+                                 {courseFields.discount && (
+                                   <Badge className="bg-emerald-600 hover:bg-emerald-700 text-white text-[10px] font-bold px-2 py-0.5 mt-1">
+                                     {courseFields.discount}
+                                   </Badge>
+                                 )}
+                               </div>
                             </div>
                             <Separator className="bg-white/10" />
                             <div className="flex justify-between items-center text-sm">
