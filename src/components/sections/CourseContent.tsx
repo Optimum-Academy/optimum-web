@@ -181,17 +181,6 @@ export function CourseContent({ course }: CourseContentProps) {
                        {courseFields.description}
                      </p>
 
-                     {courseFields.qualificationCode === 'HLTAID011' && (
-                       <div className="p-6 rounded-2xl bg-brand-purple-50 border border-brand-purple-100 mb-8 flex items-start gap-4">
-                         <div className="flex-shrink-0 mt-0.5">
-                           <AlertCircle className="h-5 w-5 text-brand-purple-500" />
-                         </div>
-                         <div>
-                           <h4 className="font-bold text-slate-900 mb-1">Vocational Placement</h4>
-                           <p className="text-slate-600 text-sm">Vocational placement is not required for this unit of competency.</p>
-                         </div>
-                       </div>
-                     )}
 
                      {courseFields.whyStudy && (
                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10">
@@ -397,11 +386,15 @@ export function CourseContent({ course }: CourseContentProps) {
                                  )}
                                </div>
                             </div>
-                            <Separator className="bg-white/10" />
-                            <div className="flex justify-between items-center text-sm">
-                               <span className="text-slate-400">Payment Plan</span>
-                               <span className="font-bold">{courseFields.paymentPlan || 'Contact us'}</span>
-                            </div>
+                            {courseFields.audience !== 'International' && courseFields.paymentPlan && (
+                              <>
+                                <Separator className="bg-white/10" />
+                                <div className="flex justify-between items-center text-sm">
+                                   <span className="text-slate-400">Payment Plan</span>
+                                   <span className="font-bold">{courseFields.paymentPlan}</span>
+                                </div>
+                              </>
+                            )}
                          </div>
 
                          <Button className="w-full h-14 rounded-full bg-brand-purple-500 hover:bg-brand-purple-600 text-white" size="lg" asChild>
