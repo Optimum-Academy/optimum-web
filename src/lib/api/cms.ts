@@ -140,8 +140,7 @@ export const mockCourses: Course[] = [
       deliveryMode: 'Face-to-Face, Vocational Placement',
       level: 'Diploma',
       totalHours: 'Approx. 2110 hours',
-      price: '$15,000.00',
-      paymentPlan: '$681.82/mo',
+      price: '$18,000.00',
       externalEnrolmentLink: '#',
       brochureLink: BROCHURE_DIP_COMM_SERVICES_INT,
       careerOutcomes: [
@@ -212,10 +211,6 @@ export const mockCourses: Course[] = [
         { code: 'CHCCDE027', title: 'Implement community development strategies', type: 'ELECTIVE' },
       ],
       faqs: [
-        {
-          question: 'What are the payment terms for international students?',
-          answer: 'The total fee is $15,000.00. This requires an initial deposit of $7,500 followed by 11 scheduled monthly payments of $681.82.'
-        },
         {
           question: 'Are there English language requirements?',
           answer: 'Yes, you need an IELTS total band score of at least 5.5 (no band less than 5.0) or equivalent from providers like PTE, TOEFL, or CAE.'
@@ -413,7 +408,6 @@ export const mockCourses: Course[] = [
       audience: 'International',
       duration: 'Up to 52 Weeks',
       deliveryMode: 'Face-to-Face, Vocational Placement',
-      paymentPlan: '$363.64/mo',
       level: 'Certificate III',
       totalHours: 'Approx. 1204 hours',
       price: '$8,000.00',
@@ -482,10 +476,6 @@ export const mockCourses: Course[] = [
       ],
       faqs: [
         {
-          question: 'Are there payment plans available?',
-          answer: 'Yes. After an initial deposit of $4,000, you can pay the remainder through 11 scheduled monthly payments of $363.64.'
-        },
-        {
           question: 'Is Recognition of Prior Learning (RPL) available?',
           answer: 'Yes, Optimum Academy has an RPL Policy to recognise your prior learning through formal/informal training or work experience.'
         },
@@ -518,10 +508,7 @@ export const mockCourses: Course[] = [
       discount: '10% Discount Available',
       externalEnrolmentLink: 'https://optimumtrainingacademy.rto.net.au/Form/Index?formType=1&directLink=true&id=optimumtrainingacademy&del=61509&courseCode=HLTAID011',
       brochureLink: BROCHURE_FIRST_AID,
-      careerOutcomes: [
-        'First Aid Officer',
-        'WHS Representative',
-      ],
+      careerOutcomes: [],
       entryRequirements: [
         'Sound Language, Literacy, and Numeracy (LLN) skills',
         'Physical capacity to perform 2 minutes of uninterrupted CPR on the floor',
@@ -540,7 +527,7 @@ export const mockCourses: Course[] = [
         'Communicate details of the incident',
         'Review the incident',
       ],
-      vocationalPlacement: 'Not required for this unit.',
+      vocationalPlacement: '',
       structure: 'Assessment includes observation during role play/simulation, questioning (verbal/written), and structured activities like projects and case studies.',
       resources: {
         provided: [
