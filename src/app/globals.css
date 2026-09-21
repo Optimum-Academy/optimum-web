@@ -4,7 +4,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
@@ -50,17 +50,27 @@
   /* Brand Colors */
   --color-brand-purple-50: #F7ECFA;
   --color-brand-purple-100: #E9CFF0;
+  --color-brand-purple-200: #DDA2E4;
   --color-brand-purple-300: #C07AC9;
+  --color-brand-purple-400: #9842A2;
   --color-brand-purple-500: #6F1D77;
+  --color-brand-purple-600: #5E1765;
   --color-brand-purple-700: #4E1355;
+  --color-brand-purple-800: #3D0E43;
   --color-brand-purple-900: #2E0B32;
+  --color-brand-purple-950: #1C0520;
 
   --color-brand-blue-50: #EEF1FB;
   --color-brand-blue-100: #D6DCF6;
+  --color-brand-blue-200: #A8B8EC;
   --color-brand-blue-300: #7A8BD9;
+  --color-brand-blue-400: #576BC1;
   --color-brand-blue-500: #3E4FA8;
+  --color-brand-blue-600: #32418B;
   --color-brand-blue-700: #2C3A7A;
+  --color-brand-blue-800: #202A5A;
   --color-brand-blue-900: #1A234A;
+  --color-brand-blue-950: #0E132D;
 }
 
 :root {
