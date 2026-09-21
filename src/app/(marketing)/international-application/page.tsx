@@ -86,7 +86,11 @@ export default async function InternationalApplicationGatewayPage() {
                   </div>
 
                   <div className="p-8 bg-slate-50 border-t border-slate-100">
-                    <Button className="w-full h-12 rounded-full bg-brand-purple-600 hover:bg-brand-purple-700 text-white font-bold flex items-center justify-center gap-2" asChild>
+                    <Button
+                      variant="outline"
+                      className="w-full h-12 rounded-full border border-slate-300 bg-white text-slate-900 font-bold hover:bg-brand-purple-600 hover:text-white hover:border-brand-purple-600 transition-all flex items-center justify-center gap-2 shadow-sm"
+                      asChild
+                    >
                       <TrackedLink
                         href={`/courses/${course.slug}/apply`}
                         eventName="international_course_selected"
@@ -96,7 +100,7 @@ export default async function InternationalApplicationGatewayPage() {
                           course_slug: course.slug,
                         }}
                       >
-                        <span>Start Application</span>
+                        <span>Start Your Application</span>
                         <ArrowRight className="w-4 h-4" />
                       </TrackedLink>
                     </Button>

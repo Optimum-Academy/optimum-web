@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getCourseBySlug, getCourses } from '@/lib/api/cms';
-import InternationalApplicationForm from '@/components/forms/InternationalApplicationForm';
+import { InternationalApplicationForm } from '@/components/forms/InternationalApplicationForm';
 
 interface CourseApplyPageProps {
   params: Promise<{
@@ -64,14 +64,7 @@ export default async function CourseApplyPage({ params }: CourseApplyPageProps) 
         </div>
 
         {/* Application Form */}
-        <InternationalApplicationForm
-          courseCode={course.courseFields.qualificationCode}
-          courseTitle={course.title}
-          cricosCode={course.courseFields.cricosCode || ''}
-          deliveryMode={course.courseFields.deliveryMode}
-          duration={course.courseFields.duration}
-          slug={course.slug}
-        />
+        <InternationalApplicationForm initialCourseSlug={course.slug} />
       </div>
     </main>
   );
