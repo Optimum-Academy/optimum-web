@@ -10,7 +10,12 @@ import { TRACKING_PARAMS, getCookie, trackEvent } from '@/lib/utils/tracking';
 import { CheckCircle2, ChevronRight, ChevronLeft, Upload, AlertCircle, ShieldCheck, Info } from 'lucide-react';
 
 interface FormProps {
-  initialCourseSlug?: string;
+  courseCode?: string;
+  courseTitle?: string;
+  cricosCode?: string;
+  deliveryMode?: string;
+  duration?: string;
+  slug?: string;
 }
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
@@ -22,13 +27,14 @@ const ALLOWED_FILE_TYPES = [
   'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
 ];
 
-export function InternationalApplicationForm({ initialCourseSlug }: FormProps) {
-  // Use initialCourseSlug if provided or log/track if needed
-  useEffect(() => {
-    if (initialCourseSlug) {
-      trackEvent('International Form Pre-selected Course', { courseSlug: initialCourseSlug });
-    }
-  }, [initialCourseSlug]);
+export default function InternationalApplicationForm({
+  courseCode = 'CHC52025',
+  courseTitle = 'Diploma of Community Services',
+  cricosCode = '120037M',
+  deliveryMode = 'Face-to-face training + Online distance + Vocational Placement',
+  duration = '80 weeks',
+  slug = 'chc52025-diploma-community-services-international',
+}: FormProps) {
   const [currentStep, setCurrentStep] = useState(1);
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
@@ -40,13 +46,13 @@ export function InternationalApplicationForm({ initialCourseSlug }: FormProps) {
 
   // Form State
   const [formData, setFormData] = useState({
-    // Course Details (Fixed/Pre-selected)
-    courseCode: 'CHC52025',
-    courseTitle: 'Diploma of Community Services',
-    courseRelease: 'Release 1',
-    cricosCode: '120037M',
-    courseDelivery: 'Face-to-face training + Online distance + Vocational Placement',
-    courseDuration: '80 weeks',
+    // Course Details (Fixed/Pre-selected dynamically from props)
+    courseCode,
+    courseTitle,
+    cricosCode,
+    courseDelivery: deliveryMode,
+    courseDuration: duration,
+    courseSlug: slug,
 
     // STEP 1: Personal Details
     applicationDate: new Date().toISOString().split('T')[0],
@@ -142,6 +148,7 @@ export function InternationalApplicationForm({ initialCourseSlug }: FormProps) {
     _honey: ''
   });
 
+  // Track funnel start with ONLY non-PII parameters
   useEffect(() => {
     const stored: Record<string, string> = {};
     if (typeof window !== 'undefined') {
@@ -152,8 +159,24 @@ export function InternationalApplicationForm({ initialCourseSlug }: FormProps) {
       });
     }
     setTracking(stored);
-    trackEvent('International Application Form Viewed');
-  }, []);
+
+    // Non-PII analytics tracking
+    trackEvent('international_application_started', {
+      course_code: courseCode,
+      cricos_code: cricosCode,
+      course_slug: slug,
+    });
+  }, [courseCode, cricosCode, slug]);
+
+  // Track step navigation with ONLY non-PII parameters
+  const trackStepComplete = (stepNumber: number) => {
+    trackEvent('international_application_step_completed', {
+      step_number: stepNumber,
+      course_code: courseCode,
+      cricos_code: cricosCode,
+      course_slug: slug,
+    });
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value, type } = e.target;
@@ -286,7 +309,6 @@ export function InternationalApplicationForm({ initialCourseSlug }: FormProps) {
     }
 
     if (step === 8) {
-      // Passport copy is strongly recommended/required for international application
       if (!fileData['passportCopy']) {
         newErrors['passportCopy'] = 'Passport copy upload is required for international application assessment';
       }
@@ -307,6 +329,7 @@ export function InternationalApplicationForm({ initialCourseSlug }: FormProps) {
 
   const nextStep = () => {
     if (validateStep(currentStep)) {
+      trackStepComplete(currentStep);
       setCurrentStep(prev => Math.min(prev + 1, 9));
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -325,10 +348,6 @@ export function InternationalApplicationForm({ initialCourseSlug }: FormProps) {
     setStatus('loading');
     setErrorMessage('');
 
-    trackEvent('International Application Submitted', {
-      course: `${formData.courseCode} ${formData.courseTitle}`
-    });
-
     try {
       const pageUrl = typeof window !== 'undefined' ? window.location.href : '';
       const referrer = typeof document !== 'undefined' ? document.referrer : '';
@@ -339,7 +358,7 @@ export function InternationalApplicationForm({ initialCourseSlug }: FormProps) {
         .join('; ');
 
       const payload = {
-        _subject: `New International Student Application – ${formData.courseCode} – ${formData.firstName} ${formData.lastName}`,
+        _subject: `New International Student Application – ${courseCode} – ${formData.firstName} ${formData.lastName}`,
         _template: 'table',
         _captcha: 'false',
         submitted_at: new Date().toISOString(),
@@ -347,10 +366,10 @@ export function InternationalApplicationForm({ initialCourseSlug }: FormProps) {
         referrer_url: referrer,
 
         // Course Info
-        course_code: formData.courseCode,
-        course_title: formData.courseTitle,
-        cricos_code: formData.cricosCode,
-        course_duration: formData.courseDuration,
+        course_code: courseCode,
+        course_title: courseTitle,
+        cricos_code: cricosCode,
+        course_duration: duration,
 
         // Step 1: Personal
         application_date: formData.applicationDate,
@@ -449,17 +468,21 @@ export function InternationalApplicationForm({ initialCourseSlug }: FormProps) {
 
       if (response.ok) {
         setStatus('success');
-        trackEvent('International Application Submission Successful');
+
+        // Track analytics submission without PII
+        trackEvent('international_application_submitted', {
+          course_code: courseCode,
+          cricos_code: cricosCode,
+          course_slug: slug,
+        });
       } else {
         setStatus('error');
         setErrorMessage('Submission failed. Please check your information or try again later.');
-        trackEvent('International Application Submission Failed', { reason: 'Response not OK' });
       }
     } catch (error) {
       console.error('Submission error:', error);
       setStatus('error');
       setErrorMessage('A network error occurred. Please try submitting again.');
-      trackEvent('International Application Submission Failed', { reason: 'Exception occurred' });
     }
   };
 
@@ -484,7 +507,7 @@ export function InternationalApplicationForm({ initialCourseSlug }: FormProps) {
         <div className="bg-slate-50 p-6 rounded-2xl border text-left text-sm space-y-3 text-slate-700">
           <p className="font-bold text-slate-900 border-b pb-2">Important Notice Regarding Your Application:</p>
           <ul className="space-y-2 list-disc list-inside text-slate-600">
-            <li>Your application is now undergoing review by OTA Student Services.</li>
+            <li>Your application for <strong>{courseCode} - {courseTitle}</strong> is now undergoing review by OTA Student Services.</li>
             <li>No payment has been charged at this stage.</li>
             <li>Submission of this application does <strong>not</strong> guarantee automatic admission, course enrolment, visa approval, or acceptance.</li>
             <li>Our team will reach out to you via email (<strong>{formData.email}</strong>) or phone regarding assessment outcomes and official enrolment instructions.</li>
@@ -520,10 +543,10 @@ export function InternationalApplicationForm({ initialCourseSlug }: FormProps) {
           <Badge variant="outline" className="text-brand-purple-300 border-brand-purple-400 px-3 py-1 text-xs">
             International Application Form (CRICOS)
           </Badge>
-          <span className="text-slate-400 font-mono text-xs">CRICOS Code: {formData.cricosCode}</span>
+          {cricosCode && <span className="text-slate-400 font-mono text-xs">CRICOS Code: {cricosCode}</span>}
         </div>
-        <h1 className="text-2xl sm:text-3xl font-bold font-heading">{formData.courseCode} {formData.courseTitle}</h1>
-        <p className="text-slate-400 text-sm mt-1">{formData.courseRelease} | Delivery: {formData.courseDelivery} | Duration: {formData.courseDuration}</p>
+        <h1 className="text-2xl sm:text-3xl font-bold font-heading">{courseCode} {courseTitle}</h1>
+        <p className="text-slate-400 text-sm mt-1">Delivery: {deliveryMode} | Duration: {duration}</p>
       </div>
 
       {/* Progress Navigation */}
@@ -1185,7 +1208,7 @@ export function InternationalApplicationForm({ initialCourseSlug }: FormProps) {
               <Textarea
                 id="relatedWorkExperience"
                 name="relatedWorkExperience"
-                placeholder="Briefly describe any previous employment, volunteering, or community care experience relevant to this diploma course."
+                placeholder="Briefly describe any previous employment, volunteering, or community care experience relevant to this course."
                 value={formData.relatedWorkExperience}
                 onChange={handleChange}
               />
@@ -1252,7 +1275,7 @@ export function InternationalApplicationForm({ initialCourseSlug }: FormProps) {
               <Textarea
                 id="relevantSkillsExperience"
                 name="relevantSkillsExperience"
-                placeholder="Outline any key skills, competencies, or experiences that support your enrolment in this Community Services program."
+                placeholder="Outline any key skills, competencies, or experiences that support your enrolment in this course."
                 value={formData.relevantSkillsExperience}
                 onChange={handleChange}
               />
