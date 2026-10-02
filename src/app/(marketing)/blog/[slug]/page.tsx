@@ -51,16 +51,16 @@ export default async function BlogPostPage({ params }: Props) {
                  </Link>
               </Button>
 
-              <div className="flex items-center gap-4 text-sm text-slate-500 mb-6">
+              <div className="flex items-center gap-4 text-sm text-slate-500 mb-6 flex-wrap">
                  <span className="flex items-center gap-1">
                     <Calendar className="h-4 w-4" />
                     {new Date(post.date).toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' })}
                  </span>
-                 {post.categories?.nodes[0] && (
-                    <span className="bg-brand-blue-50 text-brand-blue-600 px-3 py-1 rounded-full text-xs font-bold">
-                       {post.categories.nodes[0].name}
+                 {post.categories?.nodes?.map((cat) => (
+                    <span key={cat.slug} className="bg-brand-blue-50 text-brand-blue-600 px-3 py-1 rounded-full text-xs font-bold">
+                       {cat.name}
                     </span>
-                 )}
+                 ))}
               </div>
 
               <h1 className="font-heading text-3xl sm:text-5xl font-bold tracking-tight text-slate-900 mb-6 md:mb-10 leading-[1.2]">
@@ -79,30 +79,27 @@ export default async function BlogPostPage({ params }: Props) {
               </div>
 
               <div className="prose prose-lg prose-slate max-w-none">
-                 <p className="text-xl text-slate-600 leading-relaxed mb-8 italic">
-                   {post.excerpt}
-                 </p>
-                 <div className="space-y-6 text-slate-700 leading-relaxed">
-                    <p>
-                      Australia’s care and support sector is currently experiencing unprecedented growth. As the population ages and the National Disability Insurance Scheme (NDIS) continues to expand, the demand for skilled, compassionate professionals has never been higher.
-                    </p>
-                    <p>
-                      At Optimum Academy, we believe that providing care is more than just a job—it’s a career that offers immense personal satisfaction and long-term stability. Our courses are designed to not only give you the technical skills required but also the emotional intelligence and cultural awareness needed to thrive in diverse Australian communities.
-                    </p>
-                    <h2 className="text-2xl font-bold text-slate-900 mt-12 mb-4">Why the Care Sector?</h2>
-                    <p>
-                      The sector offers a unique blend of job security and flexibility. Whether you are looking for full-time work, part-time shifts to balance with family, or a complete career change, there is a place for you in disability support, aged care, or community services.
-                    </p>
-                 </div>
+                 {post.content ? (
+                   <div dangerouslySetInnerHTML={{ __html: post.content }} />
+                 ) : (
+                   <p className="text-xl text-slate-600 leading-relaxed mb-8 italic">
+                     {post.excerpt}
+                   </p>
+                 )}
               </div>
 
-              <div className="mt-16 pt-10 border-t flex items-center gap-6">
-                 <div className="w-16 h-16 rounded-full bg-slate-200 overflow-hidden relative">
-                    <Image src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200" alt="Author" fill className="object-cover" />
+              <div className="mt-16 pt-10 border-t flex items-center gap-4">
+                 <div className="w-14 h-14 rounded-full bg-slate-100 border border-slate-200 overflow-hidden relative flex-shrink-0">
+                    <Image
+                      src={post.author?.node?.avatar?.url || '/images/avatar-placeholder.svg'}
+                      alt={post.author?.node?.name || 'Optimum Academy Team'}
+                      fill
+                      className="object-cover p-1"
+                    />
                  </div>
                  <div>
-                    <p className="text-sm text-slate-500 mb-1">Written by</p>
-                    <p className="font-bold text-slate-900">Optimum Academy Team</p>
+                    <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-0.5">Written by</p>
+                    <p className="font-bold text-slate-900">{post.author?.node?.name || 'Optimum Academy Team'}</p>
                  </div>
               </div>
             </div>
