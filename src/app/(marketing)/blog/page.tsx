@@ -29,11 +29,18 @@ export default async function BlogPage() {
 
         <section className="py-12 md:py-20 bg-slate-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-              {posts.map((post) => (
-                <BlogCard key={post.id} post={post} />
-              ))}
-            </div>
+            {posts.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                {posts.map((post) => (
+                  <BlogCard key={post.id} post={post} />
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-16 bg-white rounded-3xl border border-slate-200 p-8 max-w-xl mx-auto">
+                <h2 className="text-2xl font-bold text-slate-900 mb-2">No Articles Published Yet</h2>
+                <p className="text-slate-600">Check back soon for news, guides, and student stories from Optimum Training Academy.</p>
+              </div>
+            )}
           </div>
         </section>
       </main>

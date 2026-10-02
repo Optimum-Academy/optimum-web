@@ -643,52 +643,191 @@ export const mockCourses: Course[] = [
 
 export const mockPosts: Post[] = [
   {
-    id: 'p1',
-    title: 'Building a Career in Australia’s Care Sector',
-    slug: 'career-in-australia-care-sector',
-    excerpt: 'Discover why the care and support sector is one of Australia’s fastest-growing industries.',
-    date: '2024-03-20',
+    id: 'post-international-student-life-in-australia',
+    title: 'International Student Life in Australia: A Practical Guide',
+    slug: 'international-student-life-in-australia',
+    excerpt: 'Get practical guidance on costs, housing, social connections, support services, and pre-arrival planning for international student life in Australia.',
+    date: '2025-02-23',
     featuredImage: {
       node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070',
-        altText: 'A successful professional in the care sector environment',
+        sourceUrl: '/images/international-student-life.jpg',
+        altText: 'International students studying and collaborating together in Australia',
       },
     },
     categories: {
-      nodes: [{ name: 'Career Advice', slug: 'career-advice' }],
+      nodes: [
+        { name: 'International Students', slug: 'international-students' },
+        { name: 'Student Life', slug: 'student-life' },
+      ],
     },
-  },
-  {
-    id: 'p2',
-    title: 'Understanding the New NDIS Guidelines for 2024',
-    slug: 'understanding-ndis-guidelines-2024',
-    excerpt: 'Key changes in the National Disability Insurance Scheme and how they affect support workers and participants.',
-    date: '2024-04-15',
-    featuredImage: {
+    author: {
       node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2070',
-        altText: 'Care professionals discussing support strategies in a modern office',
+        name: 'Optimum Academy Team',
+        avatar: {
+          url: '/images/avatar-placeholder.svg',
+        },
       },
     },
-    categories: {
-      nodes: [{ name: 'Industry News', slug: 'industry-news' }],
-    },
-  },
-  {
-    id: 'p3',
-    title: '5 Essential Skills for Every Community Service Worker',
-    slug: 'essential-skills-community-service-worker',
-    excerpt: 'Beyond qualifications, these core competencies will help you excel in providing support to those in need.',
-    date: '2024-05-10',
-    featuredImage: {
-      node: {
-        sourceUrl: 'https://images.unsplash.com/photo-1543269664-76bc3997d9ea?q=80&w=2070',
-        altText: 'Authentic interaction between diverse people in a community setting',
-      },
-    },
-    categories: {
-      nodes: [{ name: 'Skills & Development', slug: 'skills-development' }],
-    },
+    content: `
+      <p class="text-xl text-slate-600 leading-relaxed mb-8 italic">
+        Moving to Australia as an international student is one of those decisions that reshapes how you see the world. You get access to globally ranked institutions, cities that feel alive around the clock, and a multicultural community that genuinely welcomes newcomers. But daily life here comes with its own learning curve, from navigating rental markets to figuring out how far a part-time wage actually stretches.
+      </p>
+
+      <p class="mb-8 text-slate-700 leading-relaxed">
+        This guide covers every practical angle of international student life in Australia: costs, accommodation, social connections, support services, and the steps worth taking before you even board your flight. No vague promises, just real details you can plan around.
+      </p>
+
+      <div class="my-8 p-6 bg-slate-50 rounded-2xl border border-slate-200">
+        <h2 class="text-xl font-bold text-slate-900 mt-0 mb-4">Key takeaways</h2>
+        <ul class="space-y-2 mb-0 list-disc pl-5 text-slate-700">
+          <li>Most international students in Australia spend between $1,800 and $3,200 per month, depending on their city and lifestyle choices.</li>
+          <li>Shared housing and purpose-built student accommodation are the two most popular options for balancing cost with comfort.</li>
+          <li>Orientation Week events, student clubs, and part-time work are the fastest ways to build a social circle in a new city.</li>
+          <li>Every Australian institution offers dedicated international student advisors, counselling, career services, and language support at no extra cost.</li>
+          <li>Sorting out your accommodation, banking, and health cover before arrival removes most of the stress from your first two weeks.</li>
+        </ul>
+      </div>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-6">What Is International Student Life in Australia Really Like?</h2>
+
+      <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">What Changes in Your First Few Weeks?</h3>
+      <p class="mb-4 text-slate-700 leading-relaxed">The first two weeks are a blur of logistics. You will open a bank account, activate your phone plan, collect your student ID, and learn how public transport works in your city. Most institutions run structured orientation programs that guide you through each of these steps, so you will rarely have to figure things out alone.</p>
+      <p class="mb-4 text-slate-700 leading-relaxed">Time zones, weather, and food all shift at once. If you arrive from the Northern Hemisphere, expect the seasons to be reversed. Summer runs from December to February, and the academic year typically begins in late February or early March. Adjusting your body clock and meal routine usually takes about a week.</p>
+      <p class="mb-6 text-slate-700 leading-relaxed">The pace of campus life picks up quickly. Lectures, tutorials, and group assignments start within the first fortnight, and most students find that having a set academic schedule gives their week structure and purpose right away.</p>
+
+      <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">What Surprises Most New Students?</h3>
+      <p class="mb-4 text-slate-700 leading-relaxed">Australians use a lot of slang, and it can catch you off guard. Words like "arvo" (afternoon), "brekkie" (breakfast), and "uni" (university) are used in everyday conversation, including by lecturers and support staff. You will pick them up fast.</p>
+      <p class="mb-4 text-slate-700 leading-relaxed">The café culture here is a genuine part of daily life. Coffee shops double as study spaces, meeting points, and places to decompress between classes. Budgeting for a few coffees a week is realistic, and learning to make your own saves a surprising amount over a semester.</p>
+      <p class="mb-6 text-slate-700 leading-relaxed">Public transport reliability varies by city. Melbourne and Sydney have extensive train and tram networks. Brisbane and Perth rely more on buses. Adelaide is compact enough that cycling covers most student commutes. Planning your accommodation close to a transit line makes a real difference.</p>
+
+      <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">How Does Culture at Australian Institutions Differ from Other Countries?</h3>
+      <p class="mb-4 text-slate-700 leading-relaxed">Australian institutions place a strong emphasis on independent learning. Lecturers set expectations and provide materials, but you are responsible for managing your own study time, completing readings before tutorials, and meeting assignment deadlines without repeated reminders.</p>
+      <p class="mb-6 text-slate-700 leading-relaxed">Class participation is valued and sometimes assessed. Tutorials and seminars often involve small-group discussions, presentations, and peer feedback. If you come from an education system where listening quietly is the norm, this shift builds confidence quickly.</p>
+
+      <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">What Should You Know About Academic Integrity and Staff Access?</h3>
+      <p class="mb-4 text-slate-700 leading-relaxed">Academic integrity rules are strict. Universities use plagiarism detection software and take breaches seriously. Proper referencing, original thinking, and clear citation of sources are expected in every assignment. Most institutions offer free workshops on academic writing and referencing styles during orientation.</p>
+      <p class="mb-6 text-slate-700 leading-relaxed">The relationship between students and lecturers tends to be more informal than in many countries. You can usually address teaching staff by their first name, visit them during office hours with questions, and expect prompt email replies. This accessibility makes it easier to seek help early when you need it.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-6">How Much Does Student Life in Australia Cost?</h2>
+
+      <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">Which Costs Matter Most Each Month?</h3>
+      <p class="mb-4 text-slate-700 leading-relaxed">Rent is usually your largest single expense, and it varies dramatically by city, suburb, and housing type. Students in larger cities often pay more than those in smaller cities, especially when they want to live close to campus or public transport.</p>
+      <p class="mb-6 text-slate-700 leading-relaxed">Groceries are usually the next major cost. Students who cook at home and meal-prep regularly often spend far less than students who buy meals on campus or eat out several times a week.</p>
+
+      <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">What About Transport, Utilities, and Health Cover?</h3>
+      <p class="mb-4 text-slate-700 leading-relaxed">Transport, phone plans, and shared utilities are recurring costs worth planning for early. In many cities, eligible students can access transport concessions, which can reduce day-to-day travel costs.</p>
+      <p class="mb-6 text-slate-700 leading-relaxed">Overseas Student Health Cover (OSHC) is mandatory for your entire visa duration. It covers doctor visits, hospital stays, and some prescriptions. Premiums are typically paid upfront for the full course length, so factor that into your pre-departure budget.</p>
+
+      <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">Why Do Costs Vary by City and Lifestyle?</h3>
+      <p class="mb-4 text-slate-700 leading-relaxed">Sydney and Melbourne are the most expensive cities for students, primarily because of higher rents and transport fares. Brisbane, Perth, and Adelaide offer noticeably lower living costs while still providing strong university programs and active student communities.</p>
+      <p class="mb-6 text-slate-700 leading-relaxed">Your lifestyle choices create the biggest variation. Students who cook at home, share accommodation, and use public transport usually spend much less than students who eat out regularly and rent private studios.</p>
+
+      <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">How to Create a Realistic Student Budget</h3>
+      <p class="mb-4 text-slate-700 leading-relaxed">Start by listing your fixed costs: rent, OSHC, phone plan, and transport pass. These are predictable and rarely change month to month. Subtract them from your total available funds (family support, savings, and expected part-time income) to see what remains for groceries, social life, and unexpected expenses.</p>
+      <p class="mb-4 text-slate-700 leading-relaxed">Set a weekly grocery target and track your spending for the first month. Apps like your bank's own budgeting tool or a simple spreadsheet make this easy. Most students find their spending patterns stabilise by the end of their second month.</p>
+      <p class="mb-6 text-slate-700 leading-relaxed">Keep an emergency buffer if you can. Medical costs not fully covered, damaged devices, or unexpected study expenses can put pressure on a tight budget, so having extra funds available gives you more flexibility.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-6">Where Do International Students Live in Australia?</h2>
+
+      <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">What Are the Pros and Trade-offs of Campus and Student Housing?</h3>
+      <p class="mb-4 text-slate-700 leading-relaxed">University residential colleges are often the easiest option for your first semester. They usually include meals, utilities, internet, and organised social activities. The trade-off is that they can cost more and offer less independence than a private rental.</p>
+      <p class="mb-6 text-slate-700 leading-relaxed">Purpose-built student accommodation is designed specifically for students and typically includes furnished rooms, Wi-Fi, and communal spaces. These buildings are often near campuses or public transport hubs, which can make the daily commute easier.</p>
+
+      <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">How Do Share Houses, Homestays, and Private Rentals Compare?</h3>
+      <p class="mb-4 text-slate-700 leading-relaxed">Shared apartments are a common choice among students who have been in Australia for at least one semester. You handle your own groceries and bills, but the lower rent compared with private accommodation can give you more financial flexibility.</p>
+      <p class="mb-4 text-slate-700 leading-relaxed">Homestay places you with an Australian family and usually includes meals. This option works well for students who want to practise English daily and prefer a built-in support network, though it comes with house rules and less social freedom.</p>
+      <p class="mb-6 text-slate-700 leading-relaxed">Private studios offer the most independence and privacy, but they usually cost more than shared options. They suit students who value quiet study time, though they can feel isolating if you do not actively build social connections elsewhere.</p>
+
+      <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">Tips for Securing Accommodation from Overseas</h3>
+      <p class="mb-4 text-slate-700 leading-relaxed">Start searching two to three months before your course begins. University accommodation portals and purpose-built providers accept online applications, and many guarantee a room if you apply before the deadline. This removes the stress of arriving without a place to live.</p>
+      <p class="mb-4 text-slate-700 leading-relaxed">Be cautious with private rental listings that ask for money before you have seen the property or signed a lease. Scams targeting international students are common. Stick to verified platforms and your university's official accommodation partners for your first booking.</p>
+      <p class="mb-6 text-slate-700 leading-relaxed">If you plan to move into a share house after arriving, book a short-term stay for your first two to four weeks. Hostels, temporary student housing, and Airbnb rentals give you time to inspect share houses in person and meet potential housemates before committing to a lease.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-6">How Do Students Build a Routine and Social Life?</h2>
+
+      <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">How Do You Make Friends and Feel at Home Faster?</h3>
+      <p class="mb-4 text-slate-700 leading-relaxed">Orientation Week is the single best opportunity to meet people. Universities organise campus tours, welcome barbecues, club sign-up fairs, and social events specifically designed for new students. Attend as many as your schedule allows, even the ones that seem optional.</p>
+      <p class="mb-4 text-slate-700 leading-relaxed">Student clubs and societies are where most lasting friendships form. Australian universities typically offer 100 or more clubs, covering everything from sport and cultural groups to cooking, photography, and debate. Joining a club that meets weekly creates the kind of repeated, low-pressure interaction that turns acquaintances into friends.</p>
+      <p class="mb-6 text-slate-700 leading-relaxed">Part-time work also expands your social circle. Many international students work in hospitality, retail, or on-campus roles, and colleagues often become close friends. Working alongside Australians is one of the fastest ways to pick up local slang, cultural norms, and weekend plans.</p>
+
+      <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">How Do You Balance Study, Work, and Wellbeing?</h3>
+      <p class="mb-4 text-slate-700 leading-relaxed">International students on a Student visa (subclass 500) can work up to 48 hours per fortnight during study periods, with no limit during official course breaks. Building your work shifts around your class timetable rather than the other way around protects your academic performance.</p>
+      <p class="mb-4 text-slate-700 leading-relaxed">Consistent routines matter more than perfect ones. Students who set regular sleep and study hours, even loosely, report lower stress and higher grades than those who cram and pull late nights. Find a rhythm that includes breaks, exercise, and at least one social activity per week.</p>
+      <p class="mb-6 text-slate-700 leading-relaxed">Many institutions have free gyms, meditation rooms, or outdoor recreation spaces. Using them costs nothing and gives you a mental reset between study sessions. Walking or cycling to campus instead of taking the bus is another small habit that adds up for both fitness and savings.</p>
+
+      <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">Understanding Australian Culture and Social Norms</h3>
+      <p class="mb-4 text-slate-700 leading-relaxed">Australians value directness and a sense of humour in daily conversation. People say what they mean, and friendly teasing is a common way of showing warmth. If someone jokes with you, it usually means they feel comfortable around you.</p>
+      <p class="mb-4 text-slate-700 leading-relaxed">Punctuality matters in academic and professional settings. Arriving on time for lectures, tutorials, and part-time shifts is expected. Social gatherings, on the other hand, tend to be more relaxed about timing.</p>
+      <p class="mb-6 text-slate-700 leading-relaxed">Tipping is not expected in Australia. Hospitality workers are paid a minimum wage that is significantly higher than in many other countries. You might leave a small tip at a restaurant for exceptional service, but it is entirely optional and no one will expect it.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-6">What Support Can International Students Access?</h2>
+
+      <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">What Help Is Available on Campus?</h3>
+      <p class="mb-4 text-slate-700 leading-relaxed">Every Australian institution has a dedicated International Student Services team. These advisors help with visa questions, enrolment issues, accommodation referrals, and personal challenges. Most offer drop-in hours on weekdays and some provide 24/7 emergency phone lines.</p>
+      <p class="mb-6 text-slate-700 leading-relaxed">Counselling services are free and confidential at many Australian institutions. Trained counsellors are available for in-person and online sessions covering homesickness, academic pressure, and personal wellbeing. Many universities also offer peer mentoring programs that pair you with a senior student from a similar background.</p>
+
+      <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">What Academic and Career Support Can You Access?</h3>
+      <p class="mb-4 text-slate-700 leading-relaxed">Language and academic support is available through specialised centres on most campuses. These centres help with essay writing, presentation skills, academic English, and exam preparation. Sessions are usually free and available by appointment or on a drop-in basis.</p>
+      <p class="mb-6 text-slate-700 leading-relaxed">Career services help you build employability skills while you study. Resume workshops, mock interviews, job boards, and industry networking events are standard offerings. Some universities also run internship placement programs specifically for international students, connecting classroom learning with real workplace experience.</p>
+
+      <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">Community and Government Support Outside Campus</h3>
+      <p class="mb-4 text-slate-700 leading-relaxed">Beyond your university, local councils and community organisations run free events, language exchanges, and volunteer programs. These are open to everyone and provide another way to connect with people outside student circles.</p>
+      <p class="mb-4 text-slate-700 leading-relaxed">The Australian Government's Study Australia website offers a centralised hub of resources covering visas, rights, safety, and regional information. It also includes a cost of living calculator that lets you estimate expenses based on your chosen city and lifestyle preferences.</p>
+      <p class="mb-6 text-slate-700 leading-relaxed">If you experience workplace issues such as underpayment, the Fair Work Ombudsman provides free advice and complaints services. International students have the same workplace rights as Australian workers, and these protections are enforced regardless of visa status.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-6">What Should Students Know Before They Arrive?</h2>
+
+      <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">Which Steps Make the Biggest Difference Before Day One?</h3>
+      <p class="mb-4 text-slate-700 leading-relaxed">Secure at least temporary accommodation before you fly. Even a few weeks in a hostel or short-term rental removes the pressure of house-hunting while jet-lagged. Many students book purpose-built student accommodation from overseas, since applications can be completed entirely online.</p>
+      <p class="mb-4 text-slate-700 leading-relaxed">Open an Australian bank account before you arrive. Several major banks allow international students to set up accounts remotely, so your card is ready when you land. This avoids currency conversion fees on everyday purchases during your first week.</p>
+      <p class="mb-6 text-slate-700 leading-relaxed">Purchase your Overseas Student Health Cover (OSHC) as part of your visa application. Your education provider will usually give you a list of approved OSHC providers. Having your health cover sorted before departure means one less thing to organise on arrival.</p>
+
+      <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">What Should You Pack and Prepare in Your Final Week?</h3>
+      <p class="mb-4 text-slate-700 leading-relaxed">Pack for the season you are arriving in, not the one you are leaving. Australian weather varies enormously by region and time of year. Check your destination city's forecast for the month you land and pack layers, as mornings and evenings can be significantly cooler than midday.</p>
+      <p class="mb-4 text-slate-700 leading-relaxed">Download your university's student app and check for any pre-arrival tasks. Many institutions require you to complete online modules, upload documents, or register for orientation before classes begin. Completing these tasks early gives you a smoother first week on campus.</p>
+      <p class="mb-6 text-slate-700 leading-relaxed">Keep digital and physical copies of your passport, visa grant letter, Confirmation of Enrolment (CoE), OSHC policy, and accommodation booking. Store the digital copies in a cloud drive you can access from any device. Having backups prevents delays if any original document goes missing.</p>
+
+      <h3 class="text-xl font-bold text-slate-900 mt-8 mb-4">Financial Preparation Checklist</h3>
+      <p class="mb-4 text-slate-700 leading-relaxed">Confirm that your savings or family support will cover at least your first few months of living expenses. Your actual needs will depend on your city, accommodation choice, and day-to-day habits, so it helps to build a budget based on your own likely routine.</p>
+      <p class="mb-4 text-slate-700 leading-relaxed">Research currency transfer options before you leave. International transfer services often offer better exchange rates and lower fees than traditional banks. Setting up a transfer account in advance means you can move money to your Australian account quickly when you need it.</p>
+      <p class="mb-6 text-slate-700 leading-relaxed">Check whether your home country's driver's licence is valid in your Australian state. If you plan to drive, you may need an International Driving Permit. For most students, public transport and cycling are more practical and far less expensive than owning a car.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-6">Making the Most of Your Time as an International Student in Australia</h2>
+      <p class="mb-4 text-slate-700 leading-relaxed">International student life in Australia rewards people who prepare well and stay open to new experiences. The practical foundations covered here, including budgeting, accommodation, social connections, university support, and pre-arrival planning, all connect to one idea: the more you understand before you arrive, the faster you settle in and start enjoying your time.</p>
+      <p class="mb-8 text-slate-700 leading-relaxed">Australia's combination of strong academic programs, diverse communities, and structured student support creates an environment where you can study, work, and build lasting friendships. Take advantage of the resources available to you, both on campus and in the wider community, and approach each challenge as part of the experience rather than an obstacle to it.</p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mt-12 mb-6">FAQs About International Student Life in Australia</h2>
+      <div class="space-y-6 my-8">
+        <div class="border-b border-slate-200 pb-4">
+          <h3 class="text-lg font-bold text-slate-900 mb-2">How much money do international students need per month in Australia?</h3>
+          <p class="text-slate-700">Monthly costs vary widely depending on your city, accommodation type, and lifestyle. Rent, groceries, transport, phone bills, and social spending usually make up the largest share of a student's budget.</p>
+        </div>
+        <div class="border-b border-slate-200 pb-4">
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Can international students work while studying in Australia?</h3>
+          <p class="text-slate-700">Yes. Students on a subclass 500 visa can work up to 48 hours per fortnight during study periods. During scheduled course breaks, there is no hour limit. Many students work in hospitality, retail, or on-campus roles to supplement their income.</p>
+        </div>
+        <div class="border-b border-slate-200 pb-4">
+          <h3 class="text-lg font-bold text-slate-900 mb-2">What is the cheapest city for international students in Australia?</h3>
+          <p class="text-slate-700">Adelaide is generally the most affordable major student city, with lower rents and daily expenses compared to Sydney or Melbourne. Perth and Brisbane also offer competitive living costs while hosting well-regarded universities and active student communities.</p>
+        </div>
+        <div class="border-b border-slate-200 pb-4">
+          <h3 class="text-lg font-bold text-slate-900 mb-2">How do international students find accommodation in Australia?</h3>
+          <p class="text-slate-700">The most common methods include applying directly to purpose-built student accommodation providers, using sharehouse websites like Flatmates.com.au, or contacting your university's accommodation service. Starting your search two to three months before arrival gives you the widest range of options.</p>
+        </div>
+        <div class="border-b border-slate-200 pb-4">
+          <h3 class="text-lg font-bold text-slate-900 mb-2">What health cover do international students need in Australia?</h3>
+          <p class="text-slate-700">All international students must hold Overseas Student Health Cover (OSHC) for their entire visa period. OSHC covers doctor visits, hospital treatment, and some prescription medications. Your education provider will typically recommend approved insurers during the enrolment process.</p>
+        </div>
+        <div class="border-b border-slate-200 pb-4">
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Is it easy to make friends as an international student in Australia?</h3>
+          <p class="text-slate-700">Most students find it straightforward once they join structured social settings. Orientation Week events, student clubs, sport teams, and part-time work are the most effective ways to build friendships. Universities also run peer mentoring and buddy programs designed to help new arrivals connect quickly.</p>
+        </div>
+        <div class="border-b border-slate-200 pb-4">
+          <h3 class="text-lg font-bold text-slate-900 mb-2">What support services do Australian universities offer international students?</h3>
+          <p class="text-slate-700">Australian institutions provide international student advisors, free counselling, language and academic support, career services, and emergency assistance lines. Many also offer peer mentoring, cultural events, and financial advice workshops tailored specifically for international students.</p>
+        </div>
+      </div>
+    `,
   },
 ];
 
