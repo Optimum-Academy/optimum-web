@@ -50,8 +50,10 @@
   /* Brand Colors */
   --color-brand-purple-50: #F7ECFA;
   --color-brand-purple-100: #E9CFF0;
+  --color-brand-purple-200: #D8A5E2;
   --color-brand-purple-300: #C07AC9;
   --color-brand-purple-500: #6F1D77;
+  --color-brand-purple-600: #5C1863;
   --color-brand-purple-700: #4E1355;
   --color-brand-purple-900: #2E0B32;
 
@@ -59,6 +61,7 @@
   --color-brand-blue-100: #D6DCF6;
   --color-brand-blue-300: #7A8BD9;
   --color-brand-blue-500: #3E4FA8;
+  --color-brand-blue-600: #33428E;
   --color-brand-blue-700: #2C3A7A;
   --color-brand-blue-900: #1A234A;
 }
