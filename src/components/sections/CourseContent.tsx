@@ -115,7 +115,7 @@ export function CourseContent({ course }: CourseContentProps) {
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="h-14 px-10 text-lg rounded-full" asChild>
-                    <TrackedLink href={courseFields.audience === 'International' ? `/international-application?course=${course.slug}` : courseFields.externalEnrolmentLink}>
+                    <TrackedLink href={courseFields.audience === 'International' ? `/courses/${course.slug}/apply` : courseFields.externalEnrolmentLink}>
                       {courseFields.audience === 'International' ? 'Start Your Application' : 'Enrol Today'}
                     </TrackedLink>
                   </Button>
@@ -400,7 +400,7 @@ export function CourseContent({ course }: CourseContentProps) {
                          </div>
 
                          <Button className="w-full h-14 rounded-full bg-brand-purple-500 hover:bg-brand-purple-600 text-white" size="lg" asChild>
-                            <TrackedLink href={courseFields.audience === 'International' ? `/international-application?course=${course.slug}` : courseFields.externalEnrolmentLink}>
+                            <TrackedLink href={courseFields.audience === 'International' ? `/courses/${course.slug}/apply` : courseFields.externalEnrolmentLink}>
                               {courseFields.audience === 'International' ? 'Start Your Application' : 'Enrol Now'}
                             </TrackedLink>
                          </Button>

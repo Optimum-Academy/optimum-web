@@ -8,9 +8,11 @@ import { Label } from '@/components/ui/label';
 import { Badge } from '@/components/ui/badge';
 import { TRACKING_PARAMS, getCookie, trackEvent } from '@/lib/utils/tracking';
 import { CheckCircle2, ChevronRight, ChevronLeft, Upload, AlertCircle, ShieldCheck, Info } from 'lucide-react';
+import { Course } from '@/lib/types';
 
 interface FormProps {
   initialCourseSlug?: string;
+  course?: Course;
 }
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
@@ -22,8 +24,7 @@ const ALLOWED_FILE_TYPES = [
   'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
 ];
 
-export function InternationalApplicationForm({ initialCourseSlug }: FormProps) {
-  // Use initialCourseSlug if provided or log/track if needed
+export function InternationalApplicationForm({ initialCourseSlug, course }: FormProps) {
   useEffect(() => {
     if (initialCourseSlug) {
       trackEvent('International Form Pre-selected Course', { courseSlug: initialCourseSlug });
@@ -38,15 +39,24 @@ export function InternationalApplicationForm({ initialCourseSlug }: FormProps) {
   // File states (storing filename and status, plus file object if needed)
   const [fileData, setFileData] = useState<Record<string, { name: string; size: number; base64?: string }>>({});
 
+  // Determine initial course fields based on course prop or initialCourseSlug
+  const isCertIII = course?.slug === 'chc33021-certificate-iii-individual-support-international' || initialCourseSlug === 'chc33021-certificate-iii-individual-support-international';
+
+  const defaultCourseCode = course?.courseFields?.qualificationCode || (isCertIII ? 'CHC33021' : 'CHC52025');
+  const defaultCourseTitle = course?.title ? course.title.replace(/\s*\d{5,6}[A-Z]?$/, '') : (isCertIII ? 'Certificate III in Individual Support' : 'Diploma of Community Services');
+  const defaultCricosCode = course?.courseFields?.cricosCode || (isCertIII ? '120036A' : '120037M');
+  const defaultDelivery = course?.courseFields?.deliveryMode || 'Face-to-face training + Online distance + Vocational Placement';
+  const defaultDuration = course?.courseFields?.duration || (isCertIII ? 'Up to 52 Weeks' : 'Up to 104 Weeks');
+
   // Form State
   const [formData, setFormData] = useState({
     // Course Details (Fixed/Pre-selected)
-    courseCode: 'CHC52025',
-    courseTitle: 'Diploma of Community Services',
+    courseCode: defaultCourseCode,
+    courseTitle: defaultCourseTitle,
     courseRelease: 'Release 1',
-    cricosCode: '120037M',
-    courseDelivery: 'Face-to-face training + Online distance + Vocational Placement',
-    courseDuration: '80 weeks',
+    cricosCode: defaultCricosCode,
+    courseDelivery: defaultDelivery,
+    courseDuration: defaultDuration,
 
     // STEP 1: Personal Details
     applicationDate: new Date().toISOString().split('T')[0],
