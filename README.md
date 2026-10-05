@@ -1,3 +1,4 @@
+
 # Optimum Academy - Next.js 15 Web Platform
 
 A modern, high-performance web platform for Optimum Academy, built with Next.js 15 (App Router), TypeScript, Tailwind CSS v4, and headless WordPress integration.
