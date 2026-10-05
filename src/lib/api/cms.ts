@@ -7,6 +7,7 @@ import { GET_PAGE_BY_SLUG } from '../graphql/queries/pages';
 import { GET_CAREER_PATHWAYS } from '../graphql/queries/careerPathways';
 import { Course, Post, Testimonial, SiteSettings, Page, CareerPathway } from '../types';
 
+
 /**
  * Mock data for development until CMS is connected
  */
