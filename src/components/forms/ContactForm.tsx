@@ -15,6 +15,7 @@ export function ContactForm() {
     name: '',
     email: '',
     phone: '',
+    student_type: '',
     enquiry_type: '',
     course_of_interest: '',
     message: '',
@@ -67,6 +68,7 @@ export function ContactForm() {
       newErrors.phone = 'Please enter a valid Australian phone number';
     }
 
+    if (!formData.student_type) newErrors.student_type = 'Please select a student type';
     if (!formData.enquiry_type) newErrors.enquiry_type = 'Please select an enquiry type';
     if (!formData.message.trim()) newErrors.message = 'Message is required';
 
@@ -80,6 +82,7 @@ export function ContactForm() {
     if (!validate()) return;
     setStatus('loading');
     trackEvent('Contact Form Submitted', {
+      student_type: formData.student_type,
       enquiry_type: formData.enquiry_type,
       course: formData.course_of_interest
     });
@@ -126,6 +129,7 @@ export function ContactForm() {
       name: '',
       email: '',
       phone: '',
+      student_type: '',
       enquiry_type: '',
       course_of_interest: '',
       message: '',
@@ -217,6 +221,22 @@ export function ContactForm() {
             />
             {errors.phone && <p className="text-sm text-red-500 font-medium">{errors.phone}</p>}
           </div>
+        </div>
+
+        <div className="space-y-2">
+          <Label htmlFor="studentType">Student Type</Label>
+          <select
+            id="studentType"
+            name="student_type"
+            className={`${selectClassName} ${errors.student_type ? "border-red-500 focus-visible:ring-red-500" : ""}`}
+            value={formData.student_type}
+            onChange={handleChange}
+          >
+            <option value="">Select student type</option>
+            <option value="International">International</option>
+            <option value="Domestic">Domestic</option>
+          </select>
+          {errors.student_type && <p className="text-sm text-red-500 font-medium">{errors.student_type}</p>}
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
