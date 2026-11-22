@@ -110,6 +110,9 @@ export async function Footer() {
                   )}
                 </li>
               ))}
+              <li>
+                <CookieSettingsButton />
+              </li>
             </ul>
           </div>
           <div>
